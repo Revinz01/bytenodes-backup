@@ -12,10 +12,10 @@ const Contact = () => {
       <div className="pt-24 pb-12 px-4 bg-gradient-to-b from-navy-dark to-background">
         <div className="container mx-auto text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
-            Contact <span className="text-gradient">Us</span>
+            Hubungi <span className="text-gradient">Kami</span>
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Get in touch with us through your preferred channel
+            Hubungi kami melalui channel yang Anda preferensikan
           </p>
         </div>
       </div>
@@ -36,7 +36,7 @@ const Contact = () => {
                 <div>
                   <h3 className="font-bold mb-1 group-hover:text-cyan transition-colors">WhatsApp</h3>
                   <p className="text-muted-foreground">+62 851-2608-0236</p>
-                  <p className="text-sm text-cyan mt-1">Chat with us directly</p>
+                  <p className="text-sm text-cyan mt-1">Chat langsung dengan kami</p>
                 </div>
               </a>
             </Card>
@@ -52,7 +52,7 @@ const Contact = () => {
                 <div>
                   <h3 className="font-bold mb-1 group-hover:text-cyan transition-colors">Email</h3>
                   <p className="text-muted-foreground">support@bytenodes.id</p>
-                  <p className="text-sm text-cyan mt-1">Send us an email</p>
+                  <p className="text-sm text-cyan mt-1">Kirim email kepada kami</p>
                 </div>
               </a>
             </Card>
@@ -66,9 +66,9 @@ const Contact = () => {
                   <Phone className="w-6 h-6 text-cyan" />
                 </div>
                 <div>
-                  <h3 className="font-bold mb-1 group-hover:text-cyan transition-colors">Phone</h3>
+                  <h3 className="font-bold mb-1 group-hover:text-cyan transition-colors">Telepon</h3>
                   <p className="text-muted-foreground">+62 851-2608-0236</p>
-                  <p className="text-sm text-cyan mt-1">Call us anytime</p>
+                  <p className="text-sm text-cyan mt-1">Hubungi kami kapan saja</p>
                 </div>
               </a>
             </Card>
@@ -85,8 +85,8 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="font-bold mb-1 group-hover:text-cyan transition-colors">Instagram</h3>
-                  <p className="text-muted-foreground">@bytenodes</p>
-                  <p className="text-sm text-cyan mt-1">Follow us on Instagram</p>
+                  <p className="text-muted-foreground">@bytenodeshost</p>
+                  <p className="text-sm text-cyan mt-1">Ikuti kami di Instagram</p>
                 </div>
               </a>
             </Card>
@@ -103,8 +103,8 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="font-bold mb-1 group-hover:text-cyan transition-colors">Discord</h3>
-                  <p className="text-muted-foreground">Join our Discord server</p>
-                  <p className="text-sm text-cyan mt-1">Community support and announcements</p>
+                  <p className="text-muted-foreground">Bergabung ke server Discord kami</p>
+                  <p className="text-sm text-cyan mt-1">Dukungan komunitas dan pengumuman</p>
                 </div>
               </a>
             </Card>

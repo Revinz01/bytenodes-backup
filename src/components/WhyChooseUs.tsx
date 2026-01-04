@@ -3,33 +3,33 @@ import { Clock, Shield, Headphones, Zap, Award, TrendingUp } from "lucide-react"
 const benefits = [
   {
     icon: Clock,
-    title: "Optimized Performance",
-    description: "Experience fast server speeds with our optimized infrastructure and premium hardware."
+    title: "Performa Optimal",
+    description: "Rasakan kecepatan server tinggi dengan infrastruktur dan hardware premium kami."
   },
   {
     icon: Shield,
-    title: "Enhanced Security",
-    description: "Your data is protected with multiple layers of security measures."
+    title: "Keamanan Tingkat Tinggi",
+    description: "Data Anda dilindungi dengan berbagai lapisan keamanan."
   },
   {
     icon: Zap,
-    title: "Reliable Uptime",
-    description: "Our network is designed for reliability with proactive monitoring systems."
+    title: "Uptime Andal",
+    description: "Jaringan kami dirancang untuk keandalan dengan sistem monitoring proaktif."
   },
   {
     icon: Headphones,
-    title: "24/7 Support",
-    description: "Our support team is available to assist you whenever needed."
+    title: "Dukungan 24/7",
+    description: "Tim support kami selalu siap membantu kapan pun dibutuhkan."
   },
   {
     icon: Award,
-    title: "Developer Friendly",
-    description: "Built with developers in mind, featuring powerful tools and intuitive interfaces."
+    title: "Ramah Developer",
+    description: "Dibuat dengan pemikiran developer, dilengkapi tools powerful dan interface intuitif."
   },
   {
     icon: TrendingUp,
-    title: "Growing Community",
-    description: "Join our community of developers and access exclusive resources."
+    title: "Komunitas Berkembang",
+    description: "Bergabunglah dengan komunitas developer kami dan akses resource eksklusif."
   }
 ];
 
@@ -39,10 +39,10 @@ export const WhyChooseUs = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Why Choose ByteNodes?
+            Kenapa Pilih ByteNodes?
           </h2>
           <p className="text-base text-foreground/60 max-w-2xl mx-auto">
-            Discover what makes our hosting service stand out
+            Temukan apa yang membuat layanan hosting kami menonjol
           </p>
         </div>
 

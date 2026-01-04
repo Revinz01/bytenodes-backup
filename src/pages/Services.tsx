@@ -17,14 +17,14 @@ const servicesDetail = [
     link: "/pricing/servers",
     available: true,
     features: [
-      "Shared & Premium Options",
-      "DDoS Protection",
-      "Pterodactyl Panel",
-      "24/7 Uptime",
-      "Auto Backup",
-      "Multiple Game Support",
-      "Low Latency Network",
-      "Dedicated EU & SG Server"
+      "Opsi Shared & Premium",
+      "Perlindungan DDoS",
+      "Panel Pterodactyl",
+      "Uptime 24/7",
+      "Backup Otomatis",
+      "Dukungan Multi Game",
+      "Jaringan Low Latency",
+      "Server Dedicated EU & SG"
     ],
   },
   {
@@ -36,14 +36,14 @@ const servicesDetail = [
     link: "/pricing/bot",
     available: true,
     features: [
-      "24/7 Uptime",
+      "Uptime 24/7",
       "Auto Restart",
       "Multiple Bot Instances",
-      "Database Support",
-      "Easy Deployment",
+      "Dukungan Database",
+      "Deploy Mudah",
       "Priority Support",
-      "Custom Domain Option",
-      "Free SSL"
+      "Opsi Custom Domain",
+      "SSL Gratis"
     ],
   },
   {
@@ -57,11 +57,11 @@ const servicesDetail = [
     features: [
       "Web Ptero Container",
       "Turbo Web (Cloudflare)",
-      "Free SSL (HTTPS)",
-      "Auto Backup",
+      "SSL Gratis (HTTPS)",
+      "Backup Otomatis",
       "IP Teraliased",
       "Resource Terisolasi",
-      "Jasa Coding Available",
+      "Jasa Coding Tersedia",
       "Priority Support"
     ],
   },
@@ -74,52 +74,52 @@ const servicesDetail = [
     link: "/pricing/vps",
     available: true,
     features: [
-      "Anti-Lag Performance",
-      "NVMe Storage",
-      "Full Root Access",
+      "Performa Anti-Lag",
+      "Penyimpanan NVMe",
+      "Akses Root Penuh",
       "Linux (Ubuntu/Debian)",
-      "24/7 Uptime",
-      "DDoS Protection",
-      "Premium Support",
-      "Dedicated IP Option"
+      "Uptime 24/7",
+      "Perlindungan DDoS",
+      "Support Premium",
+      "Opsi IP Dedicated"
     ],
   },
   {
     icon: Server,
     title: "VPS KVM",
     description: "Virtual Private Server dengan teknologi KVM untuk web server, bot, dan tunneling.",
-    priceRp: "Coming Soon",
+    priceRp: "Segera Hadir",
     priceUsd: "",
     link: "/pricing/vps",
     available: false,
     features: [
-      "KVM Virtualization",
-      "Full Root Access",
-      "SSD Storage",
+      "Virtualisasi KVM",
+      "Akses Root Penuh",
+      "Penyimpanan SSD",
       "Linux OS",
-      "DDoS Protection",
-      "24/7 Uptime",
-      "Multiple Locations",
-      "Scalable Resources"
+      "Perlindungan DDoS",
+      "Uptime 24/7",
+      "Lokasi Multiple",
+      "Resource Scalable"
     ],
   },
   {
     icon: Code,
     title: "RDP Windows",
     description: "Windows Remote Desktop untuk browsing, botting, dan Android emulator.",
-    priceRp: "Coming Soon",
+    priceRp: "Segera Hadir",
     priceUsd: "",
     link: "/pricing/vps",
     available: false,
     features: [
       "Windows Server",
-      "Admin Access",
-      "High Bandwidth",
-      "SSD Storage",
-      "DDoS Protected",
-      "Multiple Locations",
-      "24/7 Support",
-      "Instant Setup"
+      "Akses Admin",
+      "Bandwidth Tinggi",
+      "Penyimpanan SSD",
+      "Perlindungan DDoS",
+      "Lokasi Multiple",
+      "Support 24/7",
+      "Setup Instan"
     ],
   },
 ];
@@ -135,7 +135,7 @@ const Services = () => {
             <span className="text-primary text-sm font-semibold">🚀 Layanan Kami</span>
           </div>
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
-            Our <span className="text-primary">Services</span>
+            Layanan <span className="text-primary">Kami</span>
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Pilih dari berbagai layanan hosting dan infrastruktur yang kami sediakan
@@ -154,7 +154,7 @@ const Services = () => {
                 {!service.available && (
                   <div className="absolute top-4 right-4 flex items-center gap-1 px-3 py-1 bg-muted rounded-full">
                     <Clock className="w-3 h-3 text-muted-foreground" />
-                    <span className="text-xs text-muted-foreground font-medium">Coming Soon</span>
+                    <span className="text-xs text-muted-foreground font-medium">Segera Hadir</span>
                   </div>
                 )}
                 
@@ -167,7 +167,7 @@ const Services = () => {
                     <p className="text-muted-foreground text-sm mb-2">{service.description}</p>
                     <div>
                       <p className="text-primary font-bold text-lg">{service.priceRp}</p>
-                      {service.priceUsd && <p className="text-muted-foreground text-xs">{service.priceUsd}/month</p>}
+                      {service.priceUsd && <p className="text-muted-foreground text-xs">{service.priceUsd}/bulan</p>}
                     </div>
                   </div>
                 </div>
@@ -190,7 +190,7 @@ const Services = () => {
                 ) : (
                   <a href={DISCORD_URL} target="_blank" rel="noopener noreferrer">
                     <Button variant="outline" className="w-full">
-                      Join Discord for Updates
+                      Gabung Discord untuk Update
                     </Button>
                   </a>
                 )}
@@ -209,7 +209,7 @@ const Services = () => {
           </p>
           <a href={DISCORD_URL} target="_blank" rel="noopener noreferrer">
             <Button size="lg">
-              Join Discord
+              Gabung Discord
             </Button>
           </a>
         </div>

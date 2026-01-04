@@ -5,23 +5,23 @@ import { useScrollAnimation, scrollVariants, staggerContainer } from "@/hooks/us
 const features = [
   {
     icon: Shield,
-    title: "Enterprise Security",
-    description: "Advanced DDoS protection and SSL certificates included with every plan.",
+    title: "Keamanan Enterprise",
+    description: "Perlindungan DDoS canggih dan sertifikat SSL disertakan di setiap paket.",
   },
   {
     icon: Zap,
-    title: "Lightning Fast",
-    description: "SSD storage and optimized infrastructure for maximum performance.",
+    title: "Sangat Cepat",
+    description: "Penyimpanan SSD dan infrastruktur yang dioptimalkan untuk performa maksimal.",
   },
   {
     icon: HeadphonesIcon,
-    title: "24/7 Support",
-    description: "Expert technical support available around the clock to assist you.",
+    title: "Dukungan 24/7",
+    description: "Tim support teknis ahli tersedia setiap saat untuk membantu Anda.",
   },
   {
     icon: TrendingUp,
-    title: "Easy Scaling",
-    description: "Seamlessly upgrade your resources as your business grows.",
+    title: "Mudah Upgrade",
+    description: "Tingkatkan resource dengan mudah seiring pertumbuhan bisnis Anda.",
   },
 ];
 
@@ -38,10 +38,10 @@ export const Features = () => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
-            Why Choose ByteNodes
+            Kenapa Pilih ByteNodes
           </h2>
           <p className="text-base text-foreground/60 max-w-2xl mx-auto">
-            We provide enterprise-grade infrastructure with the flexibility and support your business needs
+            Kami menyediakan infrastruktur tingkat enterprise dengan fleksibilitas dan dukungan yang bisnis Anda butuhkan
           </p>
         </motion.div>
 
