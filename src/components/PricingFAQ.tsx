@@ -7,44 +7,44 @@ import {
 
 const faqs = [
   {
-    question: "What is included in the hosting plans?",
-    answer: "All our hosting plans include KVM virtualization, SSD storage, dedicated resources, free backups, DDoS protection, and 24/7 customer support. You'll have full root access and can install any software you need."
+    question: "Apa saja yang termasuk dalam paket hosting?",
+    answer: "Semua paket hosting kami sudah termasuk virtualisasi KVM, penyimpanan SSD, dedicated resources, backup gratis, perlindungan DDoS, dan dukungan pelanggan 24/7. Anda akan mendapatkan akses root penuh dan dapat menginstall software apapun yang dibutuhkan."
   },
   {
-    question: "Can I upgrade or downgrade my plan?",
-    answer: "Yes! You can upgrade or downgrade your plan at any time. When upgrading, you'll be charged a prorated amount for the remainder of your billing cycle. Downgrading will take effect at your next billing date."
+    question: "Bisakah saya upgrade atau downgrade paket?",
+    answer: "Ya! Anda bisa upgrade atau downgrade paket kapan saja. Saat upgrade, Anda akan dikenakan biaya prorata untuk sisa periode billing. Downgrade akan berlaku pada tanggal billing berikutnya."
   },
   {
-    question: "What is your uptime guarantee?",
-    answer: "We guarantee 99.9% uptime on all our hosting services. If we fail to meet this guarantee, you'll receive service credits according to our SLA policy. Our infrastructure is monitored 24/7 to ensure maximum reliability."
+    question: "Berapa jaminan uptime Anda?",
+    answer: "Kami menjamin uptime 99.9% pada semua layanan hosting. Jika kami gagal memenuhi jaminan ini, Anda akan menerima kredit layanan sesuai kebijakan SLA kami. Infrastruktur kami dipantau 24/7 untuk memastikan keandalan maksimal."
   },
   {
-    question: "Do you offer refunds?",
-    answer: "Yes, we offer a 30-day money-back guarantee on all new purchases. If you're not satisfied with our service within the first 30 days, contact our support team for a full refund, no questions asked."
+    question: "Apakah Anda menawarkan refund?",
+    answer: "Ya, kami menawarkan garansi 30 hari uang kembali untuk semua pembelian baru. Jika Anda tidak puas dengan layanan kami dalam 30 hari pertama, hubungi tim support untuk refund penuh, tanpa pertanyaan."
   },
   {
-    question: "What payment methods do you accept?",
-    answer: "We accept all major credit cards (Visa, Mastercard, American Express), PayPal, and bank transfers. All payments are processed securely through Stripe for your protection."
+    question: "Metode pembayaran apa saja yang diterima?",
+    answer: "Kami menerima transfer bank (BCA, BNI, Mandiri, BRI), e-wallet (GoPay, OVO, DANA), QRIS, dan kartu kredit/debit. Semua pembayaran diproses dengan aman."
   },
   {
-    question: "How long does server setup take?",
-    answer: "Most servers are provisioned automatically within 5-10 minutes after payment confirmation. Dedicated servers may take up to 24 hours for initial setup and configuration."
+    question: "Berapa lama setup server?",
+    answer: "Kebanyakan server diaktifkan otomatis dalam 5-10 menit setelah pembayaran terkonfirmasi. Dedicated server mungkin membutuhkan hingga 24 jam untuk setup dan konfigurasi awal."
   },
   {
-    question: "Do you provide technical support?",
-    answer: "Absolutely! We offer 24/7 technical support via live chat, email, and support tickets. Our expert team is always ready to help with server configuration, troubleshooting, and optimization."
+    question: "Apakah ada dukungan teknis?",
+    answer: "Tentu saja! Kami menawarkan dukungan teknis 24/7 melalui live chat, email, dan tiket support. Tim ahli kami selalu siap membantu konfigurasi server, troubleshooting, dan optimisasi."
   },
   {
-    question: "Can I host multiple websites on one server?",
-    answer: "Yes, you can host as many websites as your server resources allow. All our plans come with full control over your server, allowing you to configure it however you need."
+    question: "Bisakah hosting beberapa website dalam satu server?",
+    answer: "Ya, Anda bisa hosting sebanyak mungkin website sesuai kapasitas resource server. Semua paket kami memberikan kontrol penuh atas server, memungkinkan konfigurasi sesuai kebutuhan."
   },
   {
-    question: "Is there a setup fee?",
-    answer: "No, there are no setup fees on any of our hosting plans. The price you see is what you pay - no hidden costs or surprise charges."
+    question: "Apakah ada biaya setup?",
+    answer: "Tidak, tidak ada biaya setup untuk semua paket hosting kami. Harga yang terlihat adalah yang Anda bayar - tanpa biaya tersembunyi atau kejutan."
   },
   {
-    question: "What security measures do you have in place?",
-    answer: "We implement multiple security layers including DDoS protection, firewalls, regular security updates, SSL certificates, and automated backups. Your data is stored in secure data centers with 24/7 physical security."
+    question: "Langkah keamanan apa yang ada?",
+    answer: "Kami menerapkan berbagai lapisan keamanan termasuk perlindungan DDoS, firewall, update keamanan rutin, sertifikat SSL, dan backup otomatis. Data Anda disimpan di data center yang aman dengan keamanan fisik 24/7."
   }
 ];
 
@@ -54,10 +54,10 @@ export const PricingFAQ = () => {
       <div className="container mx-auto max-w-4xl">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Frequently Asked <span className="text-gradient">Questions</span>
+            Pertanyaan <span className="text-gradient">Yang Sering Diajukan</span>
           </h2>
           <p className="text-xl text-muted-foreground">
-            Everything you need to know about our hosting services
+            Semua yang perlu Anda ketahui tentang layanan hosting kami
           </p>
         </div>
 
@@ -66,7 +66,7 @@ export const PricingFAQ = () => {
             <AccordionItem
               key={index}
               value={`item-${index}`}
-              className="bg-white border border-border rounded-lg px-6 shadow-sm hover:shadow-md transition-shadow"
+              className="bg-card border border-border rounded-lg px-6 shadow-sm hover:shadow-md transition-shadow"
             >
               <AccordionTrigger className="text-left font-semibold text-foreground hover:text-cyan hover:no-underline py-5">
                 {faq.question}
@@ -80,13 +80,13 @@ export const PricingFAQ = () => {
 
         <div className="mt-12 text-center">
           <p className="text-muted-foreground mb-4">
-            Still have questions? We're here to help!
+            Masih punya pertanyaan? Kami siap membantu!
           </p>
           <a
             href="/contact"
             className="text-cyan font-semibold hover:underline"
           >
-            Contact our support team →
+            Hubungi tim support kami →
           </a>
         </div>
       </div>

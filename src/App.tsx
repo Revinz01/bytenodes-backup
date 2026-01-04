@@ -5,6 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { PageTransition } from "./components/PageTransition";
 import { AnimatePresence } from "framer-motion";
+import { useEffect } from "react";
 import Index from "./pages/Index";
 import Services from "./pages/Services";
 import Pricing from "./pages/Pricing";
@@ -14,8 +15,6 @@ import PricingBot from "./pages/PricingBot";
 import PricingWebsite from "./pages/PricingWebsite";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
-import Blog from "./pages/Blog";
-import BlogPost from "./pages/BlogPost";
 import FAQ from "./pages/FAQ";
 import Documentation from "./pages/Documentation";
 import NotFound from "./pages/NotFound";
@@ -28,6 +27,17 @@ import SLA from "./pages/legal/SLA";
 import RefundPolicy from "./pages/legal/RefundPolicy";
 
 const queryClient = new QueryClient();
+
+// Component to handle scroll to top on route change
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+  
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  
+  return null;
+};
 
 const AnimatedRoutes = () => {
   const location = useLocation();
@@ -44,8 +54,6 @@ const AnimatedRoutes = () => {
         <Route path="/pricing/website" element={<PageTransition><PricingWebsite /></PageTransition>} />
         <Route path="/about" element={<PageTransition><About /></PageTransition>} />
         <Route path="/contact" element={<PageTransition><Contact /></PageTransition>} />
-        <Route path="/blog" element={<PageTransition><Blog /></PageTransition>} />
-        <Route path="/blog/:id" element={<PageTransition><BlogPost /></PageTransition>} />
         <Route path="/faq" element={<PageTransition><FAQ /></PageTransition>} />
         <Route path="/docs" element={<PageTransition><Documentation /></PageTransition>} />
         
@@ -69,6 +77,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <ScrollToTop />
         <AnimatedRoutes />
       </BrowserRouter>
     </TooltipProvider>

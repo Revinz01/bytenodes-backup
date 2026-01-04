@@ -43,10 +43,10 @@ export const TechnologyStack = () => {
       <div className="container mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-3 text-foreground">
-            Powered by Industry Leaders
+            Didukung Teknologi Terdepan
           </h2>
           <p className="text-foreground/60 text-base">
-            We use the best technology stack to ensure top-tier performance and reliability
+            Kami menggunakan teknologi terbaik untuk memastikan performa dan keandalan tertinggi
           </p>
         </div>
 
@@ -78,7 +78,7 @@ export const TechnologyStack = () => {
 
         <div className="mt-10 text-center">
           <p className="text-sm text-foreground/50">
-            Enterprise-grade infrastructure trusted by thousands of businesses worldwide
+            Infrastruktur tingkat enterprise yang dipercaya ribuan bisnis di seluruh dunia
           </p>
         </div>
       </div>

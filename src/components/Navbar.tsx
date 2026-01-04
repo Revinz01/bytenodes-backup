@@ -13,7 +13,7 @@ export const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border/50">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-          <Link to="/" className="flex items-center gap-2 text-xl font-bold" aria-label="ByteNodes Home">
+          <Link to="/" className="flex items-center gap-2 text-xl font-bold" aria-label="ByteNodes Beranda">
             <img src={logo} alt="" className="w-10 h-10 object-contain" width={40} height={40} />
             <span className="text-foreground">ByteNodes</span>
           </Link>
@@ -21,21 +21,21 @@ export const Navbar = () => {
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-6">
             <Link to="/" className="text-sm font-semibold text-foreground/80 hover:text-primary transition-all duration-300 hover:scale-105">
-              Home
+              Beranda
             </Link>
             <Link to="/services" className="text-sm font-semibold text-foreground/80 hover:text-primary transition-all duration-300 hover:scale-105">
-              Services
+              Layanan
             </Link>
             <div className="relative group">
               <button className="text-sm font-semibold text-foreground/80 hover:text-primary transition-all duration-300 hover:scale-105">
-                Pricing
+                Harga
               </button>
               <div className="absolute top-full left-0 mt-2 w-48 bg-card border border-border/50 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
                 <Link to="/pricing" className="block px-4 py-3 hover:bg-secondary hover:text-primary transition-all text-sm">
-                  General Pricing
+                  Semua Harga
                 </Link>
                 <Link to="/pricing/servers" className="block px-4 py-3 hover:bg-secondary hover:text-primary transition-all text-sm">
-                  Game Servers
+                  Game Server
                 </Link>
                 <Link to="/pricing/vps" className="block px-4 py-3 hover:bg-secondary hover:text-primary transition-all text-sm">
                   VPS & RDP
@@ -48,20 +48,17 @@ export const Navbar = () => {
                 </Link>
               </div>
             </div>
-            <Link to="/blog" className="text-sm font-semibold text-foreground/80 hover:text-primary transition-all duration-300 hover:scale-105">
-              Blog
-            </Link>
             <Link to="/about" className="text-sm font-semibold text-foreground/80 hover:text-primary transition-all duration-300 hover:scale-105">
-              About
+              Tentang
             </Link>
             <Link to="/contact" className="text-sm font-semibold text-foreground/80 hover:text-primary transition-all duration-300 hover:scale-105">
-              Contact
+              Kontak
             </Link>
           </div>
 
           <div className="hidden md:flex items-center gap-3">
             <a href={DISCORD_URL} target="_blank" rel="noopener noreferrer">
-              <Button className="rounded-full px-6 font-semibold">Get Started</Button>
+              <Button className="rounded-full px-6 font-semibold">Mulai Sekarang</Button>
             </a>
           </div>
 
@@ -69,7 +66,7 @@ export const Navbar = () => {
           <div className="md:hidden flex items-center gap-2">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
+              aria-label={mobileMenuOpen ? "Tutup menu" : "Buka menu"}
               aria-expanded={mobileMenuOpen}
               className="p-2 hover:bg-secondary rounded-lg transition-colors"
             >
@@ -87,30 +84,30 @@ export const Navbar = () => {
                 className="text-sm font-medium hover:text-primary transition-all duration-300"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                Home
+                Beranda
               </Link>
               <Link
                 to="/services"
                 className="text-sm font-medium hover:text-primary transition-all duration-300"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                Services
+                Layanan
               </Link>
               <div className="space-y-2">
-                <p className="text-sm font-semibold text-muted-foreground">Pricing</p>
+                <p className="text-sm font-semibold text-muted-foreground">Harga</p>
                 <Link
                   to="/pricing"
                   className="text-sm font-medium hover:text-primary transition-all duration-300 block pl-4"
                   onClick={() => setMobileMenuOpen(false)}
                 >
-                  General Pricing
+                  Semua Harga
                 </Link>
                 <Link
                   to="/pricing/servers"
                   className="text-sm font-medium hover:text-primary transition-all duration-300 block pl-4"
                   onClick={() => setMobileMenuOpen(false)}
                 >
-                  Game Servers
+                  Game Server
                 </Link>
                 <Link
                   to="/pricing/vps"
@@ -135,28 +132,21 @@ export const Navbar = () => {
                 </Link>
               </div>
               <Link
-                to="/blog"
-                className="text-sm font-medium hover:text-primary transition-all duration-300"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Blog
-              </Link>
-              <Link
                 to="/about"
                 className="text-sm font-medium hover:text-primary transition-all duration-300"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                About
+                Tentang
               </Link>
               <Link
                 to="/contact"
                 className="text-sm font-medium hover:text-primary transition-all duration-300"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                Contact
+                Kontak
               </Link>
               <a href={DISCORD_URL} target="_blank" rel="noopener noreferrer" onClick={() => setMobileMenuOpen(false)}>
-                <Button className="w-full">Get Started</Button>
+                <Button className="w-full">Mulai Sekarang</Button>
               </a>
             </div>
           </div>

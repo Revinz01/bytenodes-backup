@@ -6,7 +6,7 @@ import { HelpCircle } from "lucide-react";
 
 const faqs = [
   {
-    category: "General",
+    category: "Umum",
     questions: [
       {
         q: "Apa itu ByteNodes?",
@@ -14,7 +14,7 @@ const faqs = [
       },
       {
         q: "Bagaimana cara memulai menggunakan layanan ByteNodes?",
-        a: "Anda bisa memulai dengan: 1) Buat akun di website kami, 2) Pilih paket yang sesuai kebutuhan, 3) Lakukan pembayaran, 4) Layanan akan aktif dalam hitungan menit setelah pembayaran terkonfirmasi."
+        a: "Anda bisa memulai dengan: 1) Bergabung ke Discord kami, 2) Pilih paket yang sesuai kebutuhan, 3) Lakukan pembayaran, 4) Layanan akan aktif dalam hitungan menit setelah pembayaran terkonfirmasi."
       },
       {
         q: "Metode pembayaran apa saja yang tersedia?",
@@ -55,13 +55,13 @@ const faqs = [
         a: "Ya, Anda memiliki akses penuh untuk menginstall mod, plugin, dan mengkonfigurasi server sesuai kebutuhan melalui panel Pterodactyl yang user-friendly."
       },
       {
-        q: "Bagaimana dengan DDoS protection?",
-        a: "Semua server kami dilengkapi dengan DDoS protection untuk melindungi dari serangan. Kami menggunakan mitigasi layer 4 dan layer 7."
+        q: "Bagaimana dengan perlindungan DDoS?",
+        a: "Semua server kami dilengkapi dengan perlindungan DDoS untuk melindungi dari serangan. Kami menggunakan mitigasi layer 4 dan layer 7."
       }
     ]
   },
   {
-    category: "Billing & Support",
+    category: "Pembayaran & Support",
     questions: [
       {
         q: "Apakah ada garansi uang kembali?",
@@ -69,7 +69,7 @@ const faqs = [
       },
       {
         q: "Bagaimana cara menghubungi support?",
-        a: "Anda bisa menghubungi kami melalui: Support Ticket di website, WhatsApp, Discord, atau email ke support@bytenodes.id. Tim support tersedia 24/7."
+        a: "Anda bisa menghubungi kami melalui: Tiket Support di Discord, WhatsApp, atau email ke support@bytenodes.id. Tim support tersedia 24/7."
       },
       {
         q: "Apakah bisa upgrade paket?",
@@ -77,7 +77,7 @@ const faqs = [
       },
       {
         q: "Bagaimana jika saya lupa password?",
-        a: "Anda bisa reset password melalui halaman login dengan klik 'Lupa Password'. Untuk akses server, Anda bisa reinstall OS atau hubungi support untuk bantuan."
+        a: "Anda bisa hubungi support kami di Discord untuk reset password. Untuk akses server, Anda bisa reinstall OS atau hubungi support untuk bantuan."
       }
     ]
   }
@@ -92,7 +92,7 @@ const FAQ = () => {
         <div className="container mx-auto text-center">
           <HelpCircle className="w-16 h-16 text-primary mx-auto mb-6" />
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            Frequently Asked <span className="text-gradient">Questions</span>
+            Pertanyaan <span className="text-gradient">Yang Sering Diajukan</span>
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Temukan jawaban untuk pertanyaan yang sering diajukan

@@ -10,12 +10,12 @@ export const Footer = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 mb-12">
           {/* Company Info */}
           <div className="col-span-2 lg:col-span-1">
-            <Link to="/" className="flex items-center gap-2 text-xl font-bold mb-4" aria-label="ByteNodes Home">
+            <Link to="/" className="flex items-center gap-2 text-xl font-bold mb-4" aria-label="ByteNodes Beranda">
               <img src={logo} alt="" className="w-8 h-8 object-contain" width={32} height={32} />
               <span className="text-gradient">ByteNodes</span>
             </Link>
             <p className="text-sm text-muted-foreground mb-6 max-w-xs">
-              Professional hosting solutions for businesses of all sizes. Reliable, fast, and secure infrastructure.
+              Solusi hosting profesional untuk bisnis segala ukuran. Infrastruktur yang andal, cepat, dan aman.
             </p>
             <div className="flex gap-4">
               <a href="https://wa.me/6285126080236" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-all duration-300 hover:scale-110" aria-label="WhatsApp">
@@ -35,7 +35,7 @@ export const Footer = () => {
 
           {/* Products */}
           <div>
-            <h4 className="font-bold mb-4 text-foreground">Products</h4>
+            <h4 className="font-bold mb-4 text-foreground">Produk</h4>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link to="/pricing/servers" className="text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-1 inline-block">
@@ -67,31 +67,26 @@ export const Footer = () => {
 
           {/* Support */}
           <div>
-            <h4 className="font-bold mb-4 text-foreground">Support</h4>
+            <h4 className="font-bold mb-4 text-foreground">Dukungan</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link to="/blog" className="text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-1 inline-block">
-                  Knowledge Base
-                </Link>
-              </li>
-              <li>
-                <Link to="/tickets" className="text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-1 inline-block">
-                  Support Tickets
+                <Link to="/faq" className="text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-1 inline-block">
+                  Pusat Bantuan
                 </Link>
               </li>
               <li>
                 <Link to="/contact" className="text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-1 inline-block">
-                  Contact Support
+                  Hubungi Kami
                 </Link>
               </li>
               <li>
                 <Link to="/docs" className="text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-1 inline-block">
-                  Documentation
+                  Dokumentasi
                 </Link>
               </li>
               <li>
                 <Link to="/faq" className="text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-1 inline-block">
-                  FAQs
+                  FAQ
                 </Link>
               </li>
             </ul>
@@ -103,22 +98,22 @@ export const Footer = () => {
             <ul className="space-y-2 text-sm">
               <li>
                 <Link to="/terms" className="text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-1 inline-block">
-                  Terms of Service
+                  Syarat Layanan
                 </Link>
               </li>
               <li>
                 <Link to="/privacy" className="text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-1 inline-block">
-                  Privacy Policy
+                  Kebijakan Privasi
                 </Link>
               </li>
               <li>
                 <Link to="/cookies" className="text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-1 inline-block">
-                  Cookie Policy
+                  Kebijakan Cookie
                 </Link>
               </li>
               <li>
                 <Link to="/acceptable-use" className="text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-1 inline-block">
-                  Acceptable Use
+                  Kebijakan Penggunaan
                 </Link>
               </li>
               <li>
@@ -128,7 +123,7 @@ export const Footer = () => {
               </li>
               <li>
                 <Link to="/refund" className="text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-1 inline-block">
-                  Refund Policy
+                  Kebijakan Refund
                 </Link>
               </li>
             </ul>
@@ -136,26 +131,21 @@ export const Footer = () => {
 
           {/* Company */}
           <div>
-            <h4 className="font-bold mb-4 text-foreground">Company</h4>
+            <h4 className="font-bold mb-4 text-foreground">Perusahaan</h4>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link to="/about" className="text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-1 inline-block">
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link to="/blog" className="text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-1 inline-block">
-                  Blog
+                  Tentang Kami
                 </Link>
               </li>
               <li>
                 <Link to="/contact" className="text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-1 inline-block">
-                  Contact
+                  Kontak
                 </Link>
               </li>
               <li>
                 <Link to="/pricing" className="text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-1 inline-block">
-                  Pricing
+                  Harga
                 </Link>
               </li>
             </ul>
@@ -164,7 +154,7 @@ export const Footer = () => {
 
         <div className="border-t border-border pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
-            <p>&copy; 2025 ByteNodes. All rights reserved.</p>
+            <p>&copy; 2025 ByteNodes. Hak Cipta Dilindungi.</p>
             <p>Powered By Yeng</p>
           </div>
         </div>

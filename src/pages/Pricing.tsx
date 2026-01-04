@@ -7,7 +7,7 @@ import { FloatingShapes } from "@/components/FloatingShapes";
 import { TechnologyStack } from "@/components/TechnologyStack";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Check, Server, Bot, Globe, Gamepad2 } from "lucide-react";
+import { Check, Server, Bot, Globe, Gamepad2, Sparkles, Zap, Shield, Crown } from "lucide-react";
 import { Link } from "react-router-dom";
 import { GameSupportLogos } from "@/components/GameSupportLogos";
 
@@ -21,13 +21,14 @@ const pricingCategories = [
     startingPriceUsd: 0.50,
     description: "Minecraft, FiveM, Rust, dan game lainnya",
     features: [
-      "Shared & Premium Options",
-      "DDoS Protection",
-      "24/7 Uptime",
-      "Pterodactyl Panel"
+      "Opsi Shared & Premium",
+      "Perlindungan DDoS",
+      "Uptime 24/7",
+      "Panel Pterodactyl"
     ],
     link: "/pricing/servers",
-    popular: true
+    popular: true,
+    gradient: "from-orange-500/20 to-red-500/20"
   },
   {
     name: "Discord Bot",
@@ -38,11 +39,12 @@ const pricingCategories = [
     features: [
       "Auto Restart",
       "Multiple Instances",
-      "Database Support",
-      "Easy Deployment"
+      "Dukungan Database",
+      "Deploy Mudah"
     ],
     link: "/pricing/bot",
-    popular: false
+    popular: false,
+    gradient: "from-blue-500/20 to-purple-500/20"
   },
   {
     name: "Website Hosting",
@@ -51,13 +53,14 @@ const pricingCategories = [
     startingPriceUsd: 0.30,
     description: "Web Ptero, Turbo Web, & Jasa Coding",
     features: [
-      "Free SSL (HTTPS)",
-      "Auto Backup",
+      "SSL Gratis (HTTPS)",
+      "Backup Otomatis",
       "Cloudflare Tunnel",
       "Managed Hosting"
     ],
     link: "/pricing/website",
-    popular: false
+    popular: false,
+    gradient: "from-green-500/20 to-emerald-500/20"
   },
   {
     name: "VPS & Dedicated",
@@ -66,13 +69,14 @@ const pricingCategories = [
     startingPriceUsd: 4.00,
     description: "Dedicated server dengan performa tinggi",
     features: [
-      "NVMe Storage",
-      "Anti-Lag Performance",
-      "Full Root Access",
-      "24/7 Support"
+      "Penyimpanan NVMe",
+      "Performa Anti-Lag",
+      "Akses Root Penuh",
+      "Support 24/7"
     ],
     link: "/pricing/vps",
-    popular: false
+    popular: false,
+    gradient: "from-cyan-500/20 to-blue-500/20"
   }
 ];
 
@@ -103,10 +107,10 @@ const Pricing = () => {
           </div>
           
           <h1 className="text-5xl md:text-6xl font-bold mb-6 tracking-tight text-foreground animate-fade-in">
-            Simple, <span className="text-primary">Transparent</span> Pricing
+            Harga <span className="text-primary">Transparan</span> & Terjangkau
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-12 leading-relaxed animate-fade-in">
-            Pilih paket yang sesuai dengan kebutuhan. Semua paket termasuk support 24/7, uptime 99.9%, dan free migration.
+            Pilih paket yang sesuai dengan kebutuhan. Semua paket termasuk support 24/7, uptime 99.9%, dan migrasi gratis.
           </p>
 
           <AnimatedStats />
@@ -137,13 +141,16 @@ const Pricing = () => {
                   }`}
                 >
                   {category.popular && (
-                    <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 bg-gradient-to-r from-primary to-primary/80 text-primary-foreground text-xs font-bold rounded-full shadow-md">
-                      Most Popular
+                    <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 bg-gradient-to-r from-primary to-primary/80 text-primary-foreground text-xs font-bold rounded-full shadow-md flex items-center gap-1">
+                      <Crown className="w-3 h-3" />
+                      Paling Populer
                     </div>
                   )}
 
                   <div className="text-center mb-6">
-                    <IconComponent className="w-12 h-12 text-primary mx-auto mb-3" />
+                    <div className={`w-16 h-16 mx-auto mb-3 rounded-2xl bg-gradient-to-br ${category.gradient} flex items-center justify-center`}>
+                      <IconComponent className="w-8 h-8 text-primary" />
+                    </div>
                     <h3 className="text-xl font-bold mb-2">{category.name}</h3>
                     <p className="text-muted-foreground text-sm mb-4">{category.description}</p>
                     <div className="flex items-baseline justify-center gap-1">
@@ -152,7 +159,7 @@ const Pricing = () => {
                     <div className="flex items-baseline justify-center gap-1 mb-1">
                       <span className="text-3xl font-bold text-primary">{price.rp}</span>
                     </div>
-                    <span className="text-muted-foreground text-xs">{price.usd}/month</span>
+                    <span className="text-muted-foreground text-xs">{price.usd}/bulan</span>
                   </div>
 
                   <div className="space-y-2 mb-6">
@@ -188,7 +195,7 @@ const Pricing = () => {
               </p>
               <a href={DISCORD_URL} target="_blank" rel="noopener noreferrer">
                 <Button variant="outline" size="lg">
-                  Join Discord
+                  Gabung Discord
                 </Button>
               </a>
             </div>

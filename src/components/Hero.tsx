@@ -21,7 +21,7 @@ export const Hero = () => {
           {/* Left Content */}
           <div className="text-left space-y-8">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary border border-border backdrop-blur-sm">
-              <span className="text-xs text-foreground/80 font-medium tracking-wide uppercase">Premium Hosting Solutions</span>
+              <span className="text-xs text-foreground/80 font-medium tracking-wide uppercase">Solusi Hosting Premium</span>
             </div>
 
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-black leading-[0.95] tracking-tight uppercase">
@@ -33,19 +33,19 @@ export const Hero = () => {
             </h1>
 
             <p className="text-lg md:text-xl text-foreground/70 max-w-xl leading-relaxed">
-              All that you really have to do is Sign Up & Deploy your project. We'll take care of the rest, with enterprise-grade infrastructure.
+              Yang perlu Anda lakukan hanyalah Daftar & Deploy proyek Anda. Sisanya kami yang urus, dengan infrastruktur tingkat enterprise.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
               <a href={DISCORD_URL} target="_blank" rel="noopener noreferrer">
                 <Button size="lg" className="text-base px-8 py-6 font-semibold">
-                  Get Started
+                  Mulai Sekarang
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
               </a>
               <Link to="/pricing">
                 <Button size="lg" variant="outline" className="text-base px-8 py-6 font-semibold">
-                  Explore Premium Plans
+                  Lihat Paket Premium
                 </Button>
               </Link>
             </div>
@@ -56,7 +56,7 @@ export const Hero = () => {
                   <Star key={i} className="w-4 h-4 fill-primary text-primary" />
                 ))}
               </div>
-              <span>Read our reviews on Trustpilot</span>
+              <span>Baca ulasan kami di Trustpilot</span>
             </div>
           </div>
 
