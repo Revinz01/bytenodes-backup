@@ -1,7 +1,9 @@
+"use client";
+
 import { Card } from "@/components/ui/card";
 import { Server, Cloud, Globe, Monitor, Gamepad2, Code } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { useScrollAnimation, scrollVariants, staggerContainer } from "@/hooks/useScrollAnimation";
 
@@ -89,7 +91,7 @@ export const Services = () => {
                   </li>
                 ))}
               </ul>
-                <Link to="/pricing">
+                <Link href="/pricing">
                   <Button variant="outline" className="w-full text-sm group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300">
                     Learn More
                   </Button>

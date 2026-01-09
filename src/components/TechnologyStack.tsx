@@ -1,6 +1,10 @@
+"use client";
+
+import Image from "next/image";
 import samsungLogo from "@/assets/samsung-logo.png";
 import asrockLogo from "@/assets/asrock-logo.png";
 import ovhLogo from "@/assets/ovh-logo.png";
+import { useState } from "react";
 
 const technologies = [
   {
@@ -37,6 +41,29 @@ const technologies = [
   }
 ];
 
+// Client component for tech logo with error handler
+const TechLogo = ({ tech, index }: { tech: typeof technologies[0]; index: number }) => {
+  const [failed, setFailed] = useState(false);
+
+  if (failed) {
+    return (
+      <span className="text-sm font-semibold text-foreground/60">{tech.name}</span>
+    );
+  }
+
+  return (
+    <Image
+      src={typeof tech.logo === 'string' ? tech.logo : tech.logo.src}
+      alt={tech.name}
+      className="h-8 w-auto object-contain grayscale hover:grayscale-0 transition-all opacity-50 hover:opacity-100"
+      width={80}
+      height={32}
+      loading="lazy"
+      onError={() => setFailed(true)}
+    />
+  );
+};
+
 export const TechnologyStack = () => {
   return (
     <section className="py-20 px-4 bg-secondary/20 border-y border-border">
@@ -56,22 +83,7 @@ export const TechnologyStack = () => {
               key={index}
               className="flex items-center justify-center p-4 bg-card rounded-lg border border-border hover:shadow-md hover:shadow-cyan/5 transition-all hover:scale-105 group"
             >
-              <img
-                src={tech.logo}
-                alt={tech.name}
-                className="h-8 w-auto object-contain grayscale group-hover:grayscale-0 transition-all opacity-50 group-hover:opacity-100"
-                width={80}
-                height={32}
-                loading="lazy"
-                onError={(e) => {
-                  // Fallback if image fails to load
-                  e.currentTarget.style.display = 'none';
-                  const parent = e.currentTarget.parentElement;
-                  if (parent) {
-                    parent.innerHTML = `<span class="text-sm font-semibold text-foreground/60">${tech.name}</span>`;
-                  }
-                }}
-              />
+              <TechLogo tech={tech} index={index} />
             </div>
           ))}
         </div>

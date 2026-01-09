@@ -3,7 +3,7 @@ import { Footer } from "@/components/Footer";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Server, Globe, Bot, Gamepad2, Code, Check, Clock } from "lucide-react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
 const DISCORD_URL = "https://discord.gg/2PMmPp6Yx8";
 
@@ -182,7 +182,7 @@ const Services = () => {
                 </div>
 
                 {service.available ? (
-                  <Link to={service.link}>
+                  <Link href={service.link}>
                     <Button className="w-full">
                       Lihat Paket
                     </Button>

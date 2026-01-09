@@ -1,3 +1,5 @@
+"use client";
+
 import { Clock, Shield, Headphones, Zap, Award, TrendingUp } from "lucide-react";
 
 const benefits = [

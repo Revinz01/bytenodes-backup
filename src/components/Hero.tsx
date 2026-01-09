@@ -1,5 +1,7 @@
+"use client";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
+import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, Star } from "lucide-react";
 import { ParticleBackground } from "@/components/ParticleBackground";
 import logo from "@/assets/logo.png";
@@ -43,7 +45,7 @@ export const Hero = () => {
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
               </a>
-              <Link to="/pricing">
+              <Link href="/pricing">
                 <Button size="lg" variant="outline" className="text-base px-8 py-6 font-semibold">
                   Lihat Paket Premium
                 </Button>
@@ -65,7 +67,7 @@ export const Hero = () => {
             <div className="absolute inset-0 bg-gradient-to-br from-cyan/20 to-cyan-dark/20 rounded-3xl blur-3xl"></div>
             <div className="relative h-full flex items-center justify-center">
               <div className="w-72 h-72 bg-gradient-to-br from-cyan/30 to-cyan-dark/30 rounded-full blur-2xl absolute"></div>
-              <img 
+              <Image 
                 src={logo} 
                 alt="ByteNodes Logo" 
                 className="relative w-64 h-64 md:w-80 md:h-80 object-contain drop-shadow-2xl"

@@ -8,7 +8,7 @@ import { TechnologyStack } from "@/components/TechnologyStack";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Check, Server, Bot, Globe, Gamepad2, Sparkles, Zap, Shield, Crown } from "lucide-react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { GameSupportLogos } from "@/components/GameSupportLogos";
 
 const DISCORD_URL = "https://discord.gg/2PMmPp6Yx8";
@@ -171,7 +171,7 @@ const Pricing = () => {
                     ))}
                   </div>
 
-                  <Link to={category.link}>
+                  <Link href={category.link}>
                     <Button
                       className={`w-full ${
                         category.popular ? "shadow-md hover:shadow-lg" : ""

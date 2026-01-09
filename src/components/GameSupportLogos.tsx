@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { motion } from "framer-motion";
 import fivemLogo from "@/assets/fivem-logo.png";
 import minecraftLogo from "@/assets/minecraft-logo.png";
@@ -38,7 +39,7 @@ export const GameSupportLogos = () => {
               viewport={{ once: true }}
               className="flex items-center gap-3 px-5 py-3 rounded-lg bg-card border border-border/50 hover:border-primary/50 transition-colors"
             >
-              <img 
+              <Image 
                 src={game.logo} 
                 alt={game.name} 
                 className="w-10 h-10 object-contain"

@@ -1,3 +1,5 @@
+"use client";
+import Image from "next/image";
 import { Star } from "lucide-react";
 import { Card } from "@/components/ui/card";
 
@@ -73,7 +75,7 @@ export const Testimonials = () => {
               </p>
               
               <div className="flex items-center gap-3">
-                <img
+                <Image
                   src={testimonial.image}
                   alt={`Foto profil ${testimonial.name}`}
                   className="w-10 h-10 rounded-full object-cover"

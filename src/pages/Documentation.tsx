@@ -2,7 +2,7 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { Book, Server, Shield, CreditCard, MessageSquare, Settings, ArrowRight } from "lucide-react";
 
 const docCategories = [
@@ -112,7 +112,7 @@ const Documentation = () => {
                       {category.articles.map((article, articleIdx) => (
                         <li key={articleIdx}>
                           <Link 
-                            to={`/blog`}
+                            href={`/blog`}
                             className="flex items-center text-sm text-muted-foreground hover:text-primary transition-colors group"
                           >
                             <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -134,7 +134,7 @@ const Documentation = () => {
         <div className="container mx-auto max-w-4xl text-center">
           <h2 className="text-2xl font-bold mb-6">Butuh Bantuan Lebih?</h2>
           <div className="flex flex-wrap justify-center gap-4">
-            <Link to="/tickets">
+            <Link href="/tickets">
               <Badge variant="outline" className="px-4 py-2 text-sm hover:bg-primary hover:text-primary-foreground transition-colors cursor-pointer">
                 <MessageSquare className="w-4 h-4 mr-2" />
                 Buat Support Ticket

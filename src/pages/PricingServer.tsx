@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { useState } from "react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
@@ -128,7 +129,7 @@ const PricingServer = () => {
                   <Card className={`p-6 relative hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 ${pkg.popular ? "border-primary shadow-lg border-2 bg-gradient-to-b from-card to-primary/5" : "border-border/50 hover:border-primary/50"}`}>
                     {pkg.popular && <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 bg-primary text-primary-foreground text-xs font-bold rounded-full">Best Seller</div>}
                     <div className="text-center mb-6">
-                      <img src={minecraftLogo} alt="Minecraft" className="w-12 h-12 mx-auto mb-3 object-contain" />
+                      <Image src={minecraftLogo} alt="Minecraft" className="w-12 h-12 mx-auto mb-3 object-contain" />
                       <h3 className="text-xl font-bold mb-2">{pkg.name}</h3>
                       <span className="text-3xl font-bold text-primary">{formatPrice(pkg.price)}</span>
                       <p className="text-xs text-muted-foreground">/month</p>

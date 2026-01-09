@@ -2,7 +2,16 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: [],
+    domains: [
+        "images.unsplash.com",
+        "www.proxmox.com",
+        "assets.ubuntu.com",
+        "upload.wikimedia.org",
+        "www.cloudflare.com",
+    ],
+    remotePatterns: [
+      new URL('https://images.unsplash.com/**'),
+    ],
   },
   typescript: {
     // !! WARN !!

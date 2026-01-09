@@ -1,3 +1,5 @@
+"use client";
+
 import { Shield, Zap, HeadphonesIcon, TrendingUp } from "lucide-react";
 import { motion } from "framer-motion";
 import { useScrollAnimation, scrollVariants, staggerContainer } from "@/hooks/useScrollAnimation";
