@@ -139,7 +139,7 @@ const PricingVPS = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="relative pt-32 pb-20 px-4 overflow-hidden"
+        className="relative pt-40 pb-20 px-4 overflow-hidden"
       >
         <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-primary/5"></div>
         

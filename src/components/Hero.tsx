@@ -16,7 +16,7 @@ export const Hero = () => {
       {/* Particle Effects */}
       <ParticleBackground />
 
-      <div className="container mx-auto px-4 relative z-10 py-32">
+      <div className="container mx-auto px-4 relative z-10 py-32 pt-40">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div className="text-left space-y-8">

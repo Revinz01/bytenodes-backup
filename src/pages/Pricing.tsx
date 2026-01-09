@@ -90,7 +90,7 @@ const Pricing = () => {
     <div className="min-h-screen">
       <Navbar />
       
-      <div className="relative pt-24 pb-20 px-4 overflow-hidden">
+      <div className="relative pt-32 pb-20 px-4 overflow-hidden">
         {/* Background with gradients and shapes */}
         <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-primary/10">
           <div className="absolute top-0 right-0 w-96 h-96 bg-primary/20 rounded-full blur-3xl"></div>

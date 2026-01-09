@@ -83,7 +83,7 @@ const PricingServer = () => {
   return (
     <div className="min-h-screen">
       <Navbar />
-      <motion.div ref={heroRef} initial="hidden" animate={heroInView ? "visible" : "hidden"} variants={scrollVariants} className="relative pt-32 pb-20 px-4 overflow-hidden">
+      <motion.div ref={heroRef} initial="hidden" animate={heroInView ? "visible" : "hidden"} variants={scrollVariants} className="relative pt-40 pb-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-primary/5"></div>
         <div className="container mx-auto text-center relative z-10">
           <div className="inline-block mb-6 px-4 py-2 bg-primary/10 backdrop-blur-sm rounded-full border border-primary/20">

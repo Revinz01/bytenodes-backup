@@ -18,7 +18,7 @@ const webPteroPackages = [
 
 // Turbo Web Hosting (Cloudflare Tunnel) Packages
 const turboWebPackages = [
-  { name: "Turbo 1", priceRp: 20000, priceUsd: 1.20, ram: "1 GB", cpu: "1 Core", storage: "10 GB", features: ["Free SSL (HTTPS)", "IP Teraliased", "Resource Terisolasi"], note: "Managed Hosting - No Root", popular: false },
+  { name: "Turbo 1", priceRp: 15000, priceUsd: 0.90, ram: "1 GB", cpu: "1 Core", storage: "10 GB", features: ["Free SSL (HTTPS)", "IP Teraliased", "Resource Terisolasi"], note: "Managed Hosting - No Root", popular: false },
   { name: "Turbo 2", priceRp: 35000, priceUsd: 2.10, ram: "2 GB", cpu: "1 Core", storage: "20 GB", features: ["Free SSL (HTTPS)", "IP Teraliased", "Resource Terisolasi"], note: "Managed Hosting - No Root", popular: false },
   { name: "Turbo 4", priceRp: 65000, priceUsd: 4.00, ram: "4 GB", cpu: "2 Core", storage: "40 GB", features: ["Free SSL (HTTPS)", "IP Teraliased", "Resource Terisolasi", "Priority Support"], note: "Managed Hosting - No Root", popular: true },
   { name: "Turbo 6", priceRp: 95000, priceUsd: 5.80, ram: "6 GB", cpu: "2 Core", storage: "60 GB", features: ["Free SSL (HTTPS)", "IP Teraliased", "Resource Terisolasi", "Priority Support"], note: "Managed Hosting - No Root", popular: false },
@@ -82,7 +82,7 @@ const PricingWebsite = () => {
         initial="hidden"
         animate={heroInView ? "visible" : "hidden"}
         variants={scrollVariants}
-        className="relative pt-32 pb-20 px-4 overflow-hidden"
+        className="relative pt-40 pb-20 px-4 overflow-hidden"
       >
         <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-primary/5"></div>
         

@@ -35,7 +35,7 @@ const PricingBot = () => {
         initial="hidden"
         animate={heroInView ? "visible" : "hidden"}
         variants={scrollVariants}
-        className="relative pt-32 pb-20 px-4 overflow-hidden"
+        className="relative pt-40 pb-20 px-4 overflow-hidden"
       >
         <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-primary/5"></div>
         
