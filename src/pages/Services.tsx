@@ -129,7 +129,7 @@ const Services = () => {
     <div className="min-h-screen">
       <Navbar />
       
-      <div className="pt-24 pb-12 px-4 bg-gradient-to-b from-background to-muted/30">
+      <div className="pt-32 pb-12 px-4 bg-gradient-to-b from-background to-muted/30">
         <div className="container mx-auto text-center">
           <div className="inline-block mb-4 px-4 py-2 bg-primary/10 backdrop-blur-sm rounded-full border border-primary/20">
             <span className="text-primary text-sm font-semibold">🚀 Layanan Kami</span>

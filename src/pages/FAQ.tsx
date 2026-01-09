@@ -88,7 +88,7 @@ const FAQ = () => {
     <div className="min-h-screen">
       <Navbar />
       
-      <div className="pt-24 pb-12 px-4 bg-gradient-to-b from-navy-dark to-background">
+      <div className="pt-32 pb-12 px-4 bg-gradient-to-b from-navy-dark to-background">
         <div className="container mx-auto text-center">
           <HelpCircle className="w-16 h-16 text-primary mx-auto mb-6" />
           <h1 className="text-4xl md:text-5xl font-bold mb-4">

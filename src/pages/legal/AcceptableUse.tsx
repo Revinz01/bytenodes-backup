@@ -9,7 +9,7 @@ const AcceptableUse = () => {
     <div className="min-h-screen">
       <Navbar />
       
-      <div className="pt-24 pb-12 px-4 bg-gradient-to-b from-navy-dark to-background">
+      <div className="pt-32 pb-12 px-4 bg-gradient-to-b from-navy-dark to-background">
         <div className="container mx-auto text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">{acceptableUse.title}</h1>
           <p className="text-muted-foreground">Terakhir diperbarui: {acceptableUse.lastUpdated}</p>

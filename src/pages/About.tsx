@@ -7,7 +7,7 @@ const About = () => {
     <div className="min-h-screen">
       <Navbar />
       
-      <div className="pt-24 pb-12 px-4 bg-gradient-to-b from-navy-dark to-background">
+      <div className="pt-32 pb-12 px-4 bg-gradient-to-b from-navy-dark to-background">
         <div className="container mx-auto text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
             Tentang <span className="text-gradient">ByteNodes</span>
