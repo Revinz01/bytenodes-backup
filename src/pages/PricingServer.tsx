@@ -11,30 +11,30 @@ import minecraftLogo from "@/assets/minecraft-logo.png";
 
 const DISCORD_URL = "https://discord.gg/2PMmPp6Yx8";
 
-// Shared Packages (SG - Budget) - Rp 8.000/GB
+// Shared Packages (SG - Budget) - Rp 8.000/GB - CPU 100% = 1 Core
 const sharedPackages = [
-  { name: "Shared 1", price: 8000, ram: "1 GB", storage: "5 GB", backup: 1, database: 1, port: 1, note: "Fair Usage (50% - 100% per core)" },
-  { name: "Shared 2", price: 16000, ram: "2 GB", storage: "10 GB", backup: 1, database: 1, port: 2, note: "Fair Usage (50% - 100% per core)" },
-  { name: "Shared 3", price: 24000, ram: "3 GB", storage: "15 GB", backup: 1, database: 2, port: 2, note: "Fair Usage (50% - 100% per core)" },
-  { name: "Shared 4", price: 32000, ram: "4 GB", storage: "20 GB", backup: 2, database: 2, port: 2, note: "Fair Usage (50% - 100% per core)", popular: true },
-  { name: "Shared 5", price: 40000, ram: "5 GB", storage: "25 GB", backup: 2, database: 2, port: 3, note: "Fair Usage (50% - 100% per core)" },
-  { name: "Shared 6", price: 48000, ram: "6 GB", storage: "30 GB", backup: 2, database: 3, port: 3, note: "Fair Usage (50% - 100% per core)" },
-  { name: "Shared 8", price: 64000, ram: "8 GB", storage: "40 GB", backup: 3, database: 3, port: 3, note: "Fair Usage (50% - 100% per core)" },
-  { name: "Shared 10", price: 80000, ram: "10 GB", storage: "50 GB", backup: 3, database: 4, port: 4, note: "Fair Usage (50% - 100% per core)" },
-  { name: "Shared 12", price: 96000, ram: "12 GB", storage: "60 GB", backup: 3, database: 4, port: 4, note: "Fair Usage (50% - 100% per core)" }
+  { name: "Shared-1", price: 8000, ram: "1 GB", cpu: "1 Core", storage: "5 GB", backup: 1, database: 1, port: 1, note: "Fair Usage (50% - 100% per core)" },
+  { name: "Shared-2", price: 16000, ram: "2 GB", cpu: "1 Core", storage: "10 GB", backup: 1, database: 1, port: 2, note: "Fair Usage (50% - 100% per core)" },
+  { name: "Shared-3", price: 24000, ram: "3 GB", cpu: "1 Core", storage: "15 GB", backup: 1, database: 2, port: 2, note: "Fair Usage (50% - 100% per core)" },
+  { name: "Shared-4", price: 32000, ram: "4 GB", cpu: "1 Core", storage: "20 GB", backup: 2, database: 2, port: 2, note: "Fair Usage (50% - 100% per core)", popular: true },
+  { name: "Shared-5", price: 40000, ram: "5 GB", cpu: "1 Core", storage: "25 GB", backup: 2, database: 2, port: 3, note: "Fair Usage (50% - 100% per core)" },
+  { name: "Shared-6", price: 48000, ram: "6 GB", cpu: "1 Core", storage: "30 GB", backup: 2, database: 3, port: 3, note: "Fair Usage (50% - 100% per core)" },
+  { name: "Shared-8", price: 64000, ram: "8 GB", cpu: "1 Core", storage: "40 GB", backup: 3, database: 3, port: 3, note: "Fair Usage (50% - 100% per core)" },
+  { name: "Shared-10", price: 80000, ram: "10 GB", cpu: "1 Core", storage: "50 GB", backup: 3, database: 4, port: 4, note: "Fair Usage (50% - 100% per core)" },
+  { name: "Shared-12", price: 96000, ram: "12 GB", cpu: "1 Core", storage: "60 GB", backup: 3, database: 4, port: 4, note: "Fair Usage (50% - 100% per core)" }
 ];
 
-// Premium Packages (SG - Performance) - Rp 15.000/GB
+// Premium Packages (SG - Performance) - Rp 15.000/GB - CPU 200% = 2 Core
 const premiumPackages = [
-  { name: "Premium 1", price: 15000, ram: "1 GB", storage: "10 GB", backup: 2, database: 2, port: 2, note: "Dedicated/Pinned Threads (100% - 200% Guarantee)" },
-  { name: "Premium 2", price: 30000, ram: "2 GB", storage: "20 GB", backup: 3, database: 3, port: 3, note: "Dedicated/Pinned Threads (100% - 200% Guarantee)" },
-  { name: "Premium 3", price: 45000, ram: "3 GB", storage: "30 GB", backup: 3, database: 3, port: 3, note: "Dedicated/Pinned Threads (100% - 200% Guarantee)" },
-  { name: "Premium 4", price: 60000, ram: "4 GB", storage: "40 GB", backup: 5, database: 5, port: 4, note: "Dedicated/Pinned Threads (100% - 200% Guarantee)", popular: true },
-  { name: "Premium 5", price: 75000, ram: "5 GB", storage: "50 GB", backup: 5, database: 5, port: 4, note: "Dedicated/Pinned Threads (100% - 200% Guarantee)" },
-  { name: "Premium 6", price: 90000, ram: "6 GB", storage: "60 GB", backup: 5, database: 5, port: 5, note: "Dedicated/Pinned Threads (100% - 200% Guarantee)" },
-  { name: "Premium 8", price: 120000, ram: "8 GB", storage: "80 GB", backup: 10, database: 10, port: 5, note: "Dedicated/Pinned Threads (100% - 200% Guarantee)" },
-  { name: "Premium 10", price: 150000, ram: "10 GB", storage: "100 GB", backup: 10, database: 10, port: 5, note: "Dedicated/Pinned Threads (100% - 200% Guarantee)" },
-  { name: "Premium 12", price: 180000, ram: "12 GB", storage: "120 GB", backup: 10, database: 10, port: 5, note: "Dedicated/Pinned Threads (100% - 200% Guarantee)" }
+  { name: "Premium-1", price: 15000, ram: "1 GB", cpu: "2 Core", storage: "10 GB", backup: 2, database: 2, port: 2, note: "Dedicated/Pinned Threads (100% - 200% Guarantee)" },
+  { name: "Premium-2", price: 30000, ram: "2 GB", cpu: "2 Core", storage: "20 GB", backup: 3, database: 3, port: 3, note: "Dedicated/Pinned Threads (100% - 200% Guarantee)" },
+  { name: "Premium-3", price: 45000, ram: "3 GB", cpu: "2 Core", storage: "30 GB", backup: 3, database: 3, port: 3, note: "Dedicated/Pinned Threads (100% - 200% Guarantee)" },
+  { name: "Premium-4", price: 60000, ram: "4 GB", cpu: "2 Core", storage: "40 GB", backup: 5, database: 5, port: 4, note: "Dedicated/Pinned Threads (100% - 200% Guarantee)", popular: true },
+  { name: "Premium-5", price: 75000, ram: "5 GB", cpu: "2 Core", storage: "50 GB", backup: 5, database: 5, port: 4, note: "Dedicated/Pinned Threads (100% - 200% Guarantee)" },
+  { name: "Premium-6", price: 90000, ram: "6 GB", cpu: "2 Core", storage: "60 GB", backup: 5, database: 5, port: 5, note: "Dedicated/Pinned Threads (100% - 200% Guarantee)" },
+  { name: "Premium-8", price: 120000, ram: "8 GB", cpu: "2 Core", storage: "80 GB", backup: 10, database: 10, port: 5, note: "Dedicated/Pinned Threads (100% - 200% Guarantee)" },
+  { name: "Premium-10", price: 150000, ram: "10 GB", cpu: "2 Core", storage: "100 GB", backup: 10, database: 10, port: 5, note: "Dedicated/Pinned Threads (100% - 200% Guarantee)" },
+  { name: "Premium-12", price: 180000, ram: "12 GB", cpu: "2 Core", storage: "120 GB", backup: 10, database: 10, port: 5, note: "Dedicated/Pinned Threads (100% - 200% Guarantee)" }
 ];
 
 // Dedicated Europa (Budget King) - Germany Location
@@ -134,12 +134,11 @@ const PricingServer = () => {
                       <p className="text-xs text-muted-foreground">/month</p>
                     </div>
                     <div className="space-y-3 mb-6">
-                      <div className="flex items-start gap-2"><Check className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" /><span className="text-sm">{pkg.ram} RAM</span></div>
-                      {'storage' in pkg && <div className="flex items-start gap-2"><Check className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" /><span className="text-sm">{pkg.storage} SSD</span></div>}
-                      {'cpu' in pkg && <div className="flex items-start gap-2"><Check className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" /><span className="text-sm">{pkg.cpu}</span></div>}
-                      {'backup' in pkg && <div className="flex items-start gap-2"><Check className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" /><span className="text-sm">{pkg.backup} Backup Slots</span></div>}
-                      {'database' in pkg && <div className="flex items-start gap-2"><Check className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" /><span className="text-sm">{pkg.database} Database</span></div>}
-                      {'port' in pkg && <div className="flex items-start gap-2"><Check className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" /><span className="text-sm">{pkg.port} Port</span></div>}
+                      <div className="flex items-start gap-2"><Check className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" /><span className="text-sm">{pkg.ram} RAM • {pkg.cpu}</span></div>
+                      {'storage' in pkg && <div className="flex items-start gap-2"><Check className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" /><span className="text-sm">{(pkg as any).storage} SSD</span></div>}
+                      {'backup' in pkg && <div className="flex items-start gap-2"><Check className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" /><span className="text-sm">{(pkg as any).backup} Backup Slots</span></div>}
+                      {'database' in pkg && <div className="flex items-start gap-2"><Check className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" /><span className="text-sm">{(pkg as any).database} Database</span></div>}
+                      {'port' in pkg && <div className="flex items-start gap-2"><Check className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" /><span className="text-sm">{(pkg as any).port} Port</span></div>}
                       <div className="flex items-start gap-2"><Check className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" /><span className="text-sm">DDoS Protection</span></div>
                       <div className="flex items-start gap-2"><Check className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" /><span className="text-sm">24/7 Support</span></div>
                       <div className="pt-2 border-t border-border/50"><p className="text-xs text-muted-foreground italic">{pkg.note}</p></div>
