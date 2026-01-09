@@ -1,6 +1,6 @@
-# ByteNodes - VPS & Hosting Provider
+# ByteNodes - Next.js Project
 
-Aplikasi web untuk penyedia layanan VPS, dedicated server, hosting, dan layanan infrastruktur lainnya.
+Premium game server hosting and development services platform built with Next.js 15 and App Router.
 
 ## 🚀 Quick Start
 
@@ -9,14 +9,36 @@ Aplikasi web untuk penyedia layanan VPS, dedicated server, hosting, dan layanan 
 npm install
 npm run dev
 ```
-Buka: `http://localhost:8080`
+Open: `http://localhost:3000`
 
 ### Production Build
 ```bash
 npm install
 npm run build
+npm run start
 ```
-File hasil build ada di folder `dist/`
+
+## 🎨 Features
+
+- ⚡ Next.js 15 with App Router
+- 🎨 Tailwind CSS for styling  
+- 🧩 Radix UI components
+- 🎭 Framer Motion animations
+- 🔍 SEO optimized with metadata API
+- 📱 Fully responsive design
+- 🌗 Dark mode support
+
+## 🔒 SEO Optimization
+
+Project ini telah dioptimasi untuk SEO dengan:
+- ✅ Meta tags (title, description, keywords) di setiap halaman
+- ✅ Open Graph tags untuk social media sharing
+- ✅ Twitter Card tags
+- ✅ Automatic sitemap.xml generation
+- ✅ Robots.txt configuration
+- ✅ Dynamic Open Graph images
+- ✅ Structured semantic HTML
+- ✅ Fast page loads dengan Next.js optimization
 
 ## 📁 Dokumentasi
 
