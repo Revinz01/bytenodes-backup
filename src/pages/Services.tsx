@@ -1,4 +1,5 @@
 import { Navbar } from "@/components/Navbar";
+import { AnnouncementBanner } from "@/components/AnnouncementBanner";
 import { Footer } from "@/components/Footer";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -127,6 +128,7 @@ const servicesDetail = [
 const Services = () => {
   return (
     <div className="min-h-screen">
+      <AnnouncementBanner />
       <Navbar />
       
       <div className="pt-32 pb-12 px-4 bg-gradient-to-b from-background to-muted/30">

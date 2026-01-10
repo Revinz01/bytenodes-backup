@@ -1,5 +1,5 @@
 import { Card } from "@/components/ui/card";
-import { Server, Cloud, Globe, Monitor, Gamepad2, Code } from "lucide-react";
+import { Server, Globe, Bot, Gamepad2, HardDrive, Cpu, Shield, Clock, Headphones, Wifi } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -7,40 +7,72 @@ import { useScrollAnimation, scrollVariants, staggerContainer } from "@/hooks/us
 
 const services = [
   {
-    icon: Server,
-    title: "Hosting Dedicated",
-    description: "High-performance dedicated servers with full root access and guaranteed resources.",
-    features: ["Full Root Access", "DDoS Protection", "24/7 Monitoring"],
+    icon: Gamepad2,
+    title: "Game Servers",
+    startingPrice: "Rp 8.000",
+    priceUsd: "$0.50",
+    link: "/pricing/servers",
+    features: [
+      "Minecraft, FiveM, Rust & more",
+      "Pterodactyl Panel",
+      "DDoS Protection",
+      "24/7 Uptime",
+      "Auto Backup",
+      "Low Latency Network",
+      "Shared & Premium Options",
+      "Singapore & EU Locations"
+    ],
   },
   {
-    icon: Cloud,
-    title: "VPS KVM",
-    description: "Scalable virtual private servers with KVM virtualization for maximum performance.",
-    features: ["KVM Technology", "SSD Storage", "Instant Deploy"],
+    icon: Server,
+    title: "Dedicated Servers",
+    startingPrice: "Rp 65.000",
+    priceUsd: "$4.00",
+    link: "/pricing/vps",
+    features: [
+      "NVMe SSD Storage",
+      "Full Root Access",
+      "Linux (Ubuntu/Debian)",
+      "Anti-Lag Performance",
+      "24/7 Uptime",
+      "Premium Support",
+      "Dedicated IP Option",
+      "High Single Core Performance"
+    ],
   },
   {
     icon: Globe,
-    title: "Domain",
-    description: "Register and manage your domain names with competitive pricing and free WHOIS privacy.",
-    features: ["Free WHOIS Privacy", "Easy DNS Management", "Domain Transfer"],
+    title: "Website Hosting",
+    startingPrice: "Rp 5.000",
+    priceUsd: "$0.30",
+    link: "/pricing/website",
+    features: [
+      "NVMe SSD Storage",
+      "Free SSL Certificate",
+      "Cloudflare Tunnel",
+      "Auto Backup",
+      "Pterodactyl Panel",
+      "Resource Isolated",
+      "PHP & Node.js Support",
+      "Custom Domain Option"
+    ],
   },
   {
-    icon: Monitor,
-    title: "RDP",
-    description: "Windows Remote Desktop servers for your business applications and remote work needs.",
-    features: ["Windows Server", "High Bandwidth", "Admin Access"],
-  },
-  {
-    icon: Gamepad2,
-    title: "Game Server",
-    description: "Optimized game servers with low latency and automatic mod installation support.",
-    features: ["One-Click Install", "DDoS Protection", "99.9% Uptime"],
-  },
-  {
-    icon: Code,
-    title: "Website Service",
-    description: "Professional website development and maintenance services tailored to your needs.",
-    features: ["Custom Design", "SEO Optimized", "Mobile Responsive"],
+    icon: Bot,
+    title: "Discord Bot Hosting",
+    startingPrice: "Rp 10.000",
+    priceUsd: "$0.60",
+    link: "/pricing/bot",
+    features: [
+      "24/7 Uptime",
+      "Auto Restart",
+      "Multiple Instances",
+      "Database Support",
+      "Easy Deployment",
+      "Priority Support",
+      "Custom Domain Option",
+      "Free SSL"
+    ],
   },
 ];
 
@@ -56,40 +88,43 @@ export const Services = () => {
           variants={scrollVariants}
           className="text-center mb-16"
         >
+          <p className="text-sm text-muted-foreground uppercase tracking-wider mb-2">SOLUTIONS</p>
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
-            Our Services
+            Our Products
           </h2>
-          <p className="text-base text-foreground/60 max-w-2xl mx-auto">
-            Comprehensive hosting solutions designed to meet all your infrastructure needs
-          </p>
         </motion.div>
 
         <motion.div
           variants={staggerContainer}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
+          className="grid md:grid-cols-2 lg:grid-cols-4 gap-6"
         >
           {services.map((service, index) => (
             <motion.div key={index} variants={scrollVariants}>
-              <Card className="p-8 hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 hover:-translate-y-2 bg-card border-border/50 hover:border-primary/50 group h-full"
-              >
-              <div className="mb-6 p-4 rounded-xl bg-primary/5 w-fit group-hover:bg-primary/15 transition-all duration-300 group-hover:scale-110">
-                <service.icon className="w-8 h-8 text-primary" />
-              </div>
-              <h3 className="text-xl font-bold mb-3 text-foreground group-hover:text-primary transition-colors duration-300">
-                {service.title}
-              </h3>
-              <p className="text-muted-foreground mb-6 text-sm leading-relaxed">{service.description}</p>
-              <ul className="space-y-3 mb-8">
-                {service.features.map((feature, idx) => (
-                  <li key={idx} className="flex items-center text-sm text-foreground/80">
-                    <div className="w-2 h-2 rounded-full bg-primary mr-3 group-hover:scale-125 transition-transform duration-300"></div>
-                    {feature}
-                  </li>
-                ))}
-              </ul>
-                <Link to="/pricing">
+              <Card className="p-6 hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 hover:-translate-y-2 bg-card border-border/50 hover:border-primary/50 group h-full flex flex-col">
+                <div className="flex-1">
+                  <h3 className="text-xl font-bold mb-4 text-foreground group-hover:text-primary transition-colors duration-300">
+                    {service.title}
+                  </h3>
+                  
+                  <p className="text-sm text-muted-foreground mb-1">Starting at</p>
+                  <div className="mb-6">
+                    <span className="text-3xl font-bold text-primary">{service.startingPrice}</span>
+                    <span className="text-muted-foreground text-sm">/month</span>
+                  </div>
+
+                  <ul className="space-y-2.5">
+                    {service.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-start text-sm text-muted-foreground">
+                        <HardDrive className="w-4 h-4 text-muted-foreground mr-2 flex-shrink-0 mt-0.5" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <Link to={service.link} className="mt-6">
                   <Button variant="outline" className="w-full text-sm group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300">
                     Learn More
                   </Button>

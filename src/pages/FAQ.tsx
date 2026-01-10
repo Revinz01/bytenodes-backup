@@ -1,4 +1,5 @@
 import { Navbar } from "@/components/Navbar";
+import { AnnouncementBanner } from "@/components/AnnouncementBanner";
 import { Footer } from "@/components/Footer";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Card } from "@/components/ui/card";
@@ -86,6 +87,7 @@ const faqs = [
 const FAQ = () => {
   return (
     <div className="min-h-screen">
+      <AnnouncementBanner />
       <Navbar />
       
       <div className="pt-32 pb-12 px-4 bg-gradient-to-b from-navy-dark to-background">
