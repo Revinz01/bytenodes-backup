@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Navbar } from "@/components/Navbar";
+import { AnnouncementBanner } from "@/components/AnnouncementBanner";
 import { Footer } from "@/components/Footer";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -74,6 +75,7 @@ const PricingWebsite = () => {
 
   return (
     <div className="min-h-screen">
+      <AnnouncementBanner />
       <Navbar />
       
       {/* Hero Section */}

@@ -1,4 +1,5 @@
 import { Navbar } from "@/components/Navbar";
+import { AnnouncementBanner } from "@/components/AnnouncementBanner";
 import { Footer } from "@/components/Footer";
 import { Card } from "@/components/ui/card";
 import { Mail, Phone, MessageCircle, Instagram as InstagramIcon } from "lucide-react";
@@ -7,6 +8,7 @@ import { FaDiscord } from "react-icons/fa";
 const Contact = () => {
   return (
     <div className="min-h-screen">
+      <AnnouncementBanner />
       <Navbar />
       
       <div className="pt-32 pb-12 px-4 bg-gradient-to-b from-navy-dark to-background">

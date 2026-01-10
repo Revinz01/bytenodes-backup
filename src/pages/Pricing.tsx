@@ -1,4 +1,5 @@
 import { Navbar } from "@/components/Navbar";
+import { AnnouncementBanner } from "@/components/AnnouncementBanner";
 import { Footer } from "@/components/Footer";
 import { PricingFAQ } from "@/components/PricingFAQ";
 import { GuaranteeBanner } from "@/components/GuaranteeBanner";
@@ -88,6 +89,7 @@ const formatPrice = (priceRp: number, priceUsd: number) => ({
 const Pricing = () => {
   return (
     <div className="min-h-screen">
+      <AnnouncementBanner />
       <Navbar />
       
       <div className="relative pt-32 pb-20 px-4 overflow-hidden">

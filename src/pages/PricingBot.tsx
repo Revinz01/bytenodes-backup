@@ -1,4 +1,5 @@
 import { Navbar } from "@/components/Navbar";
+import { AnnouncementBanner } from "@/components/AnnouncementBanner";
 import { Footer } from "@/components/Footer";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -27,6 +28,7 @@ const PricingBot = () => {
 
   return (
     <div className="min-h-screen">
+      <AnnouncementBanner />
       <Navbar />
       
       {/* Hero Section */}

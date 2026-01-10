@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Navbar } from "@/components/Navbar";
+import { AnnouncementBanner } from "@/components/AnnouncementBanner";
 import { Footer } from "@/components/Footer";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -45,8 +46,8 @@ const dedicatedEuropaPackages = [
 
 // Dedicated Asia (Performance King) - Singapore Location
 const dedicatedAsiaPackages = [
-  { name: "SG Dedic 1", price: 250000, ram: "8 GB", cpu: "4 Core", note: "Singapore Location - Low Ping - Full Access", popular: true },
-  { name: "SG Dedic 2", price: 400000, ram: "16 GB", cpu: "6 Core", note: "Singapore Location - Low Ping - Full Access" }
+  { name: "SG Dedic 1", price: 250000, ram: "8 GB", cpu: "4 Core", storage: "155 GB NVMe", note: "Singapore Location - Low Ping - Full Access", popular: true },
+  { name: "SG Dedic 2", price: 400000, ram: "16 GB", cpu: "6 Core", storage: "Up to 320 GB NVMe SSD", note: "Singapore Location - Low Ping - Full Access" }
 ];
 
 type CategoryType = "shared" | "premium" | "dedicated-eu" | "dedicated-sg" | "rdp";
@@ -82,6 +83,7 @@ const PricingServer = () => {
 
   return (
     <div className="min-h-screen">
+      <AnnouncementBanner />
       <Navbar />
       <motion.div ref={heroRef} initial="hidden" animate={heroInView ? "visible" : "hidden"} variants={scrollVariants} className="relative pt-40 pb-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-primary/5"></div>
@@ -135,11 +137,10 @@ const PricingServer = () => {
                     </div>
                     <div className="space-y-3 mb-6">
                       <div className="flex items-start gap-2"><Check className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" /><span className="text-sm">{pkg.ram} RAM • {pkg.cpu}</span></div>
-                      {'storage' in pkg && <div className="flex items-start gap-2"><Check className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" /><span className="text-sm">{(pkg as any).storage} SSD</span></div>}
+                      {'storage' in pkg && <div className="flex items-start gap-2"><Check className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" /><span className="text-sm">{(pkg as any).storage}{!(pkg as any).storage.includes('NVMe') ? ' SSD' : ''}</span></div>}
                       {'backup' in pkg && <div className="flex items-start gap-2"><Check className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" /><span className="text-sm">{(pkg as any).backup} Backup Slots</span></div>}
                       {'database' in pkg && <div className="flex items-start gap-2"><Check className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" /><span className="text-sm">{(pkg as any).database} Database</span></div>}
                       {'port' in pkg && <div className="flex items-start gap-2"><Check className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" /><span className="text-sm">{(pkg as any).port} Port</span></div>}
-                      <div className="flex items-start gap-2"><Check className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" /><span className="text-sm">DDoS Protection</span></div>
                       <div className="flex items-start gap-2"><Check className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" /><span className="text-sm">24/7 Support</span></div>
                       <div className="pt-2 border-t border-border/50"><p className="text-xs text-muted-foreground italic">{pkg.note}</p></div>
                     </div>

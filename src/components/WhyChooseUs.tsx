@@ -1,72 +1,85 @@
-import { Clock, Shield, Headphones, Zap, Award, TrendingUp } from "lucide-react";
+import { Cpu, Shield, Wifi, Headphones, Zap, Server } from "lucide-react";
+import { motion } from "framer-motion";
+import { useScrollAnimation, scrollVariants, staggerContainer } from "@/hooks/useScrollAnimation";
 
 const benefits = [
   {
-    icon: Clock,
-    title: "Performa Optimal",
-    description: "Rasakan kecepatan server tinggi dengan infrastruktur dan hardware premium kami."
+    icon: Cpu,
+    title: "Lightning Fast CPUs",
+    description: "We only use some of the fastest and highest end CPUs in our servers, including AMD EPYC and Intel Xeon processors."
+  },
+  {
+    icon: Wifi,
+    title: "Network",
+    description: "We offer up to 1 Gbit network uplinks in most of our locations, a massive upgrade from what is typically standard."
+  },
+  {
+    icon: Server,
+    title: "NVMe Storage",
+    description: "All our servers use enterprise-grade NVMe SSDs for blazing fast read/write speeds and maximum reliability."
   },
   {
     icon: Shield,
-    title: "Keamanan Tingkat Tinggi",
-    description: "Data Anda dilindungi dengan berbagai lapisan keamanan."
+    title: "DDoS Protection",
+    description: "Advanced DDoS mitigation to keep your services online and protected against malicious attacks."
   },
   {
     icon: Zap,
-    title: "Uptime Andal",
-    description: "Jaringan kami dirancang untuk keandalan dengan sistem monitoring proaktif."
+    title: "99.9% Uptime SLA",
+    description: "We guarantee 99.9% uptime with our robust infrastructure and proactive monitoring systems."
   },
   {
     icon: Headphones,
-    title: "Dukungan 24/7",
-    description: "Tim support kami selalu siap membantu kapan pun dibutuhkan."
-  },
-  {
-    icon: Award,
-    title: "Ramah Developer",
-    description: "Dibuat dengan pemikiran developer, dilengkapi tools powerful dan interface intuitif."
-  },
-  {
-    icon: TrendingUp,
-    title: "Komunitas Berkembang",
-    description: "Bergabunglah dengan komunitas developer kami dan akses resource eksklusif."
+    title: "24/7 Support",
+    description: "Our expert support team is always ready to help you whenever you need assistance."
   }
 ];
 
 export const WhyChooseUs = () => {
-  return (
-    <section className="py-24 bg-secondary/30">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Kenapa Pilih ByteNodes?
-          </h2>
-          <p className="text-base text-foreground/60 max-w-2xl mx-auto">
-            Temukan apa yang membuat layanan hosting kami menonjol
-          </p>
-        </div>
+  const { ref, isInView } = useScrollAnimation();
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+  return (
+    <section ref={ref} className="py-24 bg-secondary/30">
+      <div className="container mx-auto px-4">
+        <motion.div
+          initial="hidden"
+          animate={isInView ? "visible" : "hidden"}
+          variants={scrollVariants}
+          className="text-center mb-16"
+        >
+          <p className="text-sm text-muted-foreground uppercase tracking-wider mb-2">WHY CHOOSE US</p>
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+            Built for Performance
+          </h2>
+        </motion.div>
+
+        <motion.div
+          variants={staggerContainer}
+          initial="hidden"
+          animate={isInView ? "visible" : "hidden"}
+          className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
+        >
           {benefits.map((benefit, index) => {
             const Icon = benefit.icon;
             return (
-              <div 
-                key={index}
-                className="group p-6 bg-card rounded-xl border border-border hover:border-cyan/50 transition-all duration-300 hover:bg-card/80"
-              >
-                <div className="w-12 h-12 bg-cyan/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-cyan/20 transition-colors">
-                  <Icon className="w-6 h-6 text-cyan" />
+              <motion.div key={index} variants={scrollVariants}>
+                <div 
+                  className="group p-6 bg-card rounded-xl border border-border hover:border-primary/50 transition-all duration-300 hover:bg-card/80 h-full"
+                >
+                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+                    <Icon className="w-6 h-6 text-primary" />
+                  </div>
+                  <h3 className="text-lg font-bold text-foreground mb-2">
+                    {benefit.title}
+                  </h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    {benefit.description}
+                  </p>
                 </div>
-                <h3 className="text-lg font-bold text-foreground mb-2">
-                  {benefit.title}
-                </h3>
-                <p className="text-sm text-foreground/60 leading-relaxed">
-                  {benefit.description}
-                </p>
-              </div>
+              </motion.div>
             );
           })}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
