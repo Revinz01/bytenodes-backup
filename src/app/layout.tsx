@@ -6,6 +6,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryProvider } from "@/providers/QueryProvider";
+import { PageTransition } from "@/components/PageTransition";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -90,7 +91,9 @@ export default function RootLayout({
             <TooltipProvider>
               <Toaster />
               <Sonner />
-              {children}
+              <PageTransition>
+                {children}
+              </PageTransition>
             </TooltipProvider>
           </QueryProvider>
         </ThemeProvider>

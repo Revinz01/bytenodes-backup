@@ -1,6 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  compress: true,
+  productionBrowserSourceMaps: false,
+  onDemandEntries: {
+    maxInactiveAge: 60 * 60 * 1000,
+    pagesBufferLength: 5,
+  },
   images: {
     domains: [
         "images.unsplash.com",
@@ -11,6 +17,10 @@ const nextConfig = {
     ],
     remotePatterns: [
       new URL('https://images.unsplash.com/**'),
+      new URL('https://www.proxmox.com/**'),
+      new URL('https://assets.ubuntu.com/**'),
+      new URL('https://upload.wikimedia.org/**'),
+      new URL('https://www.cloudflare.com/**'),
     ],
   },
   typescript: {
