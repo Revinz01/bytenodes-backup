@@ -4,12 +4,28 @@ import { Footer } from "@/components/Footer";
 import { Server, Shield, Users, Award, Globe, Zap } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "About Us",
-  description:
-    "Learn about ByteNodes - our mission to provide premium hosting and development services with exceptional support and reliability.",
+  title: "Tentang Kami - Layanan Hosting Terpercaya Sejak 2020 | ByteNodes",
+  description: "ByteNodes adalah penyedia hosting terpercaya di Indonesia sejak 2020. Kami menyediakan game server, VPS, web hosting, dan Discord bot dengan infrastruktur modern, support 24/7, dan komitmen pada kepuasan pelanggan.",
+  keywords: [
+    "tentang bytenodes",
+    "hosting company indonesia",
+    "game server provider indonesia",
+    "vps provider terpercaya",
+    "web hosting terpercaya",
+    "layanan hosting profesional"
+  ],
+  alternates: {
+    canonical: "https://bytenodes.com/about",
+  },
   openGraph: {
-    title: "About Us | ByteNodes",
-    description: "Learn about ByteNodes and our mission.",
+    title: "Tentang ByteNodes - Layanan Hosting Terpercaya Indonesia",
+    description: "Pelajari lebih lanjut tentang ByteNodes, misi kami, dan mengapa ribuan pelanggan mempercayai kami untuk kebutuhan hosting mereka.",
+    url: "https://bytenodes.com/about",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Tentang ByteNodes - Layanan Hosting Terpercaya Indonesia",
+    description: "Pelajari lebih lanjut tentang ByteNodes dan misi kami.",
   },
 };
 

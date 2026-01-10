@@ -6,11 +6,28 @@ import { Mail, Phone, MessageCircle, Instagram as InstagramIcon } from "lucide-r
 import { FaDiscord } from "react-icons/fa";
 
 export const metadata: Metadata = {
-  title: "Contact Us",
-  description: "Get in touch with ByteNodes. Our support team is available 24/7 to assist you with any questions about our hosting and development services.",
+  title: "Hubungi Kami - Support 24/7 ByteNodes | Discord, Email, WhatsApp",
+  description: "Hubungi tim support ByteNodes 24/7 melalui Discord, Email, WhatsApp, atau Instagram. Kami siap membantu Anda dengan pertanyaan tentang game server, VPS, web hosting, dan layanan lainnya.",
+  keywords: [
+    "kontak bytenodes",
+    "support hosting 24/7",
+    "customer service hosting",
+    "discord support indonesia",
+    "whatsapp hosting support",
+    "bantuan teknis hosting"
+  ],
+  alternates: {
+    canonical: "https://bytenodes.com/contact",
+  },
   openGraph: {
-    title: "Contact Us | ByteNodes",
-    description: "Get in touch with ByteNodes support team.",
+    title: "Hubungi ByteNodes - Support 24/7 Siap Membantu",
+    description: "Tim support ByteNodes tersedia 24/7 untuk membantu Anda. Hubungi kami via Discord, Email, atau WhatsApp.",
+    url: "https://bytenodes.com/contact",
+  },
+  twitter: {
+    card: "summary",
+    title: "Hubungi ByteNodes - Support 24/7",
+    description: "Hubungi tim support ByteNodes 24/7 melalui berbagai channel.",
   },
 };
 

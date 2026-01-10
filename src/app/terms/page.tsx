@@ -4,12 +4,21 @@ import { Footer } from "@/components/Footer";
 import legalData from "@/data/legal.json";
 
 export const metadata: Metadata = {
-  title: "Terms of Service",
-  description:
-    "Read ByteNodes Terms of Service. Understand your rights and responsibilities when using our hosting and development services.",
+  title: "Syarat & Ketentuan Layanan - Terms of Service | ByteNodes",
+  description: "Syarat dan ketentuan penggunaan layanan ByteNodes. Pahami hak dan tanggung jawab Anda sebagai pengguna layanan hosting, VPS, game server, dan layanan lainnya.",
+  keywords: [
+    "syarat ketentuan bytenodes",
+    "terms of service hosting",
+    "aturan penggunaan layanan",
+    "kebijakan layanan hosting"
+  ],
+  alternates: {
+    canonical: "https://bytenodes.com/terms",
+  },
   openGraph: {
-    title: "Terms of Service | ByteNodes",
-    description: "ByteNodes Terms of Service.",
+    title: "Syarat & Ketentuan Layanan ByteNodes",
+    description: "Baca syarat dan ketentuan penggunaan layanan ByteNodes.",
+    url: "https://bytenodes.com/terms",
   },
   robots: {
     index: true,

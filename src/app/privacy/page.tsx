@@ -4,12 +4,21 @@ import { Footer } from "@/components/Footer";
 import legalData from "@/data/legal.json";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy",
-  description:
-    "ByteNodes Privacy Policy. Learn how we collect, use, and protect your personal information.",
+  title: "Kebijakan Privasi - Perlindungan Data Pelanggan | ByteNodes",
+  description: "Kebijakan privasi ByteNodes: bagaimana kami mengumpulkan, menggunakan, dan melindungi informasi pribadi Anda. Komitmen kami terhadap keamanan data dan privasi pelanggan.",
+  keywords: [
+    "kebijakan privasi bytenodes",
+    "privacy policy hosting",
+    "perlindungan data pelanggan",
+    "keamanan informasi pribadi"
+  ],
+  alternates: {
+    canonical: "https://bytenodes.com/privacy",
+  },
   openGraph: {
-    title: "Privacy Policy | ByteNodes",
-    description: "ByteNodes Privacy Policy.",
+    title: "Kebijakan Privasi ByteNodes",
+    description: "Pelajari bagaimana ByteNodes melindungi privasi dan data pribadi Anda.",
+    url: "https://bytenodes.com/privacy",
   },
   robots: {
     index: true,

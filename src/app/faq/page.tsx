@@ -90,12 +90,30 @@ const faqs = [
 ];
 
 export const metadata: Metadata = {
-  title: "FAQ - Frequently Asked Questions",
-  description:
-    "Find answers to common questions about ByteNodes services, billing, support, and technical specifications.",
+  title: "FAQ - Pertanyaan Umum Hosting, VPS, Game Server | ByteNodes",
+  description: "Temukan jawaban untuk pertanyaan umum tentang layanan ByteNodes: VPS hosting, game server Minecraft/FiveM, Discord bot, pembayaran, support 24/7, upgrade paket, dan garansi uang kembali.",
+  keywords: [
+    "faq hosting indonesia",
+    "pertanyaan vps",
+    "panduan game server",
+    "cara order hosting",
+    "metode pembayaran hosting",
+    "support hosting 24/7",
+    "upgrade vps",
+    "refund policy hosting"
+  ],
+  alternates: {
+    canonical: "https://bytenodes.com/faq",
+  },
   openGraph: {
-    title: "FAQ | ByteNodes",
-    description: "Find answers to common questions about ByteNodes services.",
+    title: "FAQ ByteNodes - Pertanyaan Umum Hosting & VPS",
+    description: "Temukan jawaban untuk semua pertanyaan Anda tentang layanan hosting, VPS, game server, dan support ByteNodes.",
+    url: "https://bytenodes.com/faq",
+  },
+  twitter: {
+    card: "summary",
+    title: "FAQ ByteNodes - Pertanyaan Umum",
+    description: "Jawaban lengkap untuk pertanyaan tentang layanan ByteNodes.",
   },
 };
 
