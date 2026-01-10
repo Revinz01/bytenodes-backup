@@ -8,19 +8,32 @@ const nextConfig = {
     pagesBufferLength: 5,
   },
   images: {
-    domains: [
-        "images.unsplash.com",
-        "www.proxmox.com",
-        "assets.ubuntu.com",
-        "upload.wikimedia.org",
-        "www.cloudflare.com",
-    ],
     remotePatterns: [
-      new URL('https://images.unsplash.com/**'),
-      new URL('https://www.proxmox.com/**'),
-      new URL('https://assets.ubuntu.com/**'),
-      new URL('https://upload.wikimedia.org/**'),
-      new URL('https://www.cloudflare.com/**'),
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'www.proxmox.com',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'assets.ubuntu.com',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'upload.wikimedia.org',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'www.cloudflare.com',
+        pathname: '/**',
+      },
     ],
   },
   typescript: {

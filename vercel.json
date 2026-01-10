@@ -1,0 +1,11 @@
+{
+  "buildCommand": "next build",
+  "outputDirectory": ".next",
+  "framework": "nextjs",
+  "env": {
+    "NEXT_PUBLIC_SITE_URL": {
+      "description": "Site URL for production",
+      "default": "https://bytenodes.icu"
+    }
+  }
+}
