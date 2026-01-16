@@ -27,10 +27,10 @@ const sharedPackages = [
 
 // EPYC-HEAVY-01 Packages (Premium Performance)
 const premiumPackages = [
-  { name: "Heavy-4GB", price: 60000, ram: "4 GB", cpu: "100% (1 Thread)", storage: "40 GB", backup: 5, database: 5, port: 4, note: "EPYC-HEAVY-01 - Dedicated/Pinned Threads" },
-  { name: "Heavy-8GB", price: 120000, ram: "8 GB", cpu: "200% (2 Thread)", storage: "80 GB", backup: 10, database: 10, port: 5, note: "EPYC-HEAVY-01 - Dedicated/Pinned Threads", popular: true },
-  { name: "Heavy-12GB", price: 180000, ram: "12 GB", cpu: "200% (2 Thread)", storage: "120 GB", backup: 10, database: 10, port: 5, note: "EPYC-HEAVY-01 - Dedicated/Pinned Threads" },
-  { name: "Heavy-16GB", price: 240000, ram: "16 GB", cpu: "300% (3 Thread)", storage: "160 GB", backup: 15, database: 15, port: 6, note: "EPYC-HEAVY-01 - Dedicated/Pinned Threads" }
+  { name: "Heavy-4GB", price: 60000, ram: "4 GB", cpu: "200%", storage: "40 GB", backup: 5, database: 5, port: 4, note: "EPYC-HEAVY-01 - Dedicated/Pinned Threads" },
+  { name: "Heavy-8GB", price: 120000, ram: "8 GB", cpu: "400%", storage: "80 GB", backup: 10, database: 10, port: 5, note: "EPYC-HEAVY-01 - Dedicated/Pinned Threads", popular: true },
+  { name: "Heavy-12GB", price: 180000, ram: "12 GB", cpu: "600%", storage: "120 GB", backup: 10, database: 10, port: 5, note: "EPYC-HEAVY-01 - Dedicated/Pinned Threads" },
+  { name: "Heavy-16GB", price: 240000, ram: "16 GB", cpu: "600%", storage: "160 GB", backup: 15, database: 15, port: 6, note: "EPYC-HEAVY-01 - Dedicated/Pinned Threads" }
 ];
 
 // Dedicated Europa (Budget King) - Germany Location
