@@ -34,8 +34,8 @@ export const Hero = () => {
           </div>
 
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-black leading-tight tracking-tight">
-            <span className="text-foreground">High Performance </span>
-            <span className="text-primary">Cloud Infrastructure</span>
+            <span className="text-foreground">Reliable & Affordable </span>
+            <span className="text-primary">Hosting Solutions</span>
           </h1>
 
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">

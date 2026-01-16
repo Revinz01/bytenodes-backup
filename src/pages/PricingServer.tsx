@@ -25,17 +25,12 @@ const sharedPackages = [
   { name: "Shared-12", price: 96000, ram: "12 GB", cpu: "6 Core", storage: "60 GB", backup: 3, database: 4, port: 4, note: "Fair Usage (50% - 100% per core)" }
 ];
 
-// Premium Packages (SG - Performance) - Rp 15.000/GB - CPU = RAM/2 (min 1 Core)
+// EPYC-HEAVY-01 Packages (Premium Performance)
 const premiumPackages = [
-  { name: "Premium-1", price: 15000, ram: "1 GB", cpu: "1 Core", storage: "10 GB", backup: 2, database: 2, port: 2, note: "Dedicated/Pinned Threads (100% - 200% Guarantee)" },
-  { name: "Premium-2", price: 30000, ram: "2 GB", cpu: "1 Core", storage: "20 GB", backup: 3, database: 3, port: 3, note: "Dedicated/Pinned Threads (100% - 200% Guarantee)" },
-  { name: "Premium-3", price: 45000, ram: "3 GB", cpu: "1 Core", storage: "30 GB", backup: 3, database: 3, port: 3, note: "Dedicated/Pinned Threads (100% - 200% Guarantee)" },
-  { name: "Premium-4", price: 60000, ram: "4 GB", cpu: "2 Core", storage: "40 GB", backup: 5, database: 5, port: 4, note: "Dedicated/Pinned Threads (100% - 200% Guarantee)", popular: true },
-  { name: "Premium-5", price: 75000, ram: "5 GB", cpu: "2 Core", storage: "50 GB", backup: 5, database: 5, port: 4, note: "Dedicated/Pinned Threads (100% - 200% Guarantee)" },
-  { name: "Premium-6", price: 90000, ram: "6 GB", cpu: "3 Core", storage: "60 GB", backup: 5, database: 5, port: 5, note: "Dedicated/Pinned Threads (100% - 200% Guarantee)" },
-  { name: "Premium-8", price: 120000, ram: "8 GB", cpu: "4 Core", storage: "80 GB", backup: 10, database: 10, port: 5, note: "Dedicated/Pinned Threads (100% - 200% Guarantee)" },
-  { name: "Premium-10", price: 150000, ram: "10 GB", cpu: "5 Core", storage: "100 GB", backup: 10, database: 10, port: 5, note: "Dedicated/Pinned Threads (100% - 200% Guarantee)" },
-  { name: "Premium-12", price: 180000, ram: "12 GB", cpu: "6 Core", storage: "120 GB", backup: 10, database: 10, port: 5, note: "Dedicated/Pinned Threads (100% - 200% Guarantee)" }
+  { name: "Heavy-4GB", price: 60000, ram: "4 GB", cpu: "100% (1 Thread)", storage: "40 GB", backup: 5, database: 5, port: 4, note: "EPYC-HEAVY-01 - Dedicated/Pinned Threads" },
+  { name: "Heavy-8GB", price: 120000, ram: "8 GB", cpu: "200% (2 Thread)", storage: "80 GB", backup: 10, database: 10, port: 5, note: "EPYC-HEAVY-01 - Dedicated/Pinned Threads", popular: true },
+  { name: "Heavy-12GB", price: 180000, ram: "12 GB", cpu: "200% (2 Thread)", storage: "120 GB", backup: 10, database: 10, port: 5, note: "EPYC-HEAVY-01 - Dedicated/Pinned Threads" },
+  { name: "Heavy-16GB", price: 240000, ram: "16 GB", cpu: "300% (3 Thread)", storage: "160 GB", backup: 15, database: 15, port: 6, note: "EPYC-HEAVY-01 - Dedicated/Pinned Threads" }
 ];
 
 // Dedicated Europa (Budget King) - Germany Location
@@ -72,7 +67,7 @@ const PricingServer = () => {
   const getCategoryTitle = () => {
     switch (selectedCategory) {
       case "shared": return { title: "Shared Packages (SG - Budget)", desc: "Murah Meriah, Cocok buat Pemula - Rp 8.000/GB" };
-      case "premium": return { title: "Premium Packages (SG - Performance)", desc: "Anti-Lag, Prioritas Tinggi, Resource Lega - Rp 15.000/GB" };
+      case "premium": return { title: "EPYC-HEAVY-01 Packages", desc: "AMD EPYC - Anti-Lag, Prioritas Tinggi, Dedicated Threads" };
       case "dedicated-eu": return { title: "Dedicated Europa (Budget King)", desc: "Germany Location - Harga Murah, RAM Besar - Cocok buat Server Besar / Bot Hosting" };
       case "dedicated-sg": return { title: "Dedicated Asia (Performance King)", desc: "Singapore Location - Ping Hijau, Full Access - Khusus Server Sultan / Server Publik Besar" };
       case "rdp": return { title: "RDP Windows Packages", desc: "Windows Server with Remote Desktop" };
