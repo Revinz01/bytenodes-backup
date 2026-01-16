@@ -123,11 +123,14 @@ const PricingServer = () => {
               {getPackages().map((pkg, index) => (
                 <motion.div key={index} variants={scrollVariants}>
                   <Card className={`p-6 relative hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 ${pkg.popular ? "border-primary shadow-lg border-2 bg-gradient-to-b from-card to-primary/5" : "border-border/50 hover:border-primary/50"} ${selectedCategory === "premium" ? "ring-1 ring-orange-500/20" : ""}`}>
-                    {pkg.popular && <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 bg-primary text-primary-foreground text-xs font-bold rounded-full">Best Seller</div>}
+                    {pkg.popular && selectedCategory !== "premium" && <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 bg-primary text-primary-foreground text-xs font-bold rounded-full">Best Seller</div>}
                     {selectedCategory === "premium" && (
-                      <div className="absolute -top-3 right-4 flex items-center gap-1 px-3 py-1 bg-gradient-to-r from-orange-500 to-red-500 text-white text-xs font-bold rounded-full shadow-lg">
-                        <Zap className="w-3 h-3" />
-                        <span>HIGH PERFORMANCE</span>
+                      <div className="absolute -top-3 left-1/2 -translate-x-1/2 flex items-center gap-2">
+                        {pkg.popular && <span className="px-3 py-1 bg-primary text-primary-foreground text-xs font-bold rounded-full">Best Seller</span>}
+                        <span className="flex items-center gap-1 px-3 py-1 bg-gradient-to-r from-orange-500 to-red-500 text-white text-xs font-bold rounded-full shadow-lg">
+                          <Zap className="w-3 h-3" />
+                          HIGH PERFORMANCE
+                        </span>
                       </div>
                     )}
                     <div className="text-center mb-6">
