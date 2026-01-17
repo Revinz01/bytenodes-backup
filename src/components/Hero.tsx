@@ -7,12 +7,12 @@ const DISCORD_URL = "https://discord.gg/2PMmPp6Yx8";
 
 export const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background">
-      {/* Animated Gradient Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-primary/10 animate-gradient"></div>
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/20 via-transparent to-transparent"></div>
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background contain-layout">
+      {/* Static Gradient Background - optimized for mobile */}
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-primary/10" aria-hidden="true"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/20 via-transparent to-transparent" aria-hidden="true"></div>
       
-      {/* Particle Effects */}
+      {/* Particle Effects - lazy loaded */}
       <ParticleBackground />
 
       <div className="container mx-auto px-4 relative z-10 py-32 pt-40">
