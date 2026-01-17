@@ -55,10 +55,10 @@ export const Features = () => {
             <motion.div
               key={index}
               variants={scrollVariants}
-              className="text-center group hover:scale-110 transition-all duration-500 cursor-pointer"
+              className="text-center group hover:scale-105 transition-transform duration-300 cursor-pointer will-change-transform"
             >
-              <div className="mb-6 mx-auto w-20 h-20 rounded-2xl bg-card flex items-center justify-center group-hover:bg-primary/20 border border-border/50 group-hover:border-primary transition-all duration-500 group-hover:rotate-6 group-hover:shadow-xl group-hover:shadow-primary/20">
-                <feature.icon className="w-10 h-10 text-primary group-hover:scale-110 transition-transform duration-300" />
+              <div className="mb-6 mx-auto w-20 h-20 rounded-2xl bg-card flex items-center justify-center group-hover:bg-primary/20 border border-border/50 group-hover:border-primary transition-colors duration-300">
+                <feature.icon className="w-10 h-10 text-primary" aria-hidden="true" />
               </div>
               <h3 className="text-lg font-bold mb-3 text-foreground group-hover:text-primary transition-colors duration-300">
                 {feature.title}

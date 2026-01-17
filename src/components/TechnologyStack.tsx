@@ -54,15 +54,16 @@ export const TechnologyStack = () => {
           {technologies.map((tech, index) => (
             <div
               key={index}
-              className="flex items-center justify-center p-4 bg-card rounded-lg border border-border hover:shadow-md hover:shadow-cyan/5 transition-all hover:scale-105 group"
-            >
-              <img
-                src={tech.logo}
-                alt={tech.name}
-                className="h-8 w-auto object-contain grayscale group-hover:grayscale-0 transition-all opacity-50 group-hover:opacity-100"
-                width={80}
-                height={32}
-                loading="lazy"
+            className="flex items-center justify-center p-4 bg-card rounded-lg border border-border hover:shadow-md hover:shadow-primary/5 transition-shadow duration-300 hover:scale-105 group will-change-transform"
+          >
+            <img
+              src={tech.logo}
+              alt={tech.name}
+              className="h-8 w-auto object-contain grayscale group-hover:grayscale-0 transition-all duration-300 opacity-50 group-hover:opacity-100"
+              width={80}
+              height={32}
+              loading="lazy"
+              decoding="async"
                 onError={(e) => {
                   // Fallback if image fails to load
                   e.currentTarget.style.display = 'none';

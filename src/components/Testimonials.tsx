@@ -61,10 +61,10 @@ export const Testimonials = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
           {testimonials.map((testimonial, index) => (
-            <Card key={index} className="p-6 hover:shadow-lg hover:shadow-cyan/5 transition-all bg-card border-border">
-              <div className="flex gap-1 mb-4">
+            <Card key={index} className="p-6 hover:shadow-lg hover:shadow-primary/5 transition-shadow duration-300 bg-card border-border">
+              <div className="flex gap-1 mb-4" aria-label={`Rating: ${testimonial.rating} dari 5 bintang`}>
                 {[...Array(testimonial.rating)].map((_, i) => (
-                  <Star key={i} className="w-4 h-4 fill-cyan text-cyan" />
+                  <Star key={i} className="w-4 h-4 fill-primary text-primary" aria-hidden="true" />
                 ))}
               </div>
               
@@ -75,11 +75,12 @@ export const Testimonials = () => {
               <div className="flex items-center gap-3">
                 <img
                   src={testimonial.image}
-                  alt={`Foto profil ${testimonial.name}`}
+                  alt=""
                   className="w-10 h-10 rounded-full object-cover"
                   width={40}
                   height={40}
                   loading="lazy"
+                  decoding="async"
                 />
                 <div>
                   <p className="font-semibold text-foreground text-sm">{testimonial.name}</p>
@@ -92,7 +93,7 @@ export const Testimonials = () => {
 
         <div className="text-center mt-12">
           <div className="inline-flex items-center gap-2 text-foreground/60 text-sm">
-            <Star className="w-5 h-5 fill-cyan text-cyan" />
+            <Star className="w-5 h-5 fill-primary text-primary" aria-hidden="true" />
             <span className="font-semibold text-foreground">4.9/5</span>
             <span>berdasarkan 2.500+ ulasan</span>
           </div>

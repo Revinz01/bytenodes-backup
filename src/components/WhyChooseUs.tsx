@@ -64,10 +64,10 @@ export const WhyChooseUs = () => {
             return (
               <motion.div key={index} variants={scrollVariants}>
                 <div 
-                  className="group p-6 bg-card rounded-xl border border-border hover:border-primary/50 transition-all duration-300 hover:bg-card/80 h-full"
+                  className="group p-6 bg-card rounded-xl border border-border hover:border-primary/50 transition-colors duration-300 h-full"
                 >
                   <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
-                    <Icon className="w-6 h-6 text-primary" />
+                    <Icon className="w-6 h-6 text-primary" aria-hidden="true" />
                   </div>
                   <h3 className="text-lg font-bold text-foreground mb-2">
                     {benefit.title}

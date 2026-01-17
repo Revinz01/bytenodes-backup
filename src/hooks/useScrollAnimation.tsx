@@ -1,76 +1,85 @@
 import { useRef } from "react";
-import { useInView } from "framer-motion";
+import { useInView, type Variants } from "framer-motion";
+
+// Check if user prefers reduced motion
+const getPrefersReducedMotion = () => {
+  if (typeof window === 'undefined') return false;
+  return window.matchMedia?.('(prefers-reduced-motion: reduce)')?.matches ?? false;
+};
 
 export const useScrollAnimation = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const isInView = useInView(ref, { once: true, margin: "-50px" });
 
   return { ref, isInView };
 };
 
-export const scrollVariants = {
+const prefersReducedMotion = getPrefersReducedMotion();
+
+// Optimized variants with faster animations for better performance
+export const scrollVariants: Variants = {
   hidden: { 
     opacity: 0, 
-    y: 50 
+    y: prefersReducedMotion ? 0 : 20
   },
   visible: { 
     opacity: 1, 
     y: 0,
     transition: {
-      duration: 0.6
+      duration: prefersReducedMotion ? 0.01 : 0.35
     }
   }
 };
 
-export const scrollVariantsLeft = {
+export const scrollVariantsLeft: Variants = {
   hidden: { 
     opacity: 0, 
-    x: -50 
+    x: prefersReducedMotion ? 0 : -20 
   },
   visible: { 
     opacity: 1, 
     x: 0,
     transition: {
-      duration: 0.6
+      duration: prefersReducedMotion ? 0.01 : 0.35
     }
   }
 };
 
-export const scrollVariantsRight = {
+export const scrollVariantsRight: Variants = {
   hidden: { 
     opacity: 0, 
-    x: 50 
+    x: prefersReducedMotion ? 0 : 20 
   },
   visible: { 
     opacity: 1, 
     x: 0,
     transition: {
-      duration: 0.6
+      duration: prefersReducedMotion ? 0.01 : 0.35
     }
   }
 };
 
-export const staggerContainer = {
+export const staggerContainer: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.1,
-      delayChildren: 0.2
+      staggerChildren: prefersReducedMotion ? 0 : 0.06,
+      delayChildren: prefersReducedMotion ? 0 : 0.08
     }
   }
 };
 
-export const scaleIn = {
+export const scaleIn: Variants = {
   hidden: { 
     opacity: 0, 
-    scale: 0.8 
+    scale: prefersReducedMotion ? 1 : 0.95 
   },
   visible: { 
     opacity: 1, 
     scale: 1,
     transition: {
-      duration: 0.5
+      duration: prefersReducedMotion ? 0.01 : 0.25
     }
   }
 };
