@@ -5,17 +5,80 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Check, Bot } from "lucide-react";
 import { motion } from "framer-motion";
-import { useScrollAnimation, scrollVariants, staggerContainer } from "@/hooks/useScrollAnimation";
+import {
+  useScrollAnimation,
+  scrollVariants,
+  staggerContainer,
+} from "@/hooks/useScrollAnimation";
 import { FaDiscord } from "react-icons/fa";
 import SEO from "@/components/SEO";
 
 const DISCORD_URL = "https://discord.gg/2PMmPp6Yx8";
 
 const botPackages = [
-  { name: "Bot Starter", priceRp: 10000, priceUsd: 0.60, ram: "512 MB", storage: "5 GB SSD", features: ["1 Bot Instance", "24/7 Uptime", "Auto Restart", "Basic Support"], note: "Perfect for small Discord bots", popular: false },
-  { name: "Bot Basic", priceRp: 20000, priceUsd: 1.20, ram: "1 GB", storage: "10 GB SSD", features: ["2 Bot Instances", "24/7 Uptime", "Auto Restart", "Priority Support"], note: "For growing Discord communities", popular: false },
-  { name: "Bot Pro", priceRp: 35000, priceUsd: 2.10, ram: "2 GB", storage: "20 GB SSD", features: ["5 Bot Instances", "24/7 Uptime", "Auto Restart", "Priority Support", "Custom Domain (Rp 10.000)"], note: "Best for multiple bots", popular: true },
-  { name: "Bot Enterprise", priceRp: 60000, priceUsd: 3.60, ram: "4 GB", storage: "40 GB SSD", features: ["Unlimited Bot Instances", "24/7 Uptime", "Auto Restart", "Premium Support", "Custom Domain (Rp 10.000)", "Database Included"], note: "For large-scale bot operations", popular: false }
+  {
+    name: "Bot Starter",
+    priceRp: 10000,
+    priceUsd: 0.6,
+    ram: "512 MB",
+    storage: "5 GB SSD",
+    features: [
+      "1 Bot Instance",
+      "24/7 Uptime",
+      "Auto Restart",
+      "Basic Support",
+    ],
+    note: "Perfect for small Discord bots",
+    popular: false,
+  },
+  {
+    name: "Bot Basic",
+    priceRp: 20000,
+    priceUsd: 1.2,
+    ram: "1 GB",
+    storage: "10 GB SSD",
+    features: [
+      "2 Bot Instances",
+      "24/7 Uptime",
+      "Auto Restart",
+      "Priority Support",
+    ],
+    note: "For growing Discord communities",
+    popular: false,
+  },
+  {
+    name: "Bot Pro",
+    priceRp: 35000,
+    priceUsd: 2.1,
+    ram: "2 GB",
+    storage: "20 GB SSD",
+    features: [
+      "5 Bot Instances",
+      "24/7 Uptime",
+      "Auto Restart",
+      "Priority Support",
+      "Custom Domain (Rp 10.000)",
+    ],
+    note: "Best for multiple bots",
+    popular: true,
+  },
+  {
+    name: "Bot Enterprise",
+    priceRp: 60000,
+    priceUsd: 3.6,
+    ram: "4 GB",
+    storage: "40 GB SSD",
+    features: [
+      "Unlimited Bot Instances",
+      "24/7 Uptime",
+      "Auto Restart",
+      "Premium Support",
+      "Custom Domain (Rp 10.000)",
+      "Database Included",
+    ],
+    note: "For large-scale bot operations",
+    popular: false,
+  },
 ];
 
 const PricingBot = () => {
@@ -23,23 +86,24 @@ const PricingBot = () => {
   const { ref: packagesRef, isInView: packagesInView } = useScrollAnimation();
 
   const formatPrice = (priceRp: number, priceUsd: number) => ({
-    rp: `Rp ${priceRp.toLocaleString('id-ID')}`,
-    usd: `~$${priceUsd.toFixed(2)}`
+    rp: `Rp ${priceRp.toLocaleString("id-ID")}`,
+    usd: `~$${priceUsd.toFixed(2)}`,
   });
 
   const structuredData = {
-    '@context': 'https://schema.org',
-    '@type': 'Product',
-    name: 'Discord Bot Hosting',
-    description: 'Reliable Discord Bot Hosting with 24/7 uptime and auto-restart starting from Rp 10.000',
-    brand: { '@type': 'Brand', name: 'ByteNodes' },
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: "Discord Bot Hosting",
+    description:
+      "Reliable Discord Bot Hosting with 24/7 uptime and auto-restart starting from Rp 10.000",
+    brand: { "@type": "Brand", name: "ByteNodes" },
     offers: {
-      '@type': 'AggregateOffer',
-      priceCurrency: 'IDR',
-      lowPrice: '10000',
-      highPrice: '60000',
-      offerCount: '4'
-    }
+      "@type": "AggregateOffer",
+      priceCurrency: "IDR",
+      lowPrice: "10000",
+      highPrice: "60000",
+      offerCount: "4",
+    },
   };
 
   return (
@@ -53,7 +117,7 @@ const PricingBot = () => {
       />
       <AnnouncementBanner />
       <Navbar />
-      
+
       {/* Hero Section */}
       <motion.div
         ref={heroRef}
@@ -63,17 +127,20 @@ const PricingBot = () => {
         className="relative pt-40 pb-20 px-4 overflow-hidden"
       >
         <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-primary/5"></div>
-        
+
         <div className="container mx-auto text-center relative z-10">
           <div className="inline-block mb-6 px-4 py-2 bg-primary/10 backdrop-blur-sm rounded-full border border-primary/20">
-            <span className="text-primary text-sm font-semibold">🤖 Discord Bot Hosting Indonesia</span>
+            <span className="text-primary text-sm font-semibold">
+              🤖 Discord Bot Hosting Indonesia
+            </span>
           </div>
-          
+
           <h1 className="text-4xl md:text-6xl font-black mb-6 tracking-tight text-foreground">
             DISCORD <span className="text-primary">BOT</span> HOSTING
           </h1>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-8 leading-relaxed">
-            Reliable and affordable hosting for your Discord bots. 24/7 uptime with auto-restart feature.
+            Reliable and affordable hosting for your Discord bots. 24/7 uptime
+            with auto-restart feature.
           </p>
 
           <div className="flex items-center justify-center gap-4">
@@ -91,7 +158,9 @@ const PricingBot = () => {
             variants={scrollVariants}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Bot Hosting Packages</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Bot Hosting Packages
+            </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
               Choose the perfect plan for your Discord bot hosting needs
             </p>
@@ -124,9 +193,13 @@ const PricingBot = () => {
                       <Bot className="w-10 h-10 text-primary mx-auto mb-3" />
                       <h3 className="text-xl font-bold mb-2">{pkg.name}</h3>
                       <div className="flex items-baseline justify-center gap-1 mb-1">
-                        <span className="text-3xl font-bold text-primary">{price.rp}</span>
+                        <span className="text-3xl font-bold text-primary">
+                          {price.rp}
+                        </span>
                       </div>
-                      <p className="text-xs text-muted-foreground">{price.usd}/month</p>
+                      <p className="text-xs text-muted-foreground">
+                        {price.usd}/month
+                      </p>
                     </div>
 
                     <div className="space-y-3 mb-6">
@@ -145,11 +218,17 @@ const PricingBot = () => {
                         </div>
                       ))}
                       <div className="pt-2 border-t border-border/50">
-                        <p className="text-xs text-muted-foreground italic">{pkg.note}</p>
+                        <p className="text-xs text-muted-foreground italic">
+                          {pkg.note}
+                        </p>
                       </div>
                     </div>
 
-                    <a href={DISCORD_URL} target="_blank" rel="noopener noreferrer">
+                    <a
+                      href={DISCORD_URL}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <Button
                         className={`w-full ${
                           pkg.popular ? "shadow-md hover:shadow-lg" : ""
@@ -170,28 +249,37 @@ const PricingBot = () => {
       {/* Features Section */}
       <section className="py-16 px-4 bg-muted/30">
         <div className="container mx-auto max-w-4xl">
-          <h2 className="text-3xl font-bold text-center mb-12">Why Choose Our Bot Hosting?</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">
+            Why Choose Our Bot Hosting?
+          </h2>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Check className="w-8 h-8 text-primary" />
               </div>
               <h3 className="font-bold mb-2">24/7 Uptime</h3>
-              <p className="text-sm text-muted-foreground">Your bot stays online around the clock with our reliable infrastructure</p>
+              <p className="text-sm text-muted-foreground">
+                Your bot stays online around the clock with our reliable
+                infrastructure
+              </p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Check className="w-8 h-8 text-primary" />
               </div>
               <h3 className="font-bold mb-2">Auto Restart</h3>
-              <p className="text-sm text-muted-foreground">Automatic restart if your bot crashes to ensure minimal downtime</p>
+              <p className="text-sm text-muted-foreground">
+                Automatic restart if your bot crashes to ensure minimal downtime
+              </p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Check className="w-8 h-8 text-primary" />
               </div>
               <h3 className="font-bold mb-2">Easy Setup</h3>
-              <p className="text-sm text-muted-foreground">Simple deployment process to get your bot running in minutes</p>
+              <p className="text-sm text-muted-foreground">
+                Simple deployment process to get your bot running in minutes
+              </p>
             </div>
           </div>
         </div>

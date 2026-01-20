@@ -8,7 +8,17 @@ import { FloatingShapes } from "@/components/FloatingShapes";
 import { TechnologyStack } from "@/components/TechnologyStack";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Check, Server, Bot, Globe, Gamepad2, Sparkles, Zap, Shield, Crown } from "lucide-react";
+import {
+  Check,
+  Server,
+  Bot,
+  Globe,
+  Gamepad2,
+  Sparkles,
+  Zap,
+  Shield,
+  Crown,
+} from "lucide-react";
 import { Link } from "react-router-dom";
 import { GameSupportLogos } from "@/components/GameSupportLogos";
 import SEO from "@/components/SEO";
@@ -20,90 +30,90 @@ const pricingCategories = [
     name: "Game Server",
     icon: Gamepad2,
     startingPriceRp: 8000,
-    startingPriceUsd: 0.50,
+    startingPriceUsd: 0.5,
     description: "Minecraft, FiveM, Rust, dan game lainnya",
     features: [
       "Opsi Shared & Premium",
       "Perlindungan DDoS",
       "Uptime 24/7",
-      "Panel Pterodactyl"
+      "Panel Pterodactyl",
     ],
     link: "/pricing/servers",
     popular: true,
-    gradient: "from-orange-500/20 to-red-500/20"
+    gradient: "from-orange-500/20 to-red-500/20",
   },
   {
     name: "Discord Bot",
     icon: Bot,
     startingPriceRp: 10000,
-    startingPriceUsd: 0.60,
+    startingPriceUsd: 0.6,
     description: "Hosting bot Discord dengan uptime 24/7",
     features: [
       "Auto Restart",
       "Multiple Instances",
       "Dukungan Database",
-      "Deploy Mudah"
+      "Deploy Mudah",
     ],
     link: "/pricing/bot",
     popular: false,
-    gradient: "from-blue-500/20 to-purple-500/20"
+    gradient: "from-blue-500/20 to-purple-500/20",
   },
   {
     name: "Website Hosting",
     icon: Globe,
     startingPriceRp: 5000,
-    startingPriceUsd: 0.30,
+    startingPriceUsd: 0.3,
     description: "Web Ptero, Turbo Web, & Jasa Coding",
     features: [
       "SSL Gratis (HTTPS)",
       "Backup Otomatis",
       "Cloudflare Tunnel",
-      "Managed Hosting"
+      "Managed Hosting",
     ],
     link: "/pricing/website",
     popular: false,
-    gradient: "from-green-500/20 to-emerald-500/20"
+    gradient: "from-green-500/20 to-emerald-500/20",
   },
   {
     name: "VPS & Dedicated",
     icon: Server,
     startingPriceRp: 65000,
-    startingPriceUsd: 4.00,
+    startingPriceUsd: 4.0,
     description: "Dedicated server dengan performa tinggi",
     features: [
       "Penyimpanan NVMe",
       "Performa Anti-Lag",
       "Akses Root Penuh",
-      "Support 24/7"
+      "Support 24/7",
     ],
     link: "/pricing/vps",
     popular: false,
-    gradient: "from-cyan-500/20 to-blue-500/20"
-  }
+    gradient: "from-cyan-500/20 to-blue-500/20",
+  },
 ];
 
 const formatPrice = (priceRp: number, priceUsd: number) => ({
-  rp: `Rp ${priceRp.toLocaleString('id-ID')}`,
-  usd: `~$${priceUsd.toFixed(2)}`
+  rp: `Rp ${priceRp.toLocaleString("id-ID")}`,
+  usd: `~$${priceUsd.toFixed(2)}`,
 });
 
 const Pricing = () => {
   const structuredData = {
-    '@context': 'https://schema.org',
-    '@type': 'Product',
-    name: 'ByteNodes Hosting Services',
-    description: 'Affordable hosting solutions starting from Rp 8.000',
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: "ByteNodes Hosting Services",
+    description: "Affordable hosting solutions starting from Rp 8.000",
     brand: {
-      '@type': 'Brand',
-      name: 'ByteNodes'
+      "@type": "Brand",
+      name: "ByteNodes",
     },
     offers: {
-      '@type': 'AggregateOffer',
-      priceCurrency: 'IDR',
-      lowPrice: '8000',
-      highPrice: '200000',
-      offerCount: '4'
-    }
+      "@type": "AggregateOffer",
+      priceCurrency: "IDR",
+      lowPrice: "8000",
+      highPrice: "200000",
+      offerCount: "4",
+    },
   };
 
   return (
@@ -117,7 +127,7 @@ const Pricing = () => {
       />
       <AnnouncementBanner />
       <Navbar />
-      
+
       <div className="relative pt-32 pb-20 px-4 overflow-hidden">
         {/* Background with gradients and shapes */}
         <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-primary/10">
@@ -131,14 +141,17 @@ const Pricing = () => {
 
         <div className="container mx-auto text-center relative z-10">
           <div className="inline-block mb-4 px-4 py-2 bg-primary/10 backdrop-blur-sm rounded-full border border-primary/20">
-            <span className="text-primary text-sm font-semibold">💰 Harga Terjangkau, Kualitas Premium</span>
+            <span className="text-primary text-sm font-semibold">
+              💰 Harga Terjangkau, Kualitas Premium
+            </span>
           </div>
-          
+
           <h1 className="text-5xl md:text-6xl font-bold mb-6 tracking-tight text-foreground animate-fade-in">
             Harga <span className="text-primary">Transparan</span> & Terjangkau
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-12 leading-relaxed animate-fade-in">
-            Pilih paket yang sesuai dengan kebutuhan. Semua paket termasuk support 24/7, uptime 99.9%, dan migrasi gratis.
+            Pilih paket yang sesuai dengan kebutuhan. Semua paket termasuk
+            support 24/7, uptime 99.9%, dan migrasi gratis.
           </p>
 
           <AnimatedStats />
@@ -148,17 +161,23 @@ const Pricing = () => {
       <section className="py-16 px-4 bg-gradient-to-b from-background via-muted/30 to-background">
         <div className="container mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Katalog Layanan</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Katalog Layanan
+            </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Semua harga dalam Rupiah (IDR) dengan konversi USD sebagai referensi
+              Semua harga dalam Rupiah (IDR) dengan konversi USD sebagai
+              referensi
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
             {pricingCategories.map((category, index) => {
-              const price = formatPrice(category.startingPriceRp, category.startingPriceUsd);
+              const price = formatPrice(
+                category.startingPriceRp,
+                category.startingPriceUsd,
+              );
               const IconComponent = category.icon;
-              
+
               return (
                 <Card
                   key={index}
@@ -176,18 +195,28 @@ const Pricing = () => {
                   )}
 
                   <div className="text-center mb-6">
-                    <div className={`w-16 h-16 mx-auto mb-3 rounded-2xl bg-gradient-to-br ${category.gradient} flex items-center justify-center`}>
+                    <div
+                      className={`w-16 h-16 mx-auto mb-3 rounded-2xl bg-gradient-to-br ${category.gradient} flex items-center justify-center`}
+                    >
                       <IconComponent className="w-8 h-8 text-primary" />
                     </div>
                     <h3 className="text-xl font-bold mb-2">{category.name}</h3>
-                    <p className="text-muted-foreground text-sm mb-4">{category.description}</p>
+                    <p className="text-muted-foreground text-sm mb-4">
+                      {category.description}
+                    </p>
                     <div className="flex items-baseline justify-center gap-1">
-                      <span className="text-sm text-muted-foreground">Mulai dari</span>
+                      <span className="text-sm text-muted-foreground">
+                        Mulai dari
+                      </span>
                     </div>
                     <div className="flex items-baseline justify-center gap-1 mb-1">
-                      <span className="text-3xl font-bold text-primary">{price.rp}</span>
+                      <span className="text-3xl font-bold text-primary">
+                        {price.rp}
+                      </span>
                     </div>
-                    <span className="text-muted-foreground text-xs">{price.usd}/bulan</span>
+                    <span className="text-muted-foreground text-xs">
+                      {price.usd}/bulan
+                    </span>
                   </div>
 
                   <div className="space-y-2 mb-6">

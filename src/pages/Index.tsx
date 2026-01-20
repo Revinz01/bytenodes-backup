@@ -11,16 +11,17 @@ import SEO from "@/components/SEO";
 
 const Index = () => {
   const structuredData = {
-    '@context': 'https://schema.org',
-    '@type': 'WebSite',
-    name: 'ByteNodes',
-    url: 'https://bytenodes.icu',
-    description: 'Enterprise-grade hosting solutions with 99.9% uptime guarantee. VPS, Dedicated Servers, Discord Bots, and Website Hosting services.',
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "ByteNodes",
+    url: "https://bytenodes.icu",
+    description:
+      "Enterprise-grade hosting solutions with 99.9% uptime guarantee. VPS, Dedicated Servers, Discord Bots, and Website Hosting services.",
     potentialAction: {
-      '@type': 'SearchAction',
-      target: 'https://bytenodes.icu/search?q={search_term_string}',
-      'query-input': 'required name=search_term_string'
-    }
+      "@type": "SearchAction",
+      target: "https://bytenodes.icu/search?q={search_term_string}",
+      "query-input": "required name=search_term_string",
+    },
   };
 
   return (

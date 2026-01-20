@@ -6,7 +6,7 @@ import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { PageTransition } from "./components/PageTransition";
 import { AnimatePresence } from "framer-motion";
 import { useEffect } from "react";
-import { HelmetProvider } from 'react-helmet-async';
+import { HelmetProvider } from "react-helmet-async";
 import Index from "./pages/Index";
 import Services from "./pages/Services";
 import Pricing from "./pages/Pricing";
@@ -32,11 +32,11 @@ const queryClient = new QueryClient();
 // Component to handle scroll to top on route change
 const ScrollToTop = () => {
   const { pathname } = useLocation();
-  
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
-  
+
   return null;
 };
 
@@ -46,27 +46,153 @@ const AnimatedRoutes = () => {
   return (
     <AnimatePresence mode="wait">
       <Routes location={location} key={location.pathname}>
-        <Route path="/" element={<PageTransition><Index /></PageTransition>} />
-        <Route path="/services" element={<PageTransition><Services /></PageTransition>} />
-        <Route path="/pricing" element={<PageTransition><Pricing /></PageTransition>} />
-        <Route path="/pricing/servers" element={<PageTransition><PricingServer /></PageTransition>} />
-        <Route path="/pricing/vps" element={<PageTransition><PricingVPS /></PageTransition>} />
-        <Route path="/pricing/bot" element={<PageTransition><PricingBot /></PageTransition>} />
-        <Route path="/pricing/website" element={<PageTransition><PricingWebsite /></PageTransition>} />
-        <Route path="/about" element={<PageTransition><About /></PageTransition>} />
-        <Route path="/contact" element={<PageTransition><Contact /></PageTransition>} />
-        <Route path="/faq" element={<PageTransition><FAQ /></PageTransition>} />
-        <Route path="/docs" element={<PageTransition><Documentation /></PageTransition>} />
-        
+        <Route
+          path="/"
+          element={
+            <PageTransition>
+              <Index />
+            </PageTransition>
+          }
+        />
+        <Route
+          path="/services"
+          element={
+            <PageTransition>
+              <Services />
+            </PageTransition>
+          }
+        />
+        <Route
+          path="/pricing"
+          element={
+            <PageTransition>
+              <Pricing />
+            </PageTransition>
+          }
+        />
+        <Route
+          path="/pricing/servers"
+          element={
+            <PageTransition>
+              <PricingServer />
+            </PageTransition>
+          }
+        />
+        <Route
+          path="/pricing/vps"
+          element={
+            <PageTransition>
+              <PricingVPS />
+            </PageTransition>
+          }
+        />
+        <Route
+          path="/pricing/bot"
+          element={
+            <PageTransition>
+              <PricingBot />
+            </PageTransition>
+          }
+        />
+        <Route
+          path="/pricing/website"
+          element={
+            <PageTransition>
+              <PricingWebsite />
+            </PageTransition>
+          }
+        />
+        <Route
+          path="/about"
+          element={
+            <PageTransition>
+              <About />
+            </PageTransition>
+          }
+        />
+        <Route
+          path="/contact"
+          element={
+            <PageTransition>
+              <Contact />
+            </PageTransition>
+          }
+        />
+        <Route
+          path="/faq"
+          element={
+            <PageTransition>
+              <FAQ />
+            </PageTransition>
+          }
+        />
+        <Route
+          path="/docs"
+          element={
+            <PageTransition>
+              <Documentation />
+            </PageTransition>
+          }
+        />
+
         {/* Legal Pages */}
-        <Route path="/terms" element={<PageTransition><TermsOfService /></PageTransition>} />
-        <Route path="/privacy" element={<PageTransition><PrivacyPolicy /></PageTransition>} />
-        <Route path="/cookies" element={<PageTransition><CookiePolicy /></PageTransition>} />
-        <Route path="/acceptable-use" element={<PageTransition><AcceptableUse /></PageTransition>} />
-        <Route path="/sla" element={<PageTransition><SLA /></PageTransition>} />
-        <Route path="/refund" element={<PageTransition><RefundPolicy /></PageTransition>} />
-        
-        <Route path="*" element={<PageTransition><NotFound /></PageTransition>} />
+        <Route
+          path="/terms"
+          element={
+            <PageTransition>
+              <TermsOfService />
+            </PageTransition>
+          }
+        />
+        <Route
+          path="/privacy"
+          element={
+            <PageTransition>
+              <PrivacyPolicy />
+            </PageTransition>
+          }
+        />
+        <Route
+          path="/cookies"
+          element={
+            <PageTransition>
+              <CookiePolicy />
+            </PageTransition>
+          }
+        />
+        <Route
+          path="/acceptable-use"
+          element={
+            <PageTransition>
+              <AcceptableUse />
+            </PageTransition>
+          }
+        />
+        <Route
+          path="/sla"
+          element={
+            <PageTransition>
+              <SLA />
+            </PageTransition>
+          }
+        />
+        <Route
+          path="/refund"
+          element={
+            <PageTransition>
+              <RefundPolicy />
+            </PageTransition>
+          }
+        />
+
+        <Route
+          path="*"
+          element={
+            <PageTransition>
+              <NotFound />
+            </PageTransition>
+          }
+        />
       </Routes>
     </AnimatePresence>
   );

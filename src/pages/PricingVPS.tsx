@@ -16,58 +16,79 @@ const dedicatedPackages = [
   {
     name: "Dedicated 1",
     priceRp: 65000,
-    priceUsd: 4.00,
+    priceUsd: 4.0,
     ram: "2 GB",
     storage: "20 GB NVMe",
     os: "Linux (Ubuntu/Debian)",
     features: ["Anti-Lag Performance", "24/7 Uptime", "Basic Support"],
     note: "High Single Core Performance",
-    popular: false
+    popular: false,
   },
   {
     name: "Dedicated 2",
     priceRp: 120000,
-    priceUsd: 7.50,
+    priceUsd: 7.5,
     ram: "4 GB",
     storage: "40 GB NVMe",
     os: "Linux (Ubuntu/Debian)",
-    features: ["Anti-Lag Performance", "24/7 Uptime", "Priority Support", "Custom Domain (Rp 10.000)"],
+    features: [
+      "Anti-Lag Performance",
+      "24/7 Uptime",
+      "Priority Support",
+      "Custom Domain (Rp 10.000)",
+    ],
     note: "High Single Core Performance",
-    popular: true
+    popular: true,
   },
   {
     name: "Dedicated 3",
     priceRp: 175000,
-    priceUsd: 11.00,
+    priceUsd: 11.0,
     ram: "6 GB",
     storage: "60 GB NVMe",
     os: "Linux (Ubuntu/Debian)",
-    features: ["Anti-Lag Performance", "24/7 Uptime", "Priority Support", "Custom Domain (Rp 10.000)"],
+    features: [
+      "Anti-Lag Performance",
+      "24/7 Uptime",
+      "Priority Support",
+      "Custom Domain (Rp 10.000)",
+    ],
     note: "High Single Core Performance",
-    popular: false
+    popular: false,
   },
   {
     name: "Dedicated 4",
     priceRp: 240000,
-    priceUsd: 15.00,
+    priceUsd: 15.0,
     ram: "8 GB",
     storage: "80 GB NVMe",
     os: "Linux (Ubuntu/Debian)",
-    features: ["Anti-Lag Performance", "24/7 Uptime", "Premium Support", "Custom Domain (Rp 10.000)"],
+    features: [
+      "Anti-Lag Performance",
+      "24/7 Uptime",
+      "Premium Support",
+      "Custom Domain (Rp 10.000)",
+    ],
     note: "High Single Core Performance",
-    popular: false
+    popular: false,
   },
   {
     name: "Dedicated 5",
     priceRp: 400000,
-    priceUsd: 25.00,
+    priceUsd: 25.0,
     ram: "16 GB",
     storage: "150 GB NVMe",
     os: "Linux (Ubuntu/Debian)",
-    features: ["Anti-Lag Performance", "24/7 Uptime", "Premium Support", "Custom Domain (Rp 10.000)", "Dedicated IP"],
+    features: [
+      "Anti-Lag Performance",
+      "24/7 Uptime",
+      "Premium Support",
+      "Custom Domain (Rp 10.000)",
+      "Dedicated IP",
+    ],
     note: "Enterprise Grade Performance",
-    popular: false
-  }
+    popular: false,
+  },
 ];
 
 const containerVariants = {
@@ -75,9 +96,9 @@ const containerVariants = {
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.1
-    }
-  }
+      staggerChildren: 0.1,
+    },
+  },
 };
 
 const itemVariants = {
@@ -85,40 +106,42 @@ const itemVariants = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.5 }
-  }
+    transition: { duration: 0.5 },
+  },
 };
 
 type CategoryType = "vps-kvm" | "dedicated" | "rdp";
 
 const PricingVPS = () => {
-  const [selectedCategory, setSelectedCategory] = useState<CategoryType>("dedicated");
+  const [selectedCategory, setSelectedCategory] =
+    useState<CategoryType>("dedicated");
   const [animationKey, setAnimationKey] = useState(0);
 
   useEffect(() => {
-    setAnimationKey(prev => prev + 1);
+    setAnimationKey((prev) => prev + 1);
   }, [selectedCategory]);
 
   const formatPrice = (priceRp: number, priceUsd: number) => {
     return {
-      rp: `Rp ${priceRp.toLocaleString('id-ID')}`,
-      usd: `~$${priceUsd.toFixed(2)}`
+      rp: `Rp ${priceRp.toLocaleString("id-ID")}`,
+      usd: `~$${priceUsd.toFixed(2)}`,
     };
   };
 
   const structuredData = {
-    '@context': 'https://schema.org',
-    '@type': 'Product',
-    name: 'VPS Hosting',
-    description: 'High-performance VPS hosting with dedicated resources, full root access, and flexible configurations',
-    brand: { '@type': 'Brand', name: 'ByteNodes' },
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: "VPS Hosting",
+    description:
+      "High-performance VPS hosting with dedicated resources, full root access, and flexible configurations",
+    brand: { "@type": "Brand", name: "ByteNodes" },
     offers: {
-      '@type': 'AggregateOffer',
-      priceCurrency: 'IDR',
-      lowPrice: '65000',
-      highPrice: '500000',
-      offerCount: '10'
-    }
+      "@type": "AggregateOffer",
+      priceCurrency: "IDR",
+      lowPrice: "65000",
+      highPrice: "500000",
+      offerCount: "10",
+    },
   };
 
   const getTitle = () => {
@@ -158,7 +181,7 @@ const PricingVPS = () => {
       />
       <AnnouncementBanner />
       <Navbar />
-      
+
       {/* Hero Section */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -167,18 +190,23 @@ const PricingVPS = () => {
         className="relative pt-40 pb-20 px-4 overflow-hidden"
       >
         <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-primary/5"></div>
-        
+
         <div className="container mx-auto text-center relative z-10">
           <div className="inline-block mb-6 px-4 py-2 bg-primary/10 backdrop-blur-sm rounded-full border border-primary/20">
-            <span className="text-primary text-sm font-semibold">🚀 VPS & RDP Hosting</span>
+            <span className="text-primary text-sm font-semibold">
+              🚀 VPS & RDP Hosting
+            </span>
           </div>
-          
+
           <h1 className="text-4xl md:text-6xl font-black mb-6 tracking-tight text-foreground">
             VPS & <span className="text-primary">RDP</span> PACKAGES
           </h1>
-          <h2 className="text-2xl md:text-3xl font-bold text-muted-foreground mb-4">Coming Soon</h2>
+          <h2 className="text-2xl md:text-3xl font-bold text-muted-foreground mb-4">
+            Coming Soon
+          </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-8 leading-relaxed">
-            VPS KVM for Linux, Dedicated servers with high performance, and RDP Windows for various needs.
+            VPS KVM for Linux, Dedicated servers with high performance, and RDP
+            Windows for various needs.
           </p>
 
           {/* Category Toggle */}
@@ -227,7 +255,9 @@ const PricingVPS = () => {
             transition={{ duration: 0.5 }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">{getTitle()}</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              {getTitle()}
+            </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
               {getDescription()}
             </p>
@@ -245,10 +275,9 @@ const PricingVPS = () => {
                 <Clock className="w-16 h-16 mx-auto mb-6 text-primary" />
                 <h3 className="text-3xl font-bold mb-4">Coming Soon</h3>
                 <p className="text-muted-foreground text-lg mb-6">
-                  {selectedCategory === "vps-kvm" 
+                  {selectedCategory === "vps-kvm"
                     ? "VPS KVM packages are currently under development. Stay tuned for updates!"
-                    : "RDP Windows packages are currently under development. Stay tuned for updates!"
-                  }
+                    : "RDP Windows packages are currently under development. Stay tuned for updates!"}
                 </p>
                 <a href={DISCORD_URL} target="_blank" rel="noopener noreferrer">
                   <Button size="lg">Join Discord for Updates</Button>
@@ -266,7 +295,10 @@ const PricingVPS = () => {
               {dedicatedPackages.map((pkg, index) => {
                 const price = formatPrice(pkg.priceRp, pkg.priceUsd);
                 return (
-                  <motion.div key={`dedicated-${index}`} variants={itemVariants}>
+                  <motion.div
+                    key={`dedicated-${index}`}
+                    variants={itemVariants}
+                  >
                     <Card
                       className={`p-6 relative hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 hover:-translate-y-2 ${
                         pkg.popular
@@ -284,9 +316,13 @@ const PricingVPS = () => {
                         <Server className="w-10 h-10 text-primary mx-auto mb-3" />
                         <h3 className="text-xl font-bold mb-2">{pkg.name}</h3>
                         <div className="flex items-baseline justify-center gap-1 mb-1">
-                          <span className="text-3xl font-bold text-primary">{price.rp}</span>
+                          <span className="text-3xl font-bold text-primary">
+                            {price.rp}
+                          </span>
                         </div>
-                        <p className="text-xs text-muted-foreground">{price.usd}/month</p>
+                        <p className="text-xs text-muted-foreground">
+                          {price.usd}/month
+                        </p>
                       </div>
 
                       <div className="space-y-3 mb-6">
@@ -309,11 +345,17 @@ const PricingVPS = () => {
                           </div>
                         ))}
                         <div className="pt-2 border-t border-border/50">
-                          <p className="text-xs text-muted-foreground italic">{pkg.note}</p>
+                          <p className="text-xs text-muted-foreground italic">
+                            {pkg.note}
+                          </p>
                         </div>
                       </div>
 
-                      <a href={DISCORD_URL} target="_blank" rel="noopener noreferrer">
+                      <a
+                        href={DISCORD_URL}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <Button
                           className={`w-full ${
                             pkg.popular ? "shadow-md hover:shadow-lg" : ""

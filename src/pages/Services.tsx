@@ -13,7 +13,8 @@ const servicesDetail = [
   {
     icon: Gamepad2,
     title: "Game Server Hosting",
-    description: "Minecraft, FiveM, Rust, dan game lainnya dengan performa tinggi.",
+    description:
+      "Minecraft, FiveM, Rust, dan game lainnya dengan performa tinggi.",
     priceRp: "Mulai Rp 8.000",
     priceUsd: "~$0.50",
     link: "/pricing/servers",
@@ -26,7 +27,7 @@ const servicesDetail = [
       "Backup Otomatis",
       "Dukungan Multi Game",
       "Jaringan Low Latency",
-      "Server Dedicated EU & SG"
+      "Server Dedicated EU & SG",
     ],
   },
   {
@@ -45,13 +46,14 @@ const servicesDetail = [
       "Deploy Mudah",
       "Priority Support",
       "Opsi Custom Domain",
-      "SSL Gratis"
+      "SSL Gratis",
     ],
   },
   {
     icon: Globe,
     title: "Website Hosting",
-    description: "Web Ptero (Container), Turbo Web (Cloudflare Tunnel), dan Jasa Coding.",
+    description:
+      "Web Ptero (Container), Turbo Web (Cloudflare Tunnel), dan Jasa Coding.",
     priceRp: "Mulai Rp 5.000",
     priceUsd: "~$0.30",
     link: "/pricing/website",
@@ -64,7 +66,7 @@ const servicesDetail = [
       "IP Teraliased",
       "Resource Terisolasi",
       "Jasa Coding Tersedia",
-      "Priority Support"
+      "Priority Support",
     ],
   },
   {
@@ -83,13 +85,14 @@ const servicesDetail = [
       "Uptime 24/7",
       "Perlindungan DDoS",
       "Support Premium",
-      "Opsi IP Dedicated"
+      "Opsi IP Dedicated",
     ],
   },
   {
     icon: Server,
     title: "VPS KVM",
-    description: "Virtual Private Server dengan teknologi KVM untuk web server, bot, dan tunneling.",
+    description:
+      "Virtual Private Server dengan teknologi KVM untuk web server, bot, dan tunneling.",
     priceRp: "Segera Hadir",
     priceUsd: "",
     link: "/pricing/vps",
@@ -102,13 +105,14 @@ const servicesDetail = [
       "Perlindungan DDoS",
       "Uptime 24/7",
       "Lokasi Multiple",
-      "Resource Scalable"
+      "Resource Scalable",
     ],
   },
   {
     icon: Code,
     title: "RDP Windows",
-    description: "Windows Remote Desktop untuk browsing, botting, dan Android emulator.",
+    description:
+      "Windows Remote Desktop untuk browsing, botting, dan Android emulator.",
     priceRp: "Segera Hadir",
     priceUsd: "",
     link: "/pricing/vps",
@@ -121,56 +125,56 @@ const servicesDetail = [
       "Perlindungan DDoS",
       "Lokasi Multiple",
       "Support 24/7",
-      "Setup Instan"
+      "Setup Instan",
     ],
   },
 ];
 
 const Services = () => {
   const structuredData = {
-    '@context': 'https://schema.org',
-    '@type': 'Service',
-    serviceType: 'Web Hosting Services',
+    "@context": "https://schema.org",
+    "@type": "Service",
+    serviceType: "Web Hosting Services",
     provider: {
-      '@type': 'Organization',
-      name: 'ByteNodes',
-      url: 'https://bytenodes.icu'
+      "@type": "Organization",
+      name: "ByteNodes",
+      url: "https://bytenodes.icu",
     },
-    areaServed: 'ID',
+    areaServed: "ID",
     hasOfferCatalog: {
-      '@type': 'OfferCatalog',
-      name: 'Hosting Services',
+      "@type": "OfferCatalog",
+      name: "Hosting Services",
       itemListElement: [
         {
-          '@type': 'Offer',
+          "@type": "Offer",
           itemOffered: {
-            '@type': 'Service',
-            name: 'Game Server Hosting'
-          }
+            "@type": "Service",
+            name: "Game Server Hosting",
+          },
         },
         {
-          '@type': 'Offer',
+          "@type": "Offer",
           itemOffered: {
-            '@type': 'Service',
-            name: 'Discord Bot Hosting'
-          }
+            "@type": "Service",
+            name: "Discord Bot Hosting",
+          },
         },
         {
-          '@type': 'Offer',
+          "@type": "Offer",
           itemOffered: {
-            '@type': 'Service',
-            name: 'VPS Hosting'
-          }
+            "@type": "Service",
+            name: "VPS Hosting",
+          },
         },
         {
-          '@type': 'Offer',
+          "@type": "Offer",
           itemOffered: {
-            '@type': 'Service',
-            name: 'Website Hosting'
-          }
-        }
-      ]
-    }
+            "@type": "Service",
+            name: "Website Hosting",
+          },
+        },
+      ],
+    },
   };
 
   return (
@@ -184,17 +188,20 @@ const Services = () => {
       />
       <AnnouncementBanner />
       <Navbar />
-      
+
       <div className="pt-32 pb-12 px-4 bg-gradient-to-b from-background to-muted/30">
         <div className="container mx-auto text-center">
           <div className="inline-block mb-4 px-4 py-2 bg-primary/10 backdrop-blur-sm rounded-full border border-primary/20">
-            <span className="text-primary text-sm font-semibold">🚀 Layanan Kami</span>
+            <span className="text-primary text-sm font-semibold">
+              🚀 Layanan Kami
+            </span>
           </div>
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
             Layanan <span className="text-primary">Kami</span>
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Pilih dari berbagai layanan hosting dan infrastruktur yang kami sediakan
+            Pilih dari berbagai layanan hosting dan infrastruktur yang kami
+            sediakan
           </p>
         </div>
       </div>
@@ -205,25 +212,35 @@ const Services = () => {
             {servicesDetail.map((service, index) => (
               <Card
                 key={index}
-                className={`p-6 hover:shadow-2xl transition-all duration-300 border-border/50 hover:border-primary/50 bg-card relative ${!service.available ? 'opacity-80' : ''}`}
+                className={`p-6 hover:shadow-2xl transition-all duration-300 border-border/50 hover:border-primary/50 bg-card relative ${!service.available ? "opacity-80" : ""}`}
               >
                 {!service.available && (
                   <div className="absolute top-4 right-4 flex items-center gap-1 px-3 py-1 bg-muted rounded-full">
                     <Clock className="w-3 h-3 text-muted-foreground" />
-                    <span className="text-xs text-muted-foreground font-medium">Segera Hadir</span>
+                    <span className="text-xs text-muted-foreground font-medium">
+                      Segera Hadir
+                    </span>
                   </div>
                 )}
-                
+
                 <div className="flex items-start gap-4 mb-6">
                   <div className="p-3 rounded-lg bg-primary/10">
                     <service.icon className="w-8 h-8 text-primary" />
                   </div>
                   <div className="flex-1">
                     <h3 className="text-xl font-bold mb-2">{service.title}</h3>
-                    <p className="text-muted-foreground text-sm mb-2">{service.description}</p>
+                    <p className="text-muted-foreground text-sm mb-2">
+                      {service.description}
+                    </p>
                     <div>
-                      <p className="text-primary font-bold text-lg">{service.priceRp}</p>
-                      {service.priceUsd && <p className="text-muted-foreground text-xs">{service.priceUsd}/bulan</p>}
+                      <p className="text-primary font-bold text-lg">
+                        {service.priceRp}
+                      </p>
+                      {service.priceUsd && (
+                        <p className="text-muted-foreground text-xs">
+                          {service.priceUsd}/bulan
+                        </p>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -239,12 +256,14 @@ const Services = () => {
 
                 {service.available ? (
                   <Link to={service.link}>
-                    <Button className="w-full">
-                      Lihat Paket
-                    </Button>
+                    <Button className="w-full">Lihat Paket</Button>
                   </Link>
                 ) : (
-                  <a href={DISCORD_URL} target="_blank" rel="noopener noreferrer">
+                  <a
+                    href={DISCORD_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <Button variant="outline" className="w-full">
                       Gabung Discord untuk Update
                     </Button>
@@ -261,12 +280,11 @@ const Services = () => {
         <div className="container mx-auto text-center max-w-3xl">
           <h2 className="text-3xl font-bold mb-4">Butuh Bantuan Memilih?</h2>
           <p className="text-muted-foreground mb-8">
-            Tim kami siap membantu Anda memilih layanan yang tepat sesuai kebutuhan. Hubungi kami di Discord untuk konsultasi gratis.
+            Tim kami siap membantu Anda memilih layanan yang tepat sesuai
+            kebutuhan. Hubungi kami di Discord untuk konsultasi gratis.
           </p>
           <a href={DISCORD_URL} target="_blank" rel="noopener noreferrer">
-            <Button size="lg">
-              Gabung Discord
-            </Button>
+            <Button size="lg">Gabung Discord</Button>
           </a>
         </div>
       </section>

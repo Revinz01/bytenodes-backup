@@ -6,30 +6,31 @@ import SEO from "@/components/SEO";
 
 const About = () => {
   const structuredData = {
-    '@context': 'https://schema.org',
-    '@type': 'AboutPage',
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
     mainEntity: {
-      '@type': 'Organization',
-      name: 'ByteNodes',
-      url: 'https://bytenodes.icu',
-      logo: 'https://bytenodes.icu/favicon.png',
-      foundingDate: '2024',
+      "@type": "Organization",
+      name: "ByteNodes",
+      url: "https://bytenodes.icu",
+      logo: "https://bytenodes.icu/favicon.png",
+      foundingDate: "2024",
       founders: [
         {
-          '@type': 'Person',
-          name: 'Salman'
+          "@type": "Person",
+          name: "Salman",
         },
         {
-          '@type': 'Person',
-          name: 'Davin'
-        }
+          "@type": "Person",
+          name: "Davin",
+        },
       ],
-      description: 'ByteNodes started as a passion project between two students from SMK Negeri 13 Bandung and has grown into a trusted hosting provider serving clients across Indonesia.',
+      description:
+        "ByteNodes started as a passion project between two students from SMK Negeri 13 Bandung and has grown into a trusted hosting provider serving clients across Indonesia.",
       address: {
-        '@type': 'PostalAddress',
-        addressCountry: 'ID'
-      }
-    }
+        "@type": "PostalAddress",
+        addressCountry: "ID",
+      },
+    },
   };
 
   return (
@@ -43,7 +44,7 @@ const About = () => {
       />
       <AnnouncementBanner />
       <Navbar />
-      
+
       <div className="pt-32 pb-12 px-4 bg-gradient-to-b from-navy-dark to-background">
         <div className="container mx-auto text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
@@ -59,23 +60,28 @@ const About = () => {
         <div className="container mx-auto max-w-4xl">
           <div className="prose prose-lg dark:prose-invert mx-auto">
             <p className="text-lg text-foreground leading-relaxed mb-6">
-              ByteNodes dimulai oleh 2 orang bernama Salman dan Davin dari SMK Negeri 13 Bandung, kelas VBAP. 
-              Yang berawal dari proyek passion antara dua siswa SMK telah berkembang menjadi penyedia 
-              hosting terpercaya yang melayani klien di seluruh Indonesia dan sekitarnya.
+              ByteNodes dimulai oleh 2 orang bernama Salman dan Davin dari SMK
+              Negeri 13 Bandung, kelas VBAP. Yang berawal dari proyek passion
+              antara dua siswa SMK telah berkembang menjadi penyedia hosting
+              terpercaya yang melayani klien di seluruh Indonesia dan
+              sekitarnya.
             </p>
-            
+
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-              Didirikan dengan prinsip keandalan, keterjangkauan, dan layanan pelanggan yang excellent, 
-              ByteNodes telah berevolusi dari ide sederhana di ruang kelas menjadi perusahaan hosting lengkap. 
-              Perjalanan kami mencerminkan komitmen untuk membuat hosting profesional dapat diakses oleh semua orang, 
-              dari developer individual hingga bisnis yang berkembang.
+              Didirikan dengan prinsip keandalan, keterjangkauan, dan layanan
+              pelanggan yang excellent, ByteNodes telah berevolusi dari ide
+              sederhana di ruang kelas menjadi perusahaan hosting lengkap.
+              Perjalanan kami mencerminkan komitmen untuk membuat hosting
+              profesional dapat diakses oleh semua orang, dari developer
+              individual hingga bisnis yang berkembang.
             </p>
 
             <p className="text-lg text-muted-foreground leading-relaxed mb-12">
-              Saat ini, kami memanfaatkan teknologi dan infrastruktur mutakhir untuk memberikan 
-              solusi hosting tingkat enterprise. Tim kami terus bekerja untuk memastikan kehadiran digital Anda tetap 
-              aman, cepat, dan selalu tersedia. Kami memahami tantangan menjalankan layanan online 
-              karena kami pernah mengalaminya sendiri.
+              Saat ini, kami memanfaatkan teknologi dan infrastruktur mutakhir
+              untuk memberikan solusi hosting tingkat enterprise. Tim kami terus
+              bekerja untuk memastikan kehadiran digital Anda tetap aman, cepat,
+              dan selalu tersedia. Kami memahami tantangan menjalankan layanan
+              online karena kami pernah mengalaminya sendiri.
             </p>
           </div>
 
@@ -86,7 +92,8 @@ const About = () => {
               </div>
               <h3 className="text-2xl font-bold mb-2">Infrastruktur</h3>
               <p className="text-muted-foreground">
-                Data center canggih dengan daya redundan dan konektivitas jaringan
+                Data center canggih dengan daya redundan dan konektivitas
+                jaringan
               </p>
             </div>
 
@@ -96,7 +103,8 @@ const About = () => {
               </div>
               <h3 className="text-2xl font-bold mb-2">Keamanan</h3>
               <p className="text-muted-foreground">
-                Perlindungan DDoS canggih dan langkah keamanan untuk menjaga data Anda
+                Perlindungan DDoS canggih dan langkah keamanan untuk menjaga
+                data Anda
               </p>
             </div>
 
@@ -126,7 +134,8 @@ const About = () => {
               </div>
               <h3 className="text-2xl font-bold mb-2">Jangkauan Global</h3>
               <p className="text-muted-foreground">
-                Melayani klien di seluruh dunia dengan support dan infrastruktur lokal
+                Melayani klien di seluruh dunia dengan support dan infrastruktur
+                lokal
               </p>
             </div>
 
@@ -136,7 +145,8 @@ const About = () => {
               </div>
               <h3 className="text-2xl font-bold mb-2">Performa</h3>
               <p className="text-muted-foreground">
-                Server dan jaringan yang dioptimalkan untuk kecepatan loading super cepat
+                Server dan jaringan yang dioptimalkan untuk kecepatan loading
+                super cepat
               </p>
             </div>
           </div>
