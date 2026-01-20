@@ -11,6 +11,7 @@ import { Button } from "@/components/ui/button";
 import { Check, Server, Bot, Globe, Gamepad2, Sparkles, Zap, Shield, Crown } from "lucide-react";
 import { Link } from "react-router-dom";
 import { GameSupportLogos } from "@/components/GameSupportLogos";
+import SEO from "@/components/SEO";
 
 const DISCORD_URL = "https://discord.gg/2PMmPp6Yx8";
 
@@ -87,8 +88,33 @@ const formatPrice = (priceRp: number, priceUsd: number) => ({
 });
 
 const Pricing = () => {
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'Product',
+    name: 'ByteNodes Hosting Services',
+    description: 'Affordable hosting solutions starting from Rp 8.000',
+    brand: {
+      '@type': 'Brand',
+      name: 'ByteNodes'
+    },
+    offers: {
+      '@type': 'AggregateOffer',
+      priceCurrency: 'IDR',
+      lowPrice: '8000',
+      highPrice: '200000',
+      offerCount: '4'
+    }
+  };
+
   return (
     <div className="min-h-screen">
+      <SEO
+        title="Pricing Plans - Affordable Hosting Solutions"
+        description="Transparent pricing for all hosting services. Game Server hosting from Rp 8.000, Discord Bot hosting from Rp 10.000. No hidden fees, 24/7 support included."
+        keywords="hosting pricing, cheap VPS, affordable game server, Discord bot pricing, website hosting price, ByteNodes pricing"
+        canonicalUrl="https://bytenodes.icu/pricing"
+        structuredData={structuredData}
+      />
       <AnnouncementBanner />
       <Navbar />
       

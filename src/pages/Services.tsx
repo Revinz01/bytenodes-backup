@@ -5,6 +5,7 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Server, Globe, Bot, Gamepad2, Code, Check, Clock } from "lucide-react";
 import { Link } from "react-router-dom";
+import SEO from "@/components/SEO";
 
 const DISCORD_URL = "https://discord.gg/2PMmPp6Yx8";
 
@@ -126,8 +127,61 @@ const servicesDetail = [
 ];
 
 const Services = () => {
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    serviceType: 'Web Hosting Services',
+    provider: {
+      '@type': 'Organization',
+      name: 'ByteNodes',
+      url: 'https://bytenodes.icu'
+    },
+    areaServed: 'ID',
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: 'Hosting Services',
+      itemListElement: [
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Game Server Hosting'
+          }
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Discord Bot Hosting'
+          }
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'VPS Hosting'
+          }
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Website Hosting'
+          }
+        }
+      ]
+    }
+  };
+
   return (
     <div className="min-h-screen">
+      <SEO
+        title="Our Services - Hosting Solutions"
+        description="Comprehensive hosting services including Game Servers, Discord Bots, VPS, and Website Hosting. Premium infrastructure with 24/7 support and 99.9% uptime guarantee."
+        keywords="game server hosting, Discord bot hosting, VPS hosting, website hosting, Minecraft hosting, FiveM hosting, cloud hosting services"
+        canonicalUrl="https://bytenodes.icu/services"
+        structuredData={structuredData}
+      />
       <AnnouncementBanner />
       <Navbar />
       

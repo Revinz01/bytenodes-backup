@@ -2,10 +2,45 @@ import { Navbar } from "@/components/Navbar";
 import { AnnouncementBanner } from "@/components/AnnouncementBanner";
 import { Footer } from "@/components/Footer";
 import { Server, Shield, Users, Award, Globe, Zap } from "lucide-react";
+import SEO from "@/components/SEO";
 
 const About = () => {
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'AboutPage',
+    mainEntity: {
+      '@type': 'Organization',
+      name: 'ByteNodes',
+      url: 'https://bytenodes.icu',
+      logo: 'https://bytenodes.icu/favicon.png',
+      foundingDate: '2024',
+      founders: [
+        {
+          '@type': 'Person',
+          name: 'Salman'
+        },
+        {
+          '@type': 'Person',
+          name: 'Davin'
+        }
+      ],
+      description: 'ByteNodes started as a passion project between two students from SMK Negeri 13 Bandung and has grown into a trusted hosting provider serving clients across Indonesia.',
+      address: {
+        '@type': 'PostalAddress',
+        addressCountry: 'ID'
+      }
+    }
+  };
+
   return (
     <div className="min-h-screen">
+      <SEO
+        title="About Us - Our Story"
+        description="Learn about ByteNodes, founded by Salman and Davin from SMK Negeri 13 Bandung. From a student passion project to a trusted hosting provider serving clients across Indonesia."
+        keywords="ByteNodes about, hosting company, Indonesia hosting, SMK Negeri 13 Bandung, web hosting company"
+        canonicalUrl="https://bytenodes.icu/about"
+        structuredData={structuredData}
+      />
       <AnnouncementBanner />
       <Navbar />
       

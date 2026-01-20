@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Check, Server, Clock } from "lucide-react";
 import { motion } from "framer-motion";
 import { GameSupportLogos } from "@/components/GameSupportLogos";
+import SEO from "@/components/SEO";
 
 const DISCORD_URL = "https://discord.gg/2PMmPp6Yx8";
 
@@ -105,6 +106,21 @@ const PricingVPS = () => {
     };
   };
 
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'Product',
+    name: 'VPS Hosting',
+    description: 'High-performance VPS hosting with dedicated resources, full root access, and flexible configurations',
+    brand: { '@type': 'Brand', name: 'ByteNodes' },
+    offers: {
+      '@type': 'AggregateOffer',
+      priceCurrency: 'IDR',
+      lowPrice: '65000',
+      highPrice: '500000',
+      offerCount: '10'
+    }
+  };
+
   const getTitle = () => {
     switch (selectedCategory) {
       case "vps-kvm":
@@ -133,6 +149,13 @@ const PricingVPS = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO
+        title="VPS Hosting - Dedicated Resources & Full Control"
+        description="Premium VPS hosting from Rp 65.000/month. Dedicated resources, full root access, NVMe storage. Perfect for applications requiring high performance and control."
+        keywords="VPS hosting, virtual private server, dedicated VPS, Linux VPS, Ubuntu VPS, cheap VPS Indonesia, NVMe VPS"
+        canonicalUrl="https://bytenodes.icu/pricing/vps"
+        structuredData={structuredData}
+      />
       <AnnouncementBanner />
       <Navbar />
       

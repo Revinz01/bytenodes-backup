@@ -4,10 +4,42 @@ import { Footer } from "@/components/Footer";
 import { Card } from "@/components/ui/card";
 import { Mail, Phone, MessageCircle, Instagram as InstagramIcon } from "lucide-react";
 import { FaDiscord } from "react-icons/fa";
+import SEO from "@/components/SEO";
 
 const Contact = () => {
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'ContactPage',
+    mainEntity: {
+      '@type': 'Organization',
+      name: 'ByteNodes',
+      url: 'https://bytenodes.icu',
+      contactPoint: [
+        {
+          '@type': 'ContactPoint',
+          telephone: '+62-851-2608-0236',
+          contactType: 'Customer Service',
+          availableLanguage: ['Indonesian', 'English'],
+          areaServed: 'ID'
+        },
+        {
+          '@type': 'ContactPoint',
+          email: 'support@bytenodes.id',
+          contactType: 'Customer Support'
+        }
+      ]
+    }
+  };
+
   return (
     <div className="min-h-screen">
+      <SEO
+        title="Contact Us - Get in Touch"
+        description="Contact ByteNodes for hosting support and inquiries. Available via WhatsApp, Email, Discord, and Instagram. 24/7 customer support for all hosting services."
+        keywords="ByteNodes contact, hosting support, customer service, technical support, WhatsApp support"
+        canonicalUrl="https://bytenodes.icu/contact"
+        structuredData={structuredData}
+      />
       <AnnouncementBanner />
       <Navbar />
       

@@ -7,6 +7,7 @@ import { Check, Bot } from "lucide-react";
 import { motion } from "framer-motion";
 import { useScrollAnimation, scrollVariants, staggerContainer } from "@/hooks/useScrollAnimation";
 import { FaDiscord } from "react-icons/fa";
+import SEO from "@/components/SEO";
 
 const DISCORD_URL = "https://discord.gg/2PMmPp6Yx8";
 
@@ -26,8 +27,30 @@ const PricingBot = () => {
     usd: `~$${priceUsd.toFixed(2)}`
   });
 
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'Product',
+    name: 'Discord Bot Hosting',
+    description: 'Reliable Discord Bot Hosting with 24/7 uptime and auto-restart starting from Rp 10.000',
+    brand: { '@type': 'Brand', name: 'ByteNodes' },
+    offers: {
+      '@type': 'AggregateOffer',
+      priceCurrency: 'IDR',
+      lowPrice: '10000',
+      highPrice: '60000',
+      offerCount: '4'
+    }
+  };
+
   return (
     <div className="min-h-screen">
+      <SEO
+        title="Discord Bot Hosting Pricing - 24/7 Uptime"
+        description="Affordable Discord Bot Hosting starting from Rp 10.000/month. 24/7 uptime, auto-restart, multiple instances support. Perfect for Discord communities of all sizes."
+        keywords="Discord bot hosting, Discord hosting, bot hosting Indonesia, cheap Discord bot hosting, 24/7 bot hosting, auto restart"
+        canonicalUrl="https://bytenodes.icu/pricing/bot"
+        structuredData={structuredData}
+      />
       <AnnouncementBanner />
       <Navbar />
       

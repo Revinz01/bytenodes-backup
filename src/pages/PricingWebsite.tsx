@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Check, Globe, Code } from "lucide-react";
 import { motion } from "framer-motion";
 import { useScrollAnimation, scrollVariants, staggerContainer } from "@/hooks/useScrollAnimation";
+import SEO from "@/components/SEO";
 
 const DISCORD_URL = "https://discord.gg/2PMmPp6Yx8";
 
@@ -57,6 +58,21 @@ const PricingWebsite = () => {
     usd: `~$${priceUsd.toFixed(2)}`
   });
 
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'Product',
+    name: 'Website Hosting',
+    description: 'Professional website hosting with free SSL, auto backup, and various performance tiers starting from Rp 5.000',
+    brand: { '@type': 'Brand', name: 'ByteNodes' },
+    offers: {
+      '@type': 'AggregateOffer',
+      priceCurrency: 'IDR',
+      lowPrice: '5000',
+      highPrice: '230000',
+      offerCount: '10'
+    }
+  };
+
   const getTitle = () => {
     switch (selectedCategory) {
       case "web-ptero": return "Web Ptero (Container)";
@@ -75,6 +91,13 @@ const PricingWebsite = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO
+        title="Website Hosting - Fast, Secure & Reliable"
+        description="Professional website hosting from Rp 5.000/month. Free SSL, auto backup, multiple tiers available. Perfect for portfolios, applications, and business websites."
+        keywords="website hosting, web hosting, SSL hosting, managed hosting, Node.js hosting, PHP hosting, cheap website hosting"
+        canonicalUrl="https://bytenodes.icu/pricing/website"
+        structuredData={structuredData}
+      />
       <AnnouncementBanner />
       <Navbar />
       

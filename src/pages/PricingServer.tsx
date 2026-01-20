@@ -9,6 +9,7 @@ import { motion } from "framer-motion";
 import { useScrollAnimation, scrollVariants, staggerContainer } from "@/hooks/useScrollAnimation";
 import { GameSupportLogos } from "@/components/GameSupportLogos";
 import minecraftLogo from "@/assets/minecraft-logo.png";
+import SEO from "@/components/SEO";
 
 const DISCORD_URL = "https://discord.gg/2PMmPp6Yx8";
 
@@ -54,6 +55,21 @@ const PricingServer = () => {
 
   const formatPrice = (price: number) => `Rp ${price.toLocaleString('id-ID')}`;
 
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'Product',
+    name: 'Game Server Hosting',
+    description: 'High-performance game server hosting for Minecraft, FiveM, Rust and more starting from Rp 8.000',
+    brand: { '@type': 'Brand', name: 'ByteNodes' },
+    offers: {
+      '@type': 'AggregateOffer',
+      priceCurrency: 'IDR',
+      lowPrice: '8000',
+      highPrice: '200000',
+      offerCount: '15'
+    }
+  };
+
   const getPackages = () => {
     switch (selectedCategory) {
       case "shared": return sharedPackages;
@@ -78,6 +94,13 @@ const PricingServer = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO
+        title="Game Server Hosting - Minecraft, FiveM, Rust & More"
+        description="Premium game server hosting from Rp 8.000/month. Minecraft, FiveM, Rust and more. DDoS protection, 24/7 uptime, Pterodactyl panel. Shared and Premium options available."
+        keywords="game server hosting, Minecraft hosting, FiveM hosting, Rust hosting, game server Indonesia, cheap Minecraft server, Pterodactyl hosting"
+        canonicalUrl="https://bytenodes.icu/pricing/servers"
+        structuredData={structuredData}
+      />
       <AnnouncementBanner />
       <Navbar />
       <motion.div ref={heroRef} initial="hidden" animate={heroInView ? "visible" : "hidden"} variants={scrollVariants} className="relative pt-40 pb-20 px-4 overflow-hidden">
