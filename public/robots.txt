@@ -1,23 +1,61 @@
-# ByteNodes Robots.txt
+# ByteNodes Robots.txt - SEO Optimized
+# This file tells search engines how to crawl and index the website
 # www.robotstxt.org/
 
+# Allow all bots by default
 User-agent: *
 Allow: /
 Disallow: /api/
 Disallow: /admin/
+Disallow: /.env
+Disallow: /private/
+Disallow: /*?*parameter=*
+Disallow: /search?
+Disallow: /wp-admin/
+Disallow: /wp-login/
+Disallow: /cgi-bin/
 
 # Crawl-delay for general bots
+Crawl-delay: 0
+
+# Slow down aggressive crawlers
+User-agent: MJ12bot
 Crawl-delay: 1
 
-# Specific bot agents
+User-agent: AhrefsBot
+Crawl-delay: 1
+
+User-agent: SemrushBot
+Crawl-delay: 1
+
+# Fast crawlers from major search engines
 User-agent: Googlebot
 Allow: /
 Disallow: /api/
 Disallow: /admin/
+Crawl-delay: 0
 
 User-agent: Bingbot
 Allow: /
 Disallow: /api/
+Disallow: /admin/
+Crawl-delay: 0
+
+User-agent: Slurp
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+Crawl-delay: 0
+
+User-agent: DuckDuckBot
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+Crawl-delay: 0
+
+# Sitemap location
+Sitemap: https://bytenodes.icu/sitemap.xml
+
 Disallow: /admin/
 
 User-agent: Slurp
