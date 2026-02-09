@@ -1,3 +1,5 @@
+"use client";
+
 import { useEffect, useState } from "react";
 import { Users, TrendingUp, Globe } from "lucide-react";
 
@@ -9,7 +11,13 @@ interface StatProps {
   label: string;
 }
 
-const AnimatedStat = ({ end, duration = 2000, suffix = "", icon, label }: StatProps) => {
+const AnimatedStat = ({
+  end,
+  duration = 2000,
+  suffix = "",
+  icon,
+  label,
+}: StatProps) => {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
@@ -19,7 +27,7 @@ const AnimatedStat = ({ end, duration = 2000, suffix = "", icon, label }: StatPr
     const animate = (currentTime: number) => {
       if (!startTime) startTime = currentTime;
       const progress = Math.min((currentTime - startTime) / duration, 1);
-      
+
       setCount(Math.floor(progress * end));
 
       if (progress < 1) {
@@ -39,7 +47,8 @@ const AnimatedStat = ({ end, duration = 2000, suffix = "", icon, label }: StatPr
       </div>
       <div className="text-center">
         <div className="text-3xl md:text-4xl font-bold text-white mb-1">
-          {count.toLocaleString()}{suffix}
+          {count.toLocaleString()}
+          {suffix}
         </div>
         <div className="text-sm text-white/80 font-medium">{label}</div>
       </div>

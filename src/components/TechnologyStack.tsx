@@ -1,40 +1,38 @@
-import samsungLogo from "@/assets/samsung-logo.png";
-import asrockLogo from "@/assets/asrock-logo.png";
-import ovhLogo from "@/assets/ovh-logo.png";
+"use client";
 
 const technologies = [
   {
     name: "Proxmox",
-    logo: "https://www.proxmox.com/images/proxmox/Proxmox-logo-860.png"
+    logo: "https://www.proxmox.com/images/proxmox/Proxmox-logo-860.png",
   },
   {
     name: "Ubuntu",
-    logo: "https://assets.ubuntu.com/v1/29985a98-ubuntu-logo32.png"
+    logo: "https://assets.ubuntu.com/v1/29985a98-ubuntu-logo32.png",
   },
   {
     name: "Intel",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/7/7d/Intel_logo_%282006-2020%29.svg"
+    logo: "https://upload.wikimedia.org/wikipedia/commons/7/7d/Intel_logo_%282006-2020%29.svg",
   },
   {
     name: "AMD",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/7/7c/AMD_Logo.svg"
+    logo: "https://upload.wikimedia.org/wikipedia/commons/7/7c/AMD_Logo.svg",
   },
   {
     name: "Samsung",
-    logo: samsungLogo
+    logo: "/samsung-logo.png",
   },
   {
     name: "ASRock",
-    logo: asrockLogo
+    logo: "/asrock-logo.png",
   },
   {
     name: "Cloudflare",
-    logo: "https://www.cloudflare.com/img/logo-cloudflare-dark.svg"
+    logo: "https://www.cloudflare.com/img/logo-cloudflare-dark.svg",
   },
   {
     name: "OVH",
-    logo: ovhLogo
-  }
+    logo: "/ovh-logo.png",
+  },
 ];
 
 export const TechnologyStack = () => {
@@ -46,7 +44,8 @@ export const TechnologyStack = () => {
             Didukung Teknologi Terdepan
           </h2>
           <p className="text-foreground/60 text-base">
-            Kami menggunakan teknologi terbaik untuk memastikan performa dan keandalan tertinggi
+            Kami menggunakan teknologi terbaik untuk memastikan performa dan
+            keandalan tertinggi
           </p>
         </div>
 
@@ -54,19 +53,19 @@ export const TechnologyStack = () => {
           {technologies.map((tech, index) => (
             <div
               key={index}
-            className="flex items-center justify-center p-4 bg-card rounded-lg border border-border hover:shadow-md hover:shadow-primary/5 transition-shadow duration-300 hover:scale-105 group will-change-transform"
-          >
-            <img
-              src={tech.logo}
-              alt={tech.name}
-              className="h-8 w-auto object-contain grayscale group-hover:grayscale-0 transition-all duration-300 opacity-50 group-hover:opacity-100"
-              width={80}
-              height={32}
-              loading="lazy"
-              decoding="async"
+              className="flex items-center justify-center p-4 bg-card rounded-lg border border-border hover:shadow-md hover:shadow-primary/5 transition-shadow duration-300 hover:scale-105 group will-change-transform"
+            >
+              <img
+                src={tech.logo}
+                alt={tech.name}
+                className="h-8 w-auto object-contain grayscale group-hover:grayscale-0 transition-all duration-300 opacity-50 group-hover:opacity-100"
+                width={80}
+                height={32}
+                loading="lazy"
+                decoding="async"
                 onError={(e) => {
                   // Fallback if image fails to load
-                  e.currentTarget.style.display = 'none';
+                  e.currentTarget.style.display = "none";
                   const parent = e.currentTarget.parentElement;
                   if (parent) {
                     parent.innerHTML = `<span class="text-sm font-semibold text-foreground/60">${tech.name}</span>`;
@@ -79,7 +78,8 @@ export const TechnologyStack = () => {
 
         <div className="mt-10 text-center">
           <p className="text-sm text-foreground/50">
-            Infrastruktur tingkat enterprise yang dipercaya ribuan bisnis di seluruh dunia
+            Infrastruktur tingkat enterprise yang dipercaya ribuan bisnis di
+            seluruh dunia
           </p>
         </div>
       </div>

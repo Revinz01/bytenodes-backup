@@ -1,3 +1,5 @@
+"use client";
+
 import { X, MessageCircle } from "lucide-react";
 import { useState } from "react";
 
@@ -13,11 +15,13 @@ export const AnnouncementBanner = () => {
       <div className="container mx-auto flex items-center justify-center gap-2 sm:gap-3 text-xs sm:text-sm pr-8">
         <MessageCircle className="w-4 h-4 text-primary-foreground flex-shrink-0 hidden sm:block" />
         <p className="text-primary-foreground font-medium text-center">
-          <span className="hidden sm:inline">🛒 Pembelian & Transaksi Resmi Hanya Melalui </span>
+          <span className="hidden sm:inline">
+            🛒 Pembelian & Transaksi Resmi Hanya Melalui{" "}
+          </span>
           <span className="sm:hidden">🛒 Order via </span>
-          <a 
-            href={DISCORD_URL} 
-            target="_blank" 
+          <a
+            href={DISCORD_URL}
+            target="_blank"
             rel="noopener noreferrer"
             className="underline hover:opacity-80 transition-opacity font-bold"
           >

@@ -1,3 +1,5 @@
+"use client";
+
 import { useEffect, useRef, useState } from "react";
 
 interface Particle {
@@ -19,7 +21,7 @@ export const ParticleBackground = () => {
       setIsMobile(window.innerWidth < 768);
     };
     checkMobile();
-    
+
     const canvas = canvasRef.current;
     if (!canvas) return;
 
@@ -57,7 +59,7 @@ export const ParticleBackground = () => {
       (entries) => {
         isVisible = entries[0]?.isIntersecting ?? false;
       },
-      { threshold: 0.1 }
+      { threshold: 0.1 },
     );
     observer.observe(canvas);
 
@@ -91,14 +93,14 @@ export const ParticleBackground = () => {
       if (deltaTime < frameInterval) return;
       lastTime = currentTime - (deltaTime % frameInterval);
 
-      const width = canvas.width / (Math.min(window.devicePixelRatio || 1, 2));
-      const height = canvas.height / (Math.min(window.devicePixelRatio || 1, 2));
+      const width = canvas.width / Math.min(window.devicePixelRatio || 1, 2);
+      const height = canvas.height / Math.min(window.devicePixelRatio || 1, 2);
 
       ctx.clearRect(0, 0, width, height);
 
       // Batch draw particles
       ctx.fillStyle = "rgba(59, 130, 246, 0.5)";
-      
+
       particles.forEach((particle) => {
         // Update position
         particle.x += particle.speedX;
@@ -122,7 +124,7 @@ export const ParticleBackground = () => {
         ctx.globalAlpha = 1;
         ctx.strokeStyle = "rgba(59, 130, 246, 0.1)";
         ctx.lineWidth = 0.5;
-        
+
         for (let i = 0; i < particles.length; i++) {
           for (let j = i + 1; j < particles.length; j++) {
             const dx = particles[i].x - particles[j].x;

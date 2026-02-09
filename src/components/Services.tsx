@@ -1,9 +1,26 @@
+"use client";
+
 import { Card } from "@/components/ui/card";
-import { Server, Globe, Bot, Gamepad2, HardDrive, Cpu, Shield, Clock, Headphones, Wifi } from "lucide-react";
+import {
+  Server,
+  Globe,
+  Bot,
+  Gamepad2,
+  HardDrive,
+  Cpu,
+  Shield,
+  Clock,
+  Headphones,
+  Wifi,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { motion } from "framer-motion";
-import { useScrollAnimation, scrollVariants, staggerContainer } from "@/hooks/useScrollAnimation";
+import {
+  useScrollAnimation,
+  scrollVariants,
+  staggerContainer,
+} from "@/hooks/useScrollAnimation";
 
 const services = [
   {
@@ -20,7 +37,7 @@ const services = [
       "Auto Backup",
       "Low Latency Network",
       "Shared & Premium Options",
-      "Singapore & EU Locations"
+      "Singapore & EU Locations",
     ],
   },
   {
@@ -37,7 +54,7 @@ const services = [
       "24/7 Uptime",
       "Premium Support",
       "Dedicated IP Option",
-      "High Single Core Performance"
+      "High Single Core Performance",
     ],
   },
   {
@@ -54,7 +71,7 @@ const services = [
       "Pterodactyl Panel",
       "Resource Isolated",
       "PHP & Node.js Support",
-      "Custom Domain Option"
+      "Custom Domain Option",
     ],
   },
   {
@@ -71,7 +88,7 @@ const services = [
       "Easy Deployment",
       "Priority Support",
       "Custom Domain Option",
-      "Free SSL"
+      "Free SSL",
     ],
   },
 ];
@@ -88,7 +105,9 @@ export const Services = () => {
           variants={scrollVariants}
           className="text-center mb-16"
         >
-          <p className="text-sm text-muted-foreground uppercase tracking-wider mb-2">SOLUTIONS</p>
+          <p className="text-sm text-muted-foreground uppercase tracking-wider mb-2">
+            SOLUTIONS
+          </p>
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
             Our Products
           </h2>
@@ -107,16 +126,25 @@ export const Services = () => {
                   <h3 className="text-xl font-bold mb-4 text-foreground group-hover:text-primary transition-colors duration-300">
                     {service.title}
                   </h3>
-                  
-                  <p className="text-sm text-muted-foreground mb-1">Starting at</p>
+
+                  <p className="text-sm text-muted-foreground mb-1">
+                    Starting at
+                  </p>
                   <div className="mb-6">
-                    <span className="text-3xl font-bold text-primary">{service.startingPrice}</span>
-                    <span className="text-muted-foreground text-sm">/month</span>
+                    <span className="text-3xl font-bold text-primary">
+                      {service.startingPrice}
+                    </span>
+                    <span className="text-muted-foreground text-sm">
+                      /month
+                    </span>
                   </div>
 
                   <ul className="space-y-2.5">
                     {service.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-start text-sm text-muted-foreground">
+                      <li
+                        key={idx}
+                        className="flex items-start text-sm text-muted-foreground"
+                      >
                         <HardDrive className="w-4 h-4 text-muted-foreground mr-2 flex-shrink-0 mt-0.5" />
                         {feature}
                       </li>
@@ -124,8 +152,11 @@ export const Services = () => {
                   </ul>
                 </div>
 
-                <Link to={service.link} className="mt-6">
-                  <Button variant="outline" className="w-full text-sm group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300">
+                <Link href={service.link} className="mt-6">
+                  <Button
+                    variant="outline"
+                    className="w-full text-sm group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300"
+                  >
                     Learn More
                   </Button>
                 </Link>

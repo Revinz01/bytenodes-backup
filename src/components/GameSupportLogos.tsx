@@ -1,17 +1,14 @@
+"use client";
+
 import { motion } from "framer-motion";
-import fivemLogo from "@/assets/fivem-logo.png";
-import minecraftLogo from "@/assets/minecraft-logo.png";
-import rustLogo from "@/assets/rust-logo.png";
-import terrariaLogo from "@/assets/terraria-logo.png";
-import sampLogo from "@/assets/samp-logo.png";
 
 export const GameSupportLogos = () => {
   const games = [
-    { name: "FiveM", logo: fivemLogo },
-    { name: "Minecraft", logo: minecraftLogo },
-    { name: "Rust", logo: rustLogo },
-    { name: "Terraria", logo: terrariaLogo },
-    { name: "SA-MP", logo: sampLogo },
+    { name: "FiveM", logo: "/fivem-logo.png" },
+    { name: "Minecraft", logo: "/minecraft-logo.png" },
+    { name: "Rust", logo: "/rust-logo.png" },
+    { name: "Terraria", logo: "/terraria-logo.png" },
+    { name: "SA-MP", logo: "/samp-logo.png" },
   ];
 
   return (
@@ -25,9 +22,11 @@ export const GameSupportLogos = () => {
           className="text-center mb-8"
         >
           <h3 className="text-xl font-bold mb-2">Supported Games</h3>
-          <p className="text-sm text-muted-foreground">Our servers support all popular game platforms</p>
+          <p className="text-sm text-muted-foreground">
+            Our servers support all popular game platforms
+          </p>
         </motion.div>
-        
+
         <div className="flex flex-wrap justify-center items-center gap-8">
           {games.map((game, index) => (
             <motion.div
@@ -38,9 +37,9 @@ export const GameSupportLogos = () => {
               viewport={{ once: true }}
               className="flex items-center gap-3 px-5 py-3 rounded-lg bg-card border border-border/50 hover:border-primary/50 transition-colors"
             >
-              <img 
-                src={game.logo} 
-                alt={game.name} 
+              <img
+                src={game.logo}
+                alt={game.name}
                 className="w-10 h-10 object-contain"
               />
               <span className="font-semibold text-sm">{game.name}</span>

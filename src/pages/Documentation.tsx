@@ -1,10 +1,24 @@
 import { Navbar } from "@/components/Navbar";
 import { AnnouncementBanner } from "@/components/AnnouncementBanner";
 import { Footer } from "@/components/Footer";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Link } from "react-router-dom";
-import { Book, Server, Shield, CreditCard, MessageSquare, Settings, ArrowRight } from "lucide-react";
+import Link from "next/link";
+import {
+  Book,
+  Server,
+  Shield,
+  CreditCard,
+  MessageSquare,
+  Settings,
+  ArrowRight,
+} from "lucide-react";
 
 const docCategories = [
   {
@@ -15,8 +29,8 @@ const docCategories = [
       { title: "Cara Membuat Akun", slug: "create-account" },
       { title: "Memilih Paket yang Tepat", slug: "choose-package" },
       { title: "Proses Pembayaran", slug: "payment-process" },
-      { title: "Aktivasi Layanan", slug: "service-activation" }
-    ]
+      { title: "Aktivasi Layanan", slug: "service-activation" },
+    ],
   },
   {
     icon: Settings,
@@ -26,8 +40,8 @@ const docCategories = [
       { title: "Menggunakan Pterodactyl Panel", slug: "pterodactyl-guide" },
       { title: "Akses SSH ke VPS", slug: "ssh-access" },
       { title: "Remote Desktop (RDP)", slug: "rdp-guide" },
-      { title: "File Manager", slug: "file-manager" }
-    ]
+      { title: "File Manager", slug: "file-manager" },
+    ],
   },
   {
     icon: Shield,
@@ -37,8 +51,8 @@ const docCategories = [
       { title: "Konfigurasi Firewall", slug: "firewall-config" },
       { title: "SSL Certificate", slug: "ssl-certificate" },
       { title: "Backup Strategy", slug: "backup-strategy" },
-      { title: "DDoS Protection", slug: "ddos-protection" }
-    ]
+      { title: "DDoS Protection", slug: "ddos-protection" },
+    ],
   },
   {
     icon: Server,
@@ -48,8 +62,8 @@ const docCategories = [
       { title: "Setup Minecraft Server", slug: "minecraft-setup" },
       { title: "Install Plugins & Mods", slug: "plugins-mods" },
       { title: "Optimasi Performa", slug: "performance-optimization" },
-      { title: "Multiplayer Configuration", slug: "multiplayer-config" }
-    ]
+      { title: "Multiplayer Configuration", slug: "multiplayer-config" },
+    ],
   },
   {
     icon: CreditCard,
@@ -59,8 +73,8 @@ const docCategories = [
       { title: "Metode Pembayaran", slug: "payment-methods" },
       { title: "Invoice & Receipt", slug: "invoice-receipt" },
       { title: "Upgrade & Downgrade", slug: "upgrade-downgrade" },
-      { title: "Refund Policy", slug: "refund-policy" }
-    ]
+      { title: "Refund Policy", slug: "refund-policy" },
+    ],
   },
   {
     icon: MessageSquare,
@@ -70,9 +84,9 @@ const docCategories = [
       { title: "Membuat Support Ticket", slug: "create-ticket" },
       { title: "Menghubungi via Discord", slug: "discord-support" },
       { title: "Live Chat Support", slug: "live-chat" },
-      { title: "Emergency Contact", slug: "emergency-contact" }
-    ]
-  }
+      { title: "Emergency Contact", slug: "emergency-contact" },
+    ],
+  },
 ];
 
 const Documentation = () => {
@@ -80,7 +94,7 @@ const Documentation = () => {
     <div className="min-h-screen">
       <AnnouncementBanner />
       <Navbar />
-      
+
       <div className="pt-32 pb-12 px-4 bg-gradient-to-b from-navy-dark to-background">
         <div className="container mx-auto text-center">
           <Book className="w-16 h-16 text-primary mx-auto mb-6" />
@@ -99,13 +113,18 @@ const Documentation = () => {
             {docCategories.map((category, idx) => {
               const Icon = category.icon;
               return (
-                <Card key={idx} className="hover:border-primary/50 transition-all">
+                <Card
+                  key={idx}
+                  className="hover:border-primary/50 transition-all"
+                >
                   <CardHeader>
                     <div className="flex items-center gap-3 mb-2">
                       <div className="p-2 rounded-lg bg-primary/10">
                         <Icon className="w-5 h-5 text-primary" />
                       </div>
-                      <CardTitle className="text-lg">{category.title}</CardTitle>
+                      <CardTitle className="text-lg">
+                        {category.title}
+                      </CardTitle>
                     </div>
                     <CardDescription>{category.description}</CardDescription>
                   </CardHeader>
@@ -113,8 +132,8 @@ const Documentation = () => {
                     <ul className="space-y-2">
                       {category.articles.map((article, articleIdx) => (
                         <li key={articleIdx}>
-                          <Link 
-                            to={`/blog`}
+                          <Link
+                            href={`/blog`}
                             className="flex items-center text-sm text-muted-foreground hover:text-primary transition-colors group"
                           >
                             <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -136,19 +155,36 @@ const Documentation = () => {
         <div className="container mx-auto max-w-4xl text-center">
           <h2 className="text-2xl font-bold mb-6">Butuh Bantuan Lebih?</h2>
           <div className="flex flex-wrap justify-center gap-4">
-            <Link to="/tickets">
-              <Badge variant="outline" className="px-4 py-2 text-sm hover:bg-primary hover:text-primary-foreground transition-colors cursor-pointer">
+            <Link href="/tickets">
+              <Badge
+                variant="outline"
+                className="px-4 py-2 text-sm hover:bg-primary hover:text-primary-foreground transition-colors cursor-pointer"
+              >
                 <MessageSquare className="w-4 h-4 mr-2" />
                 Buat Support Ticket
               </Badge>
             </Link>
-            <a href="https://discord.gg/2PMmPp6Yx8" target="_blank" rel="noopener noreferrer">
-              <Badge variant="outline" className="px-4 py-2 text-sm hover:bg-primary hover:text-primary-foreground transition-colors cursor-pointer">
+            <a
+              href="https://discord.gg/2PMmPp6Yx8"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Badge
+                variant="outline"
+                className="px-4 py-2 text-sm hover:bg-primary hover:text-primary-foreground transition-colors cursor-pointer"
+              >
                 Join Discord Community
               </Badge>
             </a>
-            <a href="https://wa.me/6285126080236" target="_blank" rel="noopener noreferrer">
-              <Badge variant="outline" className="px-4 py-2 text-sm hover:bg-primary hover:text-primary-foreground transition-colors cursor-pointer">
+            <a
+              href="https://wa.me/6285126080236"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Badge
+                variant="outline"
+                className="px-4 py-2 text-sm hover:bg-primary hover:text-primary-foreground transition-colors cursor-pointer"
+              >
                 WhatsApp Support
               </Badge>
             </a>

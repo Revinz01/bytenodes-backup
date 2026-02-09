@@ -1,8 +1,10 @@
-import { Link } from "react-router-dom";
+"use client";
+
+import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
-import logo from "@/assets/logo.png";
 
 const DISCORD_URL = "https://discord.gg/2PMmPp6Yx8";
 
@@ -13,17 +15,33 @@ export const Navbar = () => {
     <nav className="fixed top-8 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border/50">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-          <Link to="/" className="flex items-center gap-2 text-xl font-bold" aria-label="ByteNodes Beranda">
-            <img src={logo} alt="" className="w-10 h-10 object-contain" width={40} height={40} />
+          <Link
+            href="/"
+            className="flex items-center gap-2 text-xl font-bold"
+            aria-label="ByteNodes Beranda"
+          >
+            <Image
+              src="/logo.png"
+              alt=""
+              className="object-contain"
+              width={40}
+              height={40}
+            />
             <span className="text-foreground">ByteNodes</span>
           </Link>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-6">
-            <Link to="/" className="text-sm font-semibold text-foreground/80 hover:text-primary transition-all duration-300 hover:scale-105">
+            <Link
+              href="/"
+              className="text-sm font-semibold text-foreground/80 hover:text-primary transition-all duration-300 hover:scale-105"
+            >
               Beranda
             </Link>
-            <Link to="/services" className="text-sm font-semibold text-foreground/80 hover:text-primary transition-all duration-300 hover:scale-105">
+            <Link
+              href="/services"
+              className="text-sm font-semibold text-foreground/80 hover:text-primary transition-all duration-300 hover:scale-105"
+            >
               Layanan
             </Link>
             <div className="relative group">
@@ -31,34 +49,57 @@ export const Navbar = () => {
                 Harga
               </button>
               <div className="absolute top-full left-0 mt-2 w-48 bg-card border border-border/50 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
-                <Link to="/pricing" className="block px-4 py-3 hover:bg-secondary hover:text-primary transition-all text-sm">
+                <Link
+                  href="/pricing"
+                  className="block px-4 py-3 hover:bg-secondary hover:text-primary transition-all text-sm"
+                >
                   Semua Harga
                 </Link>
-                <Link to="/pricing/servers" className="block px-4 py-3 hover:bg-secondary hover:text-primary transition-all text-sm">
+                <Link
+                  href="/pricing/servers"
+                  className="block px-4 py-3 hover:bg-secondary hover:text-primary transition-all text-sm"
+                >
                   Game Server
                 </Link>
-                <Link to="/pricing/vps" className="block px-4 py-3 hover:bg-secondary hover:text-primary transition-all text-sm">
+                <Link
+                  href="/pricing/vps"
+                  className="block px-4 py-3 hover:bg-secondary hover:text-primary transition-all text-sm"
+                >
                   VPS & RDP
                 </Link>
-                <Link to="/pricing/bot" className="block px-4 py-3 hover:bg-secondary hover:text-primary transition-all text-sm">
+                <Link
+                  href="/pricing/bot"
+                  className="block px-4 py-3 hover:bg-secondary hover:text-primary transition-all text-sm"
+                >
                   Discord Bot Hosting
                 </Link>
-                <Link to="/pricing/website" className="block px-4 py-3 hover:bg-secondary hover:text-primary transition-all text-sm">
+                <Link
+                  href="/pricing/website"
+                  className="block px-4 py-3 hover:bg-secondary hover:text-primary transition-all text-sm"
+                >
                   Website Hosting
                 </Link>
               </div>
             </div>
-            <Link to="/about" className="text-sm font-semibold text-foreground/80 hover:text-primary transition-all duration-300 hover:scale-105">
+            <Link
+              href="/about"
+              className="text-sm font-semibold text-foreground/80 hover:text-primary transition-all duration-300 hover:scale-105"
+            >
               Tentang
             </Link>
-            <Link to="/contact" className="text-sm font-semibold text-foreground/80 hover:text-primary transition-all duration-300 hover:scale-105">
+            <Link
+              href="/contact"
+              className="text-sm font-semibold text-foreground/80 hover:text-primary transition-all duration-300 hover:scale-105"
+            >
               Kontak
             </Link>
           </div>
 
           <div className="hidden md:flex items-center gap-3">
             <a href={DISCORD_URL} target="_blank" rel="noopener noreferrer">
-              <Button className="rounded-full px-6 font-semibold">Mulai Sekarang</Button>
+              <Button className="rounded-full px-6 font-semibold">
+                Mulai Sekarang
+              </Button>
             </a>
           </div>
 
@@ -70,7 +111,11 @@ export const Navbar = () => {
               aria-expanded={mobileMenuOpen}
               className="p-2 hover:bg-secondary rounded-lg transition-colors"
             >
-              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {mobileMenuOpen ? (
+                <X className="w-6 h-6" />
+              ) : (
+                <Menu className="w-6 h-6" />
+              )}
             </button>
           </div>
         </div>
@@ -80,51 +125,53 @@ export const Navbar = () => {
           <div className="md:hidden py-4 border-t border-border">
             <div className="flex flex-col gap-4">
               <Link
-                to="/"
+                href="/"
                 className="text-sm font-medium hover:text-primary transition-all duration-300"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Beranda
               </Link>
               <Link
-                to="/services"
+                href="/services"
                 className="text-sm font-medium hover:text-primary transition-all duration-300"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Layanan
               </Link>
               <div className="space-y-2">
-                <p className="text-sm font-semibold text-muted-foreground">Harga</p>
+                <p className="text-sm font-semibold text-muted-foreground">
+                  Harga
+                </p>
                 <Link
-                  to="/pricing"
+                  href="/pricing"
                   className="text-sm font-medium hover:text-primary transition-all duration-300 block pl-4"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Semua Harga
                 </Link>
                 <Link
-                  to="/pricing/servers"
+                  href="/pricing/servers"
                   className="text-sm font-medium hover:text-primary transition-all duration-300 block pl-4"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Game Server
                 </Link>
                 <Link
-                  to="/pricing/vps"
+                  href="/pricing/vps"
                   className="text-sm font-medium hover:text-primary transition-all duration-300 block pl-4"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   VPS & RDP
                 </Link>
                 <Link
-                  to="/pricing/bot"
+                  href="/pricing/bot"
                   className="text-sm font-medium hover:text-primary transition-all duration-300 block pl-4"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Discord Bot Hosting
                 </Link>
                 <Link
-                  to="/pricing/website"
+                  href="/pricing/website"
                   className="text-sm font-medium hover:text-primary transition-all duration-300 block pl-4"
                   onClick={() => setMobileMenuOpen(false)}
                 >
@@ -132,20 +179,25 @@ export const Navbar = () => {
                 </Link>
               </div>
               <Link
-                to="/about"
+                href="/about"
                 className="text-sm font-medium hover:text-primary transition-all duration-300"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Tentang
               </Link>
               <Link
-                to="/contact"
+                href="/contact"
                 className="text-sm font-medium hover:text-primary transition-all duration-300"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Kontak
               </Link>
-              <a href={DISCORD_URL} target="_blank" rel="noopener noreferrer" onClick={() => setMobileMenuOpen(false)}>
+              <a
+                href={DISCORD_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setMobileMenuOpen(false)}
+              >
                 <Button className="w-full">Mulai Sekarang</Button>
               </a>
             </div>
