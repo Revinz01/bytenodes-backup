@@ -5,6 +5,8 @@
 # Allow all bots by default
 User-agent: *
 Allow: /
+
+# Disallow unnecessary sections for all bots
 Disallow: /api/
 Disallow: /admin/
 Disallow: /.env
@@ -15,7 +17,7 @@ Disallow: /wp-admin/
 Disallow: /wp-login/
 Disallow: /cgi-bin/
 
-# Crawl-delay for general bots
+# Crawl-delay for general bots (optional for slower bots)
 Crawl-delay: 0
 
 # Slow down aggressive crawlers
@@ -28,7 +30,7 @@ Crawl-delay: 1
 User-agent: SemrushBot
 Crawl-delay: 1
 
-# Fast crawlers from major search engines
+# Specific handling for major search engines
 User-agent: Googlebot
 Allow: /
 Disallow: /api/
@@ -53,27 +55,13 @@ Disallow: /api/
 Disallow: /admin/
 Crawl-delay: 0
 
-# Sitemap location
-Sitemap: https://bytenodes.icu/sitemap.xml
-
-Disallow: /admin/
-
-User-agent: Slurp
-Allow: /
-Disallow: /api/
-Disallow: /admin/
-
-User-agent: DuckDuckBot
-Allow: /
-Disallow: /api/
-Disallow: /admin/
-
+# Avoid redundant disallow for certain crawlers
 User-agent: Baiduspider
 Allow: /
 Disallow: /api/
 Disallow: /admin/
 
-# Social Media Bots
+# Social Media Bots (Allowing for indexing)
 User-agent: Twitterbot
 Allow: /
 
@@ -86,5 +74,5 @@ Allow: /
 User-agent: Discordbot
 Allow: /
 
-# Sitemap location
+# Sitemap location (placed here once at the end)
 Sitemap: https://bytenodes.icu/sitemap.xml
