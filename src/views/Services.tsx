@@ -72,7 +72,8 @@ const servicesDetail = [
   {
     icon: Server,
     title: "VPS & Dedicated Server",
-    description: "VPS dengan AMD EPYC Processors, Custom Specs, dan Dedicated Resources.",
+    description:
+      "VPS dengan AMD EPYC Processors, Custom Specs, dan Dedicated Resources.",
     priceRp: "Mulai Rp 175.000",
     priceUsd: "~$10.90",
     link: "/pricing/vps",
