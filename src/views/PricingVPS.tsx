@@ -333,11 +333,8 @@ const PricingVPS = () => {
           </div>
 
           <h1 className="text-4xl md:text-6xl font-black mb-6 tracking-tight text-foreground">
-            VPS & <span className="text-primary">RDP</span> PACKAGES
+            VPS & <span className="text-primary">VDS</span> PACKAGES
           </h1>
-          <h2 className="text-2xl md:text-3xl font-bold text-muted-foreground mb-4">
-            Coming Soon
-          </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-8 leading-relaxed">
             VPS KVM for Linux, Dedicated servers with high performance, and RDP
             Windows for various needs.
