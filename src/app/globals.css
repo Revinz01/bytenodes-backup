@@ -303,4 +303,35 @@ All colors MUST be HSL.
   .contain-paint {
     contain: paint;
   }
+
+  /* Will-change optimization for GSAP animations */
+  .will-change-transform {
+    will-change: transform;
+  }
+
+  .will-change-opacity {
+    will-change: opacity;
+  }
+
+  /* Smooth scrolling with performance optimization */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  /* Prevent horizontal overflow on mobile during horizontal scroll sections */
+  .overflow-x-clip {
+    overflow-x: clip;
+  }
+
+  /* Better text rendering for animated text */
+  .text-render-optimized {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
 }
