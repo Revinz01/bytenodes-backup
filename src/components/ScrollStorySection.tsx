@@ -17,7 +17,7 @@ const STEPS = [
     accent: "hsl(217 91% 60%)",
     visual: {
       primary: "from-blue-500/30 to-blue-900/10",
-      shapes: ["top-8 left-8 w-24 h-24", "bottom-8 right-8 w-16 h-16"],
+      shapes: ["top-8 left-8 w-20 md:w-24 h-20 md:h-24", "bottom-8 right-8 w-14 md:w-16 h-14 md:h-16"],
     },
   },
   {
@@ -29,7 +29,7 @@ const STEPS = [
     accent: "hsl(180 70% 50%)",
     visual: {
       primary: "from-cyan-500/30 to-cyan-900/10",
-      shapes: ["top-4 right-4 w-28 h-28", "bottom-12 left-6 w-20 h-20"],
+      shapes: ["top-4 right-4 w-24 md:w-28 h-24 md:h-28", "bottom-12 left-6 w-16 md:w-20 h-16 md:h-20"],
     },
   },
   {
@@ -41,7 +41,7 @@ const STEPS = [
     accent: "hsl(142 70% 50%)",
     visual: {
       primary: "from-emerald-500/30 to-emerald-900/10",
-      shapes: ["top-6 left-12 w-20 h-20", "bottom-4 right-10 w-24 h-24"],
+      shapes: ["top-6 left-12 w-16 md:w-20 h-16 md:h-20", "bottom-4 right-10 w-20 md:w-24 h-20 md:h-24"],
     },
   },
   {
@@ -53,7 +53,7 @@ const STEPS = [
     accent: "hsl(280 70% 65%)",
     visual: {
       primary: "from-purple-500/30 to-purple-900/10",
-      shapes: ["top-10 right-6 w-20 h-20", "bottom-6 left-8 w-16 h-16"],
+      shapes: ["top-10 right-6 w-16 md:w-20 h-16 md:h-20", "bottom-6 left-8 w-12 md:w-16 h-12 md:h-16"],
     },
   },
   {
@@ -65,7 +65,7 @@ const STEPS = [
     accent: "hsl(30 90% 60%)",
     visual: {
       primary: "from-orange-500/30 to-orange-900/10",
-      shapes: ["top-4 left-4 w-24 h-24", "bottom-8 right-8 w-18 h-18"],
+      shapes: ["top-4 left-4 w-20 md:w-24 h-20 md:h-24", "bottom-8 right-8 w-14 md:w-18 h-14 md:h-18"],
     },
   },
 ];
@@ -76,8 +76,18 @@ export const ScrollStorySection = () => {
   const progressRef = useRef<HTMLDivElement>(null);
   const stepRefs = useRef<(HTMLDivElement | null)[]>([]);
   const visualRefs = useRef<(HTMLDivElement | null)[]>([]);
-  const dotRefs = useRef<(HTMLDivElement | null)[]>([]);
   const [activeIndex, setActiveIndex] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Handle responsive detection
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
 
   useEffect(() => {
     if (!containerRef.current || !stickyRef.current) return;
@@ -85,7 +95,7 @@ export const ScrollStorySection = () => {
     const ctx = gsap.context(() => {
       const totalSteps = STEPS.length;
 
-      // Set initial states explicitly to prevent shadow artifacts
+      // Set initial states - ensure clean state
       stepRefs.current.forEach((step, i) => {
         if (step) {
           gsap.set(step, {
@@ -93,6 +103,7 @@ export const ScrollStorySection = () => {
             y: i === 0 ? 0 : 40,
             filter: i === 0 ? "blur(0px)" : "blur(4px)",
             visibility: "visible",
+            immediateRender: true,
           });
         }
       });
@@ -104,41 +115,43 @@ export const ScrollStorySection = () => {
             scale: i === 0 ? 1 : 0.88,
             rotateY: i === 0 ? 0 : -12,
             visibility: "visible",
+            immediateRender: true,
           });
         }
       });
 
-      // Master timeline for progress bar
+      // Master scroll trigger for progress and index tracking
       ScrollTrigger.create({
         trigger: containerRef.current,
         start: "top top",
         end: "bottom bottom",
         scrub: 0.5,
         onUpdate: (self) => {
+          // Update progress bar
           if (progressRef.current) {
             gsap.set(progressRef.current, { scaleX: self.progress });
           }
-          // Calculate which step we're on
+          // Calculate active step
           const newIndex = Math.min(
             Math.floor(self.progress * totalSteps),
             totalSteps - 1
           );
-          setActiveIndex(newIndex);
+          if (newIndex !== activeIndex) {
+            setActiveIndex(newIndex);
+          }
         },
       });
 
-      // Create individual step triggers
+      // Create individual step transitions
       STEPS.forEach((_, i) => {
         const step = stepRefs.current[i];
         const visual = visualRefs.current[i];
         const prevStep = i > 0 ? stepRefs.current[i - 1] : null;
         const prevVisual = i > 0 ? visualRefs.current[i - 1] : null;
-        const nextStep = i < totalSteps - 1 ? stepRefs.current[i + 1] : null;
-        const nextVisual = i < totalSteps - 1 ? visualRefs.current[i + 1] : null;
 
         if (!step || !visual) return;
 
-        // Entry animation for each step (except first which starts visible)
+        // Entry trigger for each step (skip first - already visible)
         if (i > 0) {
           ScrollTrigger.create({
             trigger: containerRef.current,
@@ -148,7 +161,7 @@ export const ScrollStorySection = () => {
             onUpdate: (self) => {
               const progress = self.progress;
               
-              // Fade in current step
+              // Fade in current
               gsap.set(step, {
                 opacity: progress,
                 y: 40 * (1 - progress),
@@ -161,7 +174,7 @@ export const ScrollStorySection = () => {
                 rotateY: -12 * (1 - progress),
               });
 
-              // Fade out previous step completely
+              // Fade out previous
               if (prevStep && prevVisual) {
                 gsap.set(prevStep, {
                   opacity: 1 - progress,
@@ -177,64 +190,46 @@ export const ScrollStorySection = () => {
             },
           });
         }
-
-        // Exit animation for last step (when scrolling past)
-        if (i === totalSteps - 1) {
-          ScrollTrigger.create({
-            trigger: containerRef.current,
-            start: `${((i + 0.7) / totalSteps) * 100}% top`,
-            end: `${100}% top`,
-            scrub: 0.6,
-            onUpdate: (self) => {
-              const progress = self.progress;
-              gsap.set(step, {
-                opacity: 1 - progress * 0.5,
-              });
-              gsap.set(visual, {
-                opacity: 1 - progress * 0.5,
-              });
-            },
-          });
-        }
       });
 
-      // Section title reveal
+      // Title animations
       gsap.from(".story-section-title", {
         opacity: 0,
         y: 50,
         duration: 0.8,
         ease: "power3.out",
+        stagger: 0.1,
         scrollTrigger: {
           trigger: containerRef.current,
-          start: "top 80%",
+          start: "top 85%",
         },
       });
     }, containerRef);
 
     return () => ctx.revert();
-  }, []);
+  }, [activeIndex]);
 
   return (
     <section className="relative bg-background">
       {/* Section header */}
-      <div className="py-24 text-center px-4">
-        <p className="story-section-title text-sm text-primary uppercase tracking-widest font-semibold mb-3">
+      <div className="py-16 md:py-24 text-center px-4">
+        <p className="story-section-title text-xs md:text-sm text-primary uppercase tracking-widest font-semibold mb-2 md:mb-3">
           Mengapa ByteNodes
         </p>
-        <h2 className="story-section-title text-4xl md:text-5xl font-black text-foreground text-balance">
+        <h2 className="story-section-title text-3xl sm:text-4xl md:text-5xl font-black text-foreground text-balance">
           Infrastruktur yang{" "}
           <span className="text-primary">Bicara Sendiri</span>
         </h2>
-        <p className="story-section-title text-muted-foreground mt-4 max-w-xl mx-auto text-balance">
+        <p className="story-section-title text-sm md:text-base text-muted-foreground mt-3 md:mt-4 max-w-xl mx-auto text-balance">
           Scroll ke bawah untuk menjelajahi keunggulan kami satu per satu.
         </p>
       </div>
 
-      {/* Scroll container */}
+      {/* Scroll container - responsive height */}
       <div
         ref={containerRef}
         className="relative"
-        style={{ height: `${STEPS.length * 100}vh` }}
+        style={{ height: `${STEPS.length * (isMobile ? 80 : 100)}vh` }}
       >
         {/* Sticky viewport */}
         <div
@@ -250,22 +245,23 @@ export const ScrollStorySection = () => {
             />
           </div>
 
-          {/* Step counter - uses React state for clean updates */}
-          <div className="absolute top-6 right-6 z-20 flex items-baseline gap-1 font-mono">
+          {/* Step counter - uses React state */}
+          <div className="absolute top-4 md:top-6 right-4 md:right-6 z-20 flex items-baseline gap-1 font-mono">
             <span 
-              className="text-3xl font-black transition-all duration-300"
+              className="text-2xl md:text-3xl font-black transition-all duration-300"
               style={{ color: STEPS[activeIndex]?.accent }}
             >
               {String(activeIndex + 1).padStart(2, "0")}
             </span>
-            <span className="text-muted-foreground text-sm">
+            <span className="text-muted-foreground text-xs md:text-sm">
               / {String(STEPS.length).padStart(2, "0")}
             </span>
           </div>
 
-          <div className="container mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
+          {/* Main content grid */}
+          <div className="container mx-auto px-4 grid md:grid-cols-2 gap-6 md:gap-12 items-center">
             {/* Left: text steps */}
-            <div className="relative h-80">
+            <div className="relative h-64 md:h-80 order-2 md:order-1">
               {STEPS.map((step, i) => (
                 <div
                   key={i}
@@ -273,40 +269,40 @@ export const ScrollStorySection = () => {
                   className="absolute inset-0 flex flex-col justify-center will-change-transform"
                   style={{ visibility: "hidden" }}
                 >
-                  {/* Large background number */}
+                  {/* Large background number - smaller on mobile */}
                   <span
-                    className="font-mono text-8xl font-black leading-none mb-4 select-none transition-colors duration-300"
+                    className="font-mono text-5xl md:text-8xl font-black leading-none mb-2 md:mb-4 select-none transition-colors duration-300"
                     style={{ 
                       color: activeIndex === i ? `${step.accent}40` : "hsl(var(--muted-foreground) / 0.15)",
                     }}
                   >
                     {step.index}
                   </span>
-                  <div className="flex items-center gap-3 mb-4">
+                  <div className="flex items-center gap-2 md:gap-3 mb-2 md:mb-4">
                     <div
-                      className="w-12 h-12 rounded-xl flex items-center justify-center transition-all duration-300"
+                      className="w-10 h-10 md:w-12 md:h-12 rounded-lg md:rounded-xl flex items-center justify-center transition-all duration-300"
                       style={{ background: `${step.accent}22` }}
                     >
-                      <step.icon className="w-6 h-6" style={{ color: step.accent }} aria-hidden="true" />
+                      <step.icon className="w-5 h-5 md:w-6 md:h-6" style={{ color: step.accent }} aria-hidden="true" />
                     </div>
-                    <h3 className="text-2xl md:text-3xl font-black text-foreground">
+                    <h3 className="text-xl sm:text-2xl md:text-3xl font-black text-foreground">
                       {step.title}
                     </h3>
                   </div>
-                  <p className="text-muted-foreground leading-relaxed text-base max-w-md">
+                  <p className="text-sm md:text-base text-muted-foreground leading-relaxed max-w-md">
                     {step.description}
                   </p>
                 </div>
               ))}
             </div>
 
-            {/* Right: visual panels */}
-            <div className="relative h-96 hidden md:block" style={{ perspective: "1000px" }}>
+            {/* Right: visual panels - shown only on tablet+ */}
+            <div className="relative h-48 md:h-96 order-1 md:order-2" style={{ perspective: "1000px" }}>
               {STEPS.map((step, i) => (
                 <div
                   key={i}
                   ref={(el) => { visualRefs.current[i] = el; }}
-                  className={`absolute inset-0 rounded-3xl border border-primary/20 bg-gradient-to-br ${step.visual.primary} backdrop-blur-sm flex items-center justify-center will-change-transform`}
+                  className={`absolute inset-0 rounded-2xl md:rounded-3xl border border-primary/20 bg-gradient-to-br ${step.visual.primary} backdrop-blur-sm flex items-center justify-center will-change-transform`}
                   style={{ 
                     transformStyle: "preserve-3d",
                     visibility: "hidden",
@@ -316,7 +312,7 @@ export const ScrollStorySection = () => {
                   {step.visual.shapes.map((cls, si) => (
                     <div
                       key={si}
-                      className={`absolute ${cls} rounded-2xl border border-primary/20 transition-transform duration-700`}
+                      className={`absolute ${cls} rounded-xl md:rounded-2xl border border-primary/20 transition-transform duration-700`}
                       style={{ 
                         background: `${step.accent}15`,
                         transform: activeIndex === i ? "scale(1)" : "scale(0.8)",
@@ -325,36 +321,35 @@ export const ScrollStorySection = () => {
                   ))}
                   {/* Center icon */}
                   <div
-                    className="w-28 h-28 rounded-3xl flex items-center justify-center shadow-2xl transition-transform duration-500"
+                    className="w-20 h-20 md:w-28 md:h-28 rounded-2xl md:rounded-3xl flex items-center justify-center shadow-2xl transition-transform duration-500"
                     style={{ 
                       background: `linear-gradient(135deg, ${step.accent}30, ${step.accent}10)`, 
                       border: `2px solid ${step.accent}50`,
                       transform: activeIndex === i ? "scale(1) rotate(0deg)" : "scale(0.9) rotate(-5deg)",
                     }}
                   >
-                    <step.icon className="w-14 h-14" style={{ color: step.accent }} aria-hidden="true" />
+                    <step.icon className="w-10 h-10 md:w-14 md:h-14" style={{ color: step.accent }} aria-hidden="true" />
                   </div>
 
                   {/* Floating particles */}
                   <div 
-                    className="absolute top-1/4 left-1/4 w-2 h-2 rounded-full animate-pulse"
+                    className="absolute top-1/4 left-1/4 w-1.5 md:w-2 h-1.5 md:h-2 rounded-full animate-pulse"
                     style={{ background: step.accent, opacity: 0.6 }}
                   />
                   <div 
-                    className="absolute bottom-1/3 right-1/4 w-3 h-3 rounded-full animate-pulse delay-300"
-                    style={{ background: step.accent, opacity: 0.4 }}
+                    className="absolute bottom-1/3 right-1/4 w-2 md:w-3 h-2 md:h-3 rounded-full animate-pulse"
+                    style={{ background: step.accent, opacity: 0.4, animationDelay: "300ms" }}
                   />
                 </div>
               ))}
             </div>
           </div>
 
-          {/* Side step indicator dots */}
-          <div className="absolute right-6 top-1/2 -translate-y-1/2 flex flex-col gap-3 z-20">
+          {/* Side step indicator dots - hidden on mobile, shown on right side on desktop */}
+          <div className="hidden md:flex absolute right-6 top-1/2 -translate-y-1/2 flex-col gap-3 z-20">
             {STEPS.map((step, i) => (
               <div
                 key={i}
-                ref={(el) => { dotRefs.current[i] = el; }}
                 className="relative w-2.5 h-2.5 rounded-full transition-all duration-300 cursor-pointer"
                 style={{ 
                   background: activeIndex === i ? step.accent : "hsl(var(--muted-foreground) / 0.3)",
@@ -371,11 +366,25 @@ export const ScrollStorySection = () => {
             ))}
           </div>
 
+          {/* Mobile step dots - bottom center on mobile */}
+          <div className="md:hidden absolute bottom-20 left-1/2 -translate-x-1/2 flex gap-2 z-20">
+            {STEPS.map((step, i) => (
+              <div
+                key={i}
+                className="relative w-2 h-2 rounded-full transition-all duration-300"
+                style={{ 
+                  background: activeIndex === i ? step.accent : "hsl(var(--muted-foreground) / 0.3)",
+                  transform: activeIndex === i ? "scale(1.3)" : "scale(1)",
+                }}
+              />
+            ))}
+          </div>
+
           {/* Scroll hint at bottom */}
-          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-muted-foreground/50">
-            <span className="text-xs uppercase tracking-widest">Scroll</span>
-            <div className="w-5 h-8 rounded-full border-2 border-current flex items-start justify-center p-1">
-              <div className="w-1 h-2 rounded-full bg-current animate-bounce" />
+          <div className="absolute bottom-4 md:bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 md:gap-2 text-muted-foreground/50">
+            <span className="text-[10px] md:text-xs uppercase tracking-widest">Scroll</span>
+            <div className="w-4 md:w-5 h-6 md:h-8 rounded-full border-2 border-current flex items-start justify-center p-0.5 md:p-1">
+              <div className="w-0.5 md:w-1 h-1.5 md:h-2 rounded-full bg-current animate-bounce" />
             </div>
           </div>
         </div>

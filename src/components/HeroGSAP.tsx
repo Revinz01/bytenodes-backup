@@ -6,19 +6,18 @@ import Link from "next/link";
 import { ArrowRight, Server, Zap, Shield, Globe } from "lucide-react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { FloatingLinesBackground } from "./FloatingLinesBackground";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const DISCORD_URL = "https://discord.gg/2PMmPp6Yx8";
 
 const ORBS = [
-  { size: 520, top: "-10%", left: "-8%", delay: 0, speed: 0.4, opacity: 0.15 },
-  { size: 380, top: "20%", right: "-5%", delay: 0.3, speed: -0.25, opacity: 0.12 },
-  { size: 260, top: "55%", left: "15%", delay: 0.6, speed: 0.3, opacity: 0.1 },
-  { size: 180, top: "10%", left: "45%", delay: 0.9, speed: -0.2, opacity: 0.08 },
+  { size: 520, top: "-10%", left: "-8%", delay: 0, speed: 0.4, opacity: 0.12 },
+  { size: 380, top: "20%", right: "-5%", delay: 0.3, speed: -0.25, opacity: 0.1 },
+  { size: 260, top: "55%", left: "15%", delay: 0.6, speed: 0.3, opacity: 0.08 },
+  { size: 180, top: "10%", left: "45%", delay: 0.9, speed: -0.2, opacity: 0.06 },
 ];
-
-const GRID_LINES = Array.from({ length: 8 });
 
 export const HeroGSAP = () => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -155,10 +154,22 @@ export const HeroGSAP = () => {
       className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background"
       style={{ perspective: "1000px" }}
     >
-      {/* Animated grid background */}
+      {/* Floating Lines Background - Dynamic and Interactive */}
+      <div className="absolute inset-0 z-0">
+        <FloatingLinesBackground
+          lineCount={16}
+          lineColor="hsl(217 91% 60%)"
+          lineColorSecondary="hsl(180 70% 50%)"
+          lineWidth={1.5}
+          speed={0.6}
+          interactive={true}
+        />
+      </div>
+
+      {/* Animated grid background - reduced opacity to not compete with lines */}
       <div
         ref={gridRef}
-        className="absolute inset-0 opacity-[0.04]"
+        className="absolute inset-0 opacity-[0.02] z-[1]"
         aria-hidden="true"
         style={{
           backgroundImage:
@@ -167,12 +178,12 @@ export const HeroGSAP = () => {
         }}
       />
 
-      {/* Parallax orbs */}
+      {/* Parallax orbs - reduced opacity */}
       {ORBS.map((orb, i) => (
         <div
           key={i}
           ref={(el) => { orbsRef.current[i] = el; }}
-          className="absolute rounded-full pointer-events-none"
+          className="absolute rounded-full pointer-events-none z-[1]"
           aria-hidden="true"
           style={{
             width: orb.size,
@@ -186,34 +197,24 @@ export const HeroGSAP = () => {
         />
       ))}
 
-      {/* Vertical grid lines */}
-      <div className="absolute inset-0 flex justify-between pointer-events-none" aria-hidden="true">
-        {GRID_LINES.map((_, i) => (
-          <div
-            key={i}
-            className="w-px bg-primary/5"
-            style={{ opacity: i === 0 || i === GRID_LINES.length - 1 ? 0 : 1 }}
-          />
-        ))}
-      </div>
-
       {/* Center content */}
-      <div className="container mx-auto px-4 relative z-10 py-40">
-        <div className="max-w-4xl mx-auto text-center space-y-8">
+      <div className="container mx-auto px-4 relative z-10 py-32 md:py-40">
+        <div className="max-w-4xl mx-auto text-center space-y-6 md:space-y-8">
           {/* Badge */}
-          <div ref={badgeRef} className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 text-xs font-medium text-primary">
+          <div ref={badgeRef} className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 backdrop-blur-sm px-3 md:px-4 py-1.5 text-xs font-medium text-primary">
             <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
-            All systems operational &mdash; Singapore Node
+            <span className="hidden sm:inline">All systems operational &mdash; Singapore Node</span>
+            <span className="sm:hidden">All systems operational</span>
           </div>
 
           {/* Headline */}
           <h1
             ref={headlineRef}
-            className="text-5xl md:text-7xl lg:text-8xl font-black leading-[0.9] tracking-tight text-foreground"
+            className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black leading-[0.9] tracking-tight text-foreground"
             style={{ transformStyle: "preserve-3d" }}
           >
             {headlineWords.map((word, i) => (
-              <span key={i} className="word inline-block mr-[0.2em] last:mr-0">
+              <span key={i} className="word inline-block mr-[0.15em] sm:mr-[0.2em] last:mr-0">
                 {word === "Hosting" || word === "Solutions" ? (
                   <span className="text-primary">{word}</span>
                 ) : (
@@ -226,38 +227,38 @@ export const HeroGSAP = () => {
           {/* Subheading */}
           <p
             ref={subRef}
-            className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed"
+            className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed px-4 md:px-0"
           >
             Solusi hosting profesional dengan performa tinggi. Game server, VPS,
             Discord bot, dan website hosting dengan uptime 99.9%.
           </p>
 
           {/* CTA */}
-          <div ref={ctaRef} className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div ref={ctaRef} className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center px-4 md:px-0">
             <a href={DISCORD_URL} target="_blank" rel="noopener noreferrer">
-              <Button size="lg" className="text-base px-8 py-6 font-semibold rounded-xl">
+              <Button size="lg" className="w-full sm:w-auto text-base px-6 md:px-8 py-5 md:py-6 font-semibold rounded-xl">
                 Get Started
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
             </a>
             <Link href="/contact">
-              <Button size="lg" variant="outline" className="text-base px-8 py-6 font-semibold rounded-xl">
+              <Button size="lg" variant="outline" className="w-full sm:w-auto text-base px-6 md:px-8 py-5 md:py-6 font-semibold rounded-xl backdrop-blur-sm">
                 Contact Sales
               </Button>
             </Link>
           </div>
 
           {/* Floating stat cards */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mt-16 max-w-3xl mx-auto">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-2 md:gap-3 mt-12 md:mt-16 max-w-3xl mx-auto px-2 md:px-0">
             {floatCards.map((card, i) => (
               <div
                 key={i}
                 ref={(el) => { floatCardsRef.current[i] = el; }}
-                className={`rounded-2xl border border-primary/20 bg-gradient-to-br ${card.color} backdrop-blur-sm p-4 text-left`}
+                className={`rounded-xl md:rounded-2xl border border-primary/20 bg-gradient-to-br ${card.color} backdrop-blur-sm p-3 md:p-4 text-left`}
               >
-                <card.icon className="w-5 h-5 text-primary mb-2" aria-hidden="true" />
-                <p className="text-[11px] text-muted-foreground font-medium">{card.label}</p>
-                <p className="text-sm font-bold text-foreground">{card.value}</p>
+                <card.icon className="w-4 h-4 md:w-5 md:h-5 text-primary mb-1.5 md:mb-2" aria-hidden="true" />
+                <p className="text-[10px] md:text-[11px] text-muted-foreground font-medium">{card.label}</p>
+                <p className="text-xs md:text-sm font-bold text-foreground">{card.value}</p>
               </div>
             ))}
           </div>
@@ -265,9 +266,9 @@ export const HeroGSAP = () => {
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-muted-foreground/50">
+      <div className="absolute bottom-6 md:bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-muted-foreground/50">
         <span className="text-[10px] uppercase tracking-widest">Scroll</span>
-        <div className="w-px h-10 bg-gradient-to-b from-primary/50 to-transparent animate-pulse" />
+        <div className="w-px h-8 md:h-10 bg-gradient-to-b from-primary/50 to-transparent animate-pulse" />
       </div>
     </section>
   );
