@@ -10,7 +10,7 @@ import { TechnologyStack } from "@/components/TechnologyStack";
 import { Footer } from "@/components/Footer";
 import SEO from "@/components/SEO";
 
-const Index = () => {
+const InteractiveLanding = () => {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "WebSite",
@@ -40,19 +40,19 @@ const Index = () => {
       {/* Hero with GSAP parallax orbs and word-by-word reveal */}
       <HeroGSAP />
       
-      {/* Scroll-pinned storytelling section - showcases key benefits with sticky animations */}
+      {/* Scroll-pinned storytelling section */}
       <ScrollStorySection />
       
-      {/* Horizontal scroll services showcase - scrub-based horizontal carousel */}
+      {/* Horizontal scroll services showcase */}
       <HorizontalServicesScroll />
       
-      {/* Animated stats bar with count-up numbers */}
+      {/* Animated stats bar with count-up */}
       <AnimatedStatsBar />
       
-      {/* Why Choose Us with 3D tilt cards and animated stat counters */}
+      {/* Why Choose Us with 3D tilt cards and stat counters */}
       <WhyChooseUsGSAP />
       
-      {/* Infinite marquee testimonials with pause-on-hover */}
+      {/* Infinite marquee testimonials */}
       <TestimonialsMarquee />
       
       {/* Technology stack */}
@@ -64,4 +64,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default InteractiveLanding;

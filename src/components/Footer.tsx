@@ -71,7 +71,7 @@ export const Footer = () => {
             <ul className="space-y-2 text-sm">
               <li>
                 <Link
-                  href="/pricing/servers"
+                  href="/pricing/server/minecraft"
                   className="text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-1 inline-block"
                 >
                   Game Server

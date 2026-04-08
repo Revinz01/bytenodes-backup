@@ -132,7 +132,7 @@ const PricingServer = () => {
         title="Game Server Hosting - Minecraft, FiveM, Rust & More"
         description="Premium game server hosting from Rp 8.000/month. Minecraft, FiveM, Rust and more. DDoS protection, 24/7 uptime, Pterodactyl panel. Shared and Premium options available."
         keywords="game server hosting, Minecraft hosting, FiveM hosting, Rust hosting, game server Indonesia, cheap Minecraft server, Pterodactyl hosting"
-        canonicalUrl="https://bytenodes.icu/pricing/servers"
+        canonicalUrl="https://bytenodes.icu/pricing/server/minecraft"
         structuredData={structuredData}
       />
       <AnnouncementBanner />
