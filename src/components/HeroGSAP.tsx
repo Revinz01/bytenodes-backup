@@ -6,7 +6,7 @@ import Link from "next/link";
 import { ArrowRight, Server, Zap, Shield, Globe } from "lucide-react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { FloatingLinesBackground } from "./FloatingLinesBackground";
+import { ShapeGrid } from "./ShapeGrid";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -154,15 +154,12 @@ export const HeroGSAP = () => {
       className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background"
       style={{ perspective: "1000px" }}
     >
-      {/* Floating Lines Background - Dynamic and Interactive */}
+      {/* Shape Grid Background - Dynamic and Interactive */}
       <div className="absolute inset-0 z-0">
-        <FloatingLinesBackground
-          lineCount={16}
-          lineColor="hsl(217 91% 60%)"
-          lineColorSecondary="hsl(180 70% 50%)"
-          lineWidth={1.5}
-          speed={0.6}
-          interactive={true}
+        <ShapeGrid
+          gridSize={80}
+          duration={2500}
+          maxActiveShapes={12}
         />
       </div>
 
