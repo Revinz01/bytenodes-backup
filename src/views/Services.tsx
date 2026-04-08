@@ -17,7 +17,7 @@ const servicesDetail = [
       "Minecraft, FiveM, Rust, dan game lainnya dengan performa tinggi. Shared CPU dengan harga terjangkau.",
     priceRp: "Mulai Rp 12.000",
     priceUsd: "~$0.75",
-    link: "/pricing/servers",
+    link: "/pricing/server/minecraft",
     available: true,
     features: [
       "Shared CPU Packages",

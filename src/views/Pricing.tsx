@@ -38,7 +38,7 @@ const pricingCategories = [
       "Uptime 24/7",
       "Panel Pterodactyl",
     ],
-    link: "/pricing/servers",
+    link: "/pricing/server/minecraft",
     popular: true,
     gradient: "from-orange-500/20 to-red-500/20",
   },

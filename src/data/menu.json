@@ -19,7 +19,7 @@
         },
         {
           "label": "Game Servers",
-          "href": "/pricing/servers",
+          "href": "/pricing/server/minecraft",
           "description": "Minecraft & Game Server Hosting"
         },
         {
@@ -44,7 +44,7 @@
   ],
   "footerNav": {
     "services": [
-      { "label": "Game Server", "href": "/pricing/servers" },
+      { "label": "Game Server", "href": "/pricing/server/minecraft" },
       { "label": "VPS KVM", "href": "/pricing/vps" },
       { "label": "VPS Premium", "href": "/pricing/vps" },
       { "label": "RDP Windows", "href": "/pricing/vps" }

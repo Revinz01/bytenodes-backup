@@ -415,13 +415,16 @@ const PricingVPS = () => {
               <Card className="p-8 md:p-12 border-primary/30 bg-gradient-to-b from-card to-primary/5">
                 <div className="grid md:grid-cols-2 gap-8">
                   <div>
-                    <h3 className="text-2xl font-bold mb-6">
-                      Build Your Own VPS
-                    </h3>
+                    <div className="flex items-center gap-2 mb-4">
+                      <h3 className="text-2xl font-bold">Build Your Own VPS</h3>
+                      <span className="inline-flex items-center rounded-full bg-destructive/15 text-destructive px-3 py-1 text-xs font-semibold">
+                        Tutup Sementara
+                      </span>
+                    </div>
                     <p className="text-muted-foreground mb-6">
-                      You are no longer limited to our fixed plans. You now have
-                      the freedom to request custom specifications perfectly
-                      tailored to your project or server needs.
+                      Layanan Custom VPS saat ini sedang ditutup sementara
+                      karena slot provisioning penuh. Pemesanan baru belum dapat
+                      diproses hingga pemberitahuan berikutnya.
                     </p>
 
                     <div className="space-y-4 mb-8">
@@ -457,67 +460,68 @@ const PricingVPS = () => {
 
                   <div>
                     <div className="bg-card border border-primary/20 rounded-lg p-6 mb-6">
-                      <h4 className="font-bold mb-4">Starting Configuration</h4>
+                      <h4 className="font-bold mb-4">Status Layanan</h4>
                       <div className="space-y-3">
                         <div className="flex justify-between items-center pb-3 border-b border-border/50">
-                          <span className="text-muted-foreground">RAM:</span>
-                          <span className="font-semibold">4 GB</span>
-                        </div>
-                        <div className="flex justify-between items-center pb-3 border-b border-border/50">
-                          <span className="text-muted-foreground">CPU:</span>
-                          <span className="font-semibold">2 Cores</span>
+                          <span className="text-muted-foreground">
+                            Custom VPS:
+                          </span>
+                          <span className="font-semibold text-destructive">
+                            Sedang Tutup
+                          </span>
                         </div>
                         <div className="flex justify-between items-center pb-3 border-b border-border/50">
                           <span className="text-muted-foreground">
-                            Storage:
+                            Ketersediaan:
                           </span>
-                          <span className="font-semibold">100 GB NVMe</span>
+                          <span className="font-semibold">Slot Habis</span>
+                        </div>
+                        <div className="flex justify-between items-center pb-3 border-b border-border/50">
+                          <span className="text-muted-foreground">Update:</span>
+                          <span className="font-semibold">Via Discord</span>
                         </div>
                         <div className="flex justify-between items-center pt-2">
-                          <span className="font-semibold">Starting Price:</span>
-                          <span className="text-2xl font-bold text-primary">
-                            Rp 95.000
+                          <span className="font-semibold">Status:</span>
+                          <span className="text-xl font-bold text-destructive">
+                            Closed
                           </span>
                         </div>
                         <p className="text-xs text-muted-foreground pt-2">
-                          /month
+                          Silakan pantau pengumuman pembukaan ulang.
                         </p>
                       </div>
                     </div>
 
-                    <div className="bg-primary/10 border border-primary/20 rounded-lg p-4 mb-6">
+                    <div className="bg-destructive/10 border border-destructive/20 rounded-lg p-4 mb-6">
                       <p className="text-sm">
-                        <span className="font-semibold">
-                          Need higher specs?
-                        </span>{" "}
-                        Want to add more RAM or extra Storage? Everything can be
-                        adjusted to fit your requirements and budget!
+                        <span className="font-semibold">Catatan:</span> Layanan
+                        ini untuk sementara tidak menerima order baru. Paket VPS
+                        reguler tetap tersedia seperti biasa.
                       </p>
                     </div>
 
                     <div>
-                      <h4 className="font-bold mb-3">How to Order:</h4>
+                      <h4 className="font-bold mb-3">Info Ketersediaan:</h4>
                       <ol className="text-sm space-y-2 text-muted-foreground">
                         <li className="flex gap-2">
                           <span className="font-bold text-primary min-w-6">
                             1.
                           </span>
-                          <span>Open a Ticket in our support channel</span>
+                          <span>Gabung Discord ByteNodes</span>
                         </li>
                         <li className="flex gap-2">
                           <span className="font-bold text-primary min-w-6">
                             2.
                           </span>
                           <span>
-                            Tell our admin the exact specifications (RAM, Cores,
-                            Storage)
+                            Pantau pengumuman pembukaan slot Custom VPS
                           </span>
                         </li>
                         <li className="flex gap-2">
                           <span className="font-bold text-primary min-w-6">
                             3.
                           </span>
-                          <span>We will deploy the server for you!</span>
+                          <span>Hubungi admin saat layanan kembali dibuka</span>
                         </li>
                       </ol>
                     </div>
@@ -525,15 +529,10 @@ const PricingVPS = () => {
                 </div>
 
                 <div className="mt-8 pt-8 border-t border-border">
-                  <a
-                    href={DISCORD_URL}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Button size="lg" className="w-full md:w-auto">
-                      Open Support Ticket
-                    </Button>
-                  </a>
+                  <Button size="lg" className="w-full md:w-auto" disabled>
+                    <Clock className="w-4 h-4 mr-2" />
+                    Custom VPS Sedang Tutup
+                  </Button>
                 </div>
               </Card>
             </motion.div>

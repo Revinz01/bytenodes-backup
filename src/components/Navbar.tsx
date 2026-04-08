@@ -56,12 +56,32 @@ export const Navbar = () => {
                 >
                   Semua Harga
                 </Link>
-                <Link
-                  href="/pricing/servers"
-                  className="block px-4 py-3 hover:bg-secondary hover:text-primary transition-all text-sm"
-                >
-                  Game Server
-                </Link>
+                <div className="relative group/server">
+                  <div className="px-4 py-3 text-sm font-semibold text-foreground/80 cursor-default flex items-center justify-between hover:bg-secondary">
+                    <span>Servers</span>
+                    <span aria-hidden="true">›</span>
+                  </div>
+                  <div className="absolute left-full top-0 ml-1 w-44 bg-card border border-border/50 rounded-lg shadow-xl opacity-0 invisible group-hover/server:opacity-100 group-hover/server:visible transition-all duration-200">
+                    <Link
+                      href="/pricing/server/minecraft"
+                      className="block px-4 py-2 hover:bg-secondary hover:text-primary transition-all text-sm"
+                    >
+                      Minecraft
+                    </Link>
+                    <Link
+                      href="/pricing/server/fivem"
+                      className="block px-4 py-2 hover:bg-secondary hover:text-primary transition-all text-sm"
+                    >
+                      FiveM
+                    </Link>
+                    <Link
+                      href="/pricing/server/samp"
+                      className="block px-4 py-2 hover:bg-secondary hover:text-primary transition-all text-sm"
+                    >
+                      SA:MP
+                    </Link>
+                  </div>
+                </div>
                 <Link
                   href="/pricing/vps"
                   className="block px-4 py-3 hover:bg-secondary hover:text-primary transition-all text-sm"
@@ -152,12 +172,29 @@ export const Navbar = () => {
                 >
                   Semua Harga
                 </Link>
+                <p className="text-sm font-semibold text-muted-foreground pl-4">
+                  Servers
+                </p>
                 <Link
-                  href="/pricing/servers"
-                  className="text-sm font-medium hover:text-primary transition-all duration-300 block pl-4"
+                  href="/pricing/server/minecraft"
+                  className="text-sm font-medium hover:text-primary transition-all duration-300 block pl-8"
                   onClick={() => setMobileMenuOpen(false)}
                 >
-                  Game Server
+                  Minecraft
+                </Link>
+                <Link
+                  href="/pricing/server/fivem"
+                  className="text-sm font-medium hover:text-primary transition-all duration-300 block pl-8"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  FiveM
+                </Link>
+                <Link
+                  href="/pricing/server/samp"
+                  className="text-sm font-medium hover:text-primary transition-all duration-300 block pl-8"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  SA:MP
                 </Link>
                 <Link
                   href="/pricing/vps"

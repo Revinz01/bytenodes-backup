@@ -28,7 +28,7 @@ const services = [
     title: "Game Servers",
     startingPrice: "Rp 12.000",
     priceUsd: "$0.75",
-    link: "/pricing/servers",
+    link: "/pricing/server/minecraft",
     features: [
       "Minecraft, FiveM, Rust & more",
       "Pterodactyl Panel",

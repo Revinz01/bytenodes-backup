@@ -26,10 +26,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     // Pricing subpages
     {
-      url: `${baseUrl}/pricing/servers`,
+      url: `${baseUrl}/pricing/server/minecraft`,
       lastModified,
       changeFrequency: "weekly" as const,
       priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/pricing/server/fivem`,
+      lastModified,
+      changeFrequency: "weekly" as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/pricing/server/samp`,
+      lastModified,
+      changeFrequency: "weekly" as const,
+      priority: 0.8,
     },
     {
       url: `${baseUrl}/pricing/vps`,

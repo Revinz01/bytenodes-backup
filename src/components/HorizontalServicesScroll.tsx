@@ -64,7 +64,7 @@ const services = [
     tagline: "Lag-free. Always on.",
     startingPrice: "Rp 12.000",
     priceUsd: "$0.75",
-    link: "/pricing/servers",
+    link: "/pricing/server/minecraft",
     color: "from-violet-600/20 via-violet-500/10 to-violet-900/5",
     accent: "hsl(270 70% 65%)",
     features: [
