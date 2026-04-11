@@ -3,93 +3,248 @@
     "title": "Terms of Service",
     "lastUpdated": "2025-01-01",
     "sections": [
-      {"title": "1. Acceptance of Terms", "content": "By accessing and using ByteNodes services, you acknowledge that you have read, understood, and agree to be bound by these Terms of Service. These terms constitute a legally binding agreement between you and ByteNodes. If you do not agree with any part of these terms, you must immediately discontinue use of our services. Your continued use of our platform constitutes your acceptance of these terms and any future modifications. We reserve the right to update these terms at any time, and it is your responsibility to review them periodically. ByteNodes provides hosting services including but not limited to Virtual Private Servers, Game Servers, Remote Desktop Protocol services, and related infrastructure solutions."},
-      {"title": "2. Service Description", "content": "ByteNodes provides comprehensive hosting solutions including VPS KVM hosting, dedicated game server hosting, RDP Windows services, Discord bot hosting, and related technical infrastructure. Our services are designed to provide reliable, high-performance hosting with DDoS protection, 24/7 uptime monitoring, and professional technical support. We utilize enterprise-grade hardware including NVMe storage, high-frequency processors, and redundant network infrastructure."},
-      {"title": "3. User Account Responsibilities", "content": "When you create an account with ByteNodes, you are responsible for maintaining the confidentiality of your account credentials, including your username and password. You agree to notify us immediately of any unauthorized access to or use of your account. You are solely responsible for all activities that occur under your account, whether or not you have authorized such activities."},
-      {"title": "4. Payment and Billing Terms", "content": "All payments for ByteNodes services must be made in advance through our approved payment methods. Service activation occurs only after payment confirmation is received. Prices are displayed in United States Dollars (USD) and are subject to change with 30 days advance notice."},
-      {"title": "5. Prohibited Uses and Activities", "content": "You are strictly prohibited from using ByteNodes services for any illegal, harmful, or unauthorized purposes. Prohibited activities include launching DDoS attacks, sending spam, hosting phishing websites, distributing malware, and violating intellectual property rights."},
-      {"title": "6. Suspension and Termination", "content": "ByteNodes reserves the right to suspend or terminate your account and access to services immediately and without prior notice if we determine that you have violated these Terms of Service or engaged in conduct that threatens the security of our services."},
-      {"title": "7. Limitation of Liability", "content": "To the maximum extent permitted by applicable law, ByteNodes shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising out of or related to your use of our services."},
-      {"title": "8. Indemnification", "content": "You agree to indemnify, defend, and hold harmless ByteNodes and its affiliates from any claims, damages, or expenses arising from your use of our services or violation of these Terms."},
-      {"title": "9. Modifications to Terms", "content": "ByteNodes reserves the right to modify these Terms of Service at any time. Changes will be effective immediately upon posting on our website."},
-      {"title": "10. Governing Law", "content": "These Terms of Service shall be governed by and construed in accordance with applicable international laws and the laws of the jurisdiction in which ByteNodes operates."}
+      {
+        "title": "1. Acceptance of Terms",
+        "content": "By accessing and using ByteNodes services, you acknowledge that you have read, understood, and agree to be bound by these Terms of Service. These terms constitute a legally binding agreement between you and ByteNodes. If you do not agree with any part of these terms, you must immediately discontinue use of our services. Your continued use of our platform constitutes your acceptance of these terms and any future modifications. We reserve the right to update these terms at any time, and it is your responsibility to review them periodically. ByteNodes provides hosting services including but not limited to Virtual Private Servers, Game Servers, Remote Desktop Protocol services, and related infrastructure solutions."
+      },
+      {
+        "title": "2. Service Description",
+        "content": "ByteNodes provides comprehensive hosting solutions including VPS KVM hosting, dedicated game server hosting, RDP Windows services, Discord bot hosting, and related technical infrastructure. Our services are designed to provide reliable, high-performance hosting with DDoS protection, 24/7 uptime monitoring, and professional technical support. We utilize enterprise-grade hardware including NVMe storage, high-frequency processors, and redundant network infrastructure."
+      },
+      {
+        "title": "3. User Account Responsibilities",
+        "content": "When you create an account with ByteNodes, you are responsible for maintaining the confidentiality of your account credentials, including your username and password. You agree to notify us immediately of any unauthorized access to or use of your account. You are solely responsible for all activities that occur under your account, whether or not you have authorized such activities."
+      },
+      {
+        "title": "4. Payment and Billing Terms",
+        "content": "All payments for ByteNodes services must be made in advance through our approved payment methods. Service activation occurs only after payment confirmation is received. Prices are displayed in United States Dollars (USD) and are subject to change with 30 days advance notice."
+      },
+      {
+        "title": "5. Prohibited Uses and Activities",
+        "content": "You are strictly prohibited from using ByteNodes services for any illegal, harmful, or unauthorized purposes. Prohibited activities include launching DDoS attacks, sending spam, hosting phishing websites, distributing malware, and violating intellectual property rights."
+      },
+      {
+        "title": "6. Suspension and Termination",
+        "content": "ByteNodes reserves the right to suspend or terminate your account and access to services immediately and without prior notice if we determine that you have violated these Terms of Service or engaged in conduct that threatens the security of our services."
+      },
+      {
+        "title": "7. Limitation of Liability",
+        "content": "To the maximum extent permitted by applicable law, ByteNodes shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising out of or related to your use of our services."
+      },
+      {
+        "title": "8. Indemnification",
+        "content": "You agree to indemnify, defend, and hold harmless ByteNodes and its affiliates from any claims, damages, or expenses arising from your use of our services or violation of these Terms."
+      },
+      {
+        "title": "9. Modifications to Terms",
+        "content": "ByteNodes reserves the right to modify these Terms of Service at any time. Changes will be effective immediately upon posting on our website."
+      },
+      {
+        "title": "10. Governing Law",
+        "content": "These Terms of Service shall be governed by and construed in accordance with applicable international laws and the laws of the jurisdiction in which ByteNodes operates."
+      }
     ]
   },
   "privacyPolicy": {
-    "title": "Privacy Policy",
-    "lastUpdated": "2025-01-01",
+    "title": "Privacy Policy for ByteNodes",
+    "lastUpdated": "April 11, 2026",
     "sections": [
-      {"title": "1. Information We Collect", "content": "ByteNodes collects information that you provide directly when using our services, creating an account, or contacting our support team. This includes personal identification information such as your full name, email address, phone number, billing address, and payment information. We also automatically collect technical information when you access our services."},
-      {"title": "2. How We Use Your Information", "content": "The information we collect is used to provide, maintain, and improve our hosting services; to process transactions and send related billing notifications; to respond to your inquiries and support requests; to monitor and analyze usage patterns; and to detect and prevent security threats."},
-      {"title": "3. Information Sharing", "content": "ByteNodes does not sell, trade, or rent your personal information to third parties for marketing purposes. We may share your information with service providers who assist in operating our business under strict confidentiality agreements."},
-      {"title": "4. Data Security", "content": "We implement comprehensive security measures designed to protect your personal information from unauthorized access, alteration, disclosure, or destruction including encryption, access controls, and regular security audits."},
-      {"title": "5. Data Retention", "content": "We retain your personal information for as long as your account remains active or as needed to provide you with our services. After account termination, we may retain certain information to comply with legal obligations."},
-      {"title": "6. Your Privacy Rights", "content": "You may have rights regarding your personal information including access, correction, deletion, and data portability. Contact our support team to exercise these rights."},
-      {"title": "7. Cookies", "content": "ByteNodes uses cookies and similar tracking technologies to enhance your experience on our website and services."},
-      {"title": "8. International Data Transfers", "content": "Your personal information may be transferred to and processed in countries other than your country of residence."},
-      {"title": "9. Children's Privacy", "content": "ByteNodes services are not intended for individuals under the age of 18. We do not knowingly collect personal information from children."},
-      {"title": "10. Changes to Privacy Policy", "content": "We may update this Privacy Policy periodically to reflect changes in our practices, technologies, or legal requirements."}
+      {
+        "title": "1. Data We Access (Data Accessed)",
+        "content": "ByteNodes accesses specific Google user data only when you explicitly grant permission via Google OAuth. This includes: Basic profile information (Name, Email address, and Profile picture). Any specific scopes requested during the sign-in process."
+      },
+      {
+        "title": "2. How We Use Your Data (Data Usage)",
+        "content": "We use the accessed Google user data for the following purposes: Account Creation & Authentication: To identify you and allow secure access to your ByteNodes dashboard. Communication: To send important service updates or billing notifications to your registered email. We do not use Google user data for any other purposes beyond providing and improving our hosting services."
+      },
+      {
+        "title": "3. Data Sharing (Data Sharing)",
+        "content": "ByteNodes does not sell, rent, or trade your Google user data to third parties. Data is only shared when: Necessary to provide our core services (e.g., automated billing systems). Required by law or to protect our legal rights."
+      },
+      {
+        "title": "4. Google API Limited Use",
+        "content": "ByteNodes' use of information received from Google APIs will adhere to the Google API Services User Data Policy, including the Limited Use requirements. We do not use Google user data for advertising purposes, do not sell Google user data to data brokers, and do not use Google user data to build, train, or improve generalized AI/ML models. We also do not use Google user data for profiling or any purpose unrelated to providing and improving core ByteNodes services requested by the user."
+      },
+      {
+        "title": "5. Data Storage and Protection (Data Storage & Protection)",
+        "content": "Your data is stored securely on our encrypted servers. We implement industry-standard security measures, including SSL encryption and restricted access protocols, to protect your Google user data from unauthorized access or disclosure."
+      },
+      {
+        "title": "6. Data Retention and Deletion (Data Retention & Deletion)",
+        "content": "Retention: We retain your data only as long as your account is active or as needed to provide you with our services. Deletion: You may request the deletion of your account and associated Google data at any time by opening a support ticket or emailing us at bytenodeshost@gmail.com. Upon request, we will permanently delete your data from our active databases within 30 days."
+      }
     ]
   },
   "cookiePolicy": {
     "title": "Cookie Policy",
     "lastUpdated": "2025-01-01",
     "sections": [
-      {"title": "1. Introduction to Cookies", "content": "This Cookie Policy explains how ByteNodes uses cookies and similar tracking technologies when you visit our website and use our hosting services. Cookies are small text files that are stored on your computer, smartphone, or other device when you visit a website. They are widely used to make websites work more efficiently, provide a better user experience, and give website owners useful information about how their sites are being used. At ByteNodes, we are committed to transparency about our use of cookies and protecting your privacy while delivering the best possible experience on our platform."},
-      {"title": "2. What Are Cookies and How They Work", "content": "Cookies are small data files that are placed on your device when you visit a website. They contain a small amount of information that allows the website to recognize your device when you return. Cookies serve many functions: they can remember your login credentials so you do not have to enter them every time you visit; they can remember your preferences such as language settings or display options; they can track your browsing behavior to provide personalized content; they can help website owners understand how visitors interact with their sites. Cookies can be either first-party cookies, which are set by the website you are visiting, or third-party cookies, which are set by other domains. Session cookies are temporary and are deleted when you close your browser, while persistent cookies remain on your device for a specified period or until you delete them manually."},
-      {"title": "3. Types of Cookies We Use", "content": "ByteNodes uses several categories of cookies to provide and improve our services. Essential Cookies are strictly necessary for the operation of our website and cannot be disabled without affecting basic functionality. These cookies enable core features such as user authentication, session management, security features, and load balancing. Performance Cookies collect anonymous information about how visitors use our website, including which pages are visited most often and how long visitors spend on each page. Functional Cookies allow our website to remember choices you make, such as your username, language preference, or region. Analytics Cookies are used to collect information about how visitors interact with our website to help us compile reports and improve our site."},
-      {"title": "4. Third-Party Cookies and Services", "content": "In addition to our own cookies, ByteNodes may use cookies from third-party services to enhance your experience on our website. These third-party cookies may include analytics services such as Google Analytics, which helps us understand how visitors use our site; social media plugins that allow you to share content on platforms like Facebook, Twitter, and LinkedIn; payment processing services that facilitate secure transactions; and customer support chat widgets that enable real-time communication with our support team. Each third-party service has its own privacy policy governing the use of their cookies. We recommend reviewing these policies to understand how your information may be used."},
-      {"title": "5. How to Manage and Control Cookies", "content": "You have several options for managing and controlling cookies on your device. Most web browsers allow you to control cookies through their settings preferences. You can typically find these settings in the Options, Settings, or Preferences menu of your browser. You can configure your browser to accept all cookies, reject all cookies, or notify you when a cookie is set so you can decide whether to accept it. You can also delete cookies that have already been stored on your device. Please note that if you choose to block or delete cookies, some features of our website may not function properly, and your user experience may be affected."},
-      {"title": "6. Cookie Consent and Your Choices", "content": "When you first visit our website, you may be presented with a cookie consent banner that explains our use of cookies and asks for your consent. By clicking Accept or continuing to use our website, you consent to our use of cookies as described in this policy. You can withdraw your consent at any time by adjusting your browser settings to block cookies or by clearing existing cookies from your device. We respect your right to make informed choices about cookies and are committed to providing you with the information you need."},
-      {"title": "7. Cookies and Your Privacy", "content": "We take your privacy seriously and use cookies in accordance with our Privacy Policy. The information collected through cookies is used to improve your experience on our website and provide better services. We do not use cookies to collect personally identifiable information unless you have consented to do so. Any personal information collected through cookies is handled in accordance with applicable data protection laws and our Privacy Policy. We implement appropriate technical and organizational measures to protect the information collected through cookies from unauthorized access."},
-      {"title": "8. Updates to This Cookie Policy", "content": "We may update this Cookie Policy from time to time to reflect changes in our practices, technologies, legal requirements, or for other operational reasons. When we make material changes to this policy, we will notify you by posting the updated policy on our website with a revised effective date. We encourage you to review this Cookie Policy periodically to stay informed about our use of cookies. Your continued use of our website after any changes constitutes your acceptance of the updated terms. If you have any questions about this Cookie Policy or our use of cookies, please contact us through our support channels."}
+      {
+        "title": "1. Introduction to Cookies",
+        "content": "This Cookie Policy explains how ByteNodes uses cookies and similar tracking technologies when you visit our website and use our hosting services. Cookies are small text files that are stored on your computer, smartphone, or other device when you visit a website. They are widely used to make websites work more efficiently, provide a better user experience, and give website owners useful information about how their sites are being used. At ByteNodes, we are committed to transparency about our use of cookies and protecting your privacy while delivering the best possible experience on our platform."
+      },
+      {
+        "title": "2. What Are Cookies and How They Work",
+        "content": "Cookies are small data files that are placed on your device when you visit a website. They contain a small amount of information that allows the website to recognize your device when you return. Cookies serve many functions: they can remember your login credentials so you do not have to enter them every time you visit; they can remember your preferences such as language settings or display options; they can track your browsing behavior to provide personalized content; they can help website owners understand how visitors interact with their sites. Cookies can be either first-party cookies, which are set by the website you are visiting, or third-party cookies, which are set by other domains. Session cookies are temporary and are deleted when you close your browser, while persistent cookies remain on your device for a specified period or until you delete them manually."
+      },
+      {
+        "title": "3. Types of Cookies We Use",
+        "content": "ByteNodes uses several categories of cookies to provide and improve our services. Essential Cookies are strictly necessary for the operation of our website and cannot be disabled without affecting basic functionality. These cookies enable core features such as user authentication, session management, security features, and load balancing. Performance Cookies collect anonymous information about how visitors use our website, including which pages are visited most often and how long visitors spend on each page. Functional Cookies allow our website to remember choices you make, such as your username, language preference, or region. Analytics Cookies are used to collect information about how visitors interact with our website to help us compile reports and improve our site."
+      },
+      {
+        "title": "4. Third-Party Cookies and Services",
+        "content": "In addition to our own cookies, ByteNodes may use cookies from third-party services to enhance your experience on our website. These third-party cookies may include analytics services such as Google Analytics, which helps us understand how visitors use our site; social media plugins that allow you to share content on platforms like Facebook, Twitter, and LinkedIn; payment processing services that facilitate secure transactions; and customer support chat widgets that enable real-time communication with our support team. Each third-party service has its own privacy policy governing the use of their cookies. We recommend reviewing these policies to understand how your information may be used."
+      },
+      {
+        "title": "5. How to Manage and Control Cookies",
+        "content": "You have several options for managing and controlling cookies on your device. Most web browsers allow you to control cookies through their settings preferences. You can typically find these settings in the Options, Settings, or Preferences menu of your browser. You can configure your browser to accept all cookies, reject all cookies, or notify you when a cookie is set so you can decide whether to accept it. You can also delete cookies that have already been stored on your device. Please note that if you choose to block or delete cookies, some features of our website may not function properly, and your user experience may be affected."
+      },
+      {
+        "title": "6. Cookie Consent and Your Choices",
+        "content": "When you first visit our website, you may be presented with a cookie consent banner that explains our use of cookies and asks for your consent. By clicking Accept or continuing to use our website, you consent to our use of cookies as described in this policy. You can withdraw your consent at any time by adjusting your browser settings to block cookies or by clearing existing cookies from your device. We respect your right to make informed choices about cookies and are committed to providing you with the information you need."
+      },
+      {
+        "title": "7. Cookies and Your Privacy",
+        "content": "We take your privacy seriously and use cookies in accordance with our Privacy Policy. The information collected through cookies is used to improve your experience on our website and provide better services. We do not use cookies to collect personally identifiable information unless you have consented to do so. Any personal information collected through cookies is handled in accordance with applicable data protection laws and our Privacy Policy. We implement appropriate technical and organizational measures to protect the information collected through cookies from unauthorized access."
+      },
+      {
+        "title": "8. Updates to This Cookie Policy",
+        "content": "We may update this Cookie Policy from time to time to reflect changes in our practices, technologies, legal requirements, or for other operational reasons. When we make material changes to this policy, we will notify you by posting the updated policy on our website with a revised effective date. We encourage you to review this Cookie Policy periodically to stay informed about our use of cookies. Your continued use of our website after any changes constitutes your acceptance of the updated terms. If you have any questions about this Cookie Policy or our use of cookies, please contact us through our support channels."
+      }
     ]
   },
   "acceptableUse": {
     "title": "Acceptable Use Policy",
     "lastUpdated": "2025-01-01",
     "sections": [
-      {"title": "1. Purpose and Scope of This Policy", "content": "This Acceptable Use Policy (AUP) defines the acceptable and prohibited uses of ByteNodes hosting services, including but not limited to Virtual Private Servers (VPS), Game Servers, Remote Desktop Protocol (RDP) services, Discord Bot Hosting, Website Hosting, and all related infrastructure and network services. This policy applies to all users, customers, resellers, and any other parties who access or use ByteNodes services. The purpose of this policy is to ensure that all users can enjoy reliable, secure, and high-quality hosting services while preventing activities that may harm our infrastructure, other customers, or third parties."},
-      {"title": "2. General Prohibited Activities", "content": "Users of ByteNodes services are strictly prohibited from engaging in any activities that are illegal, harmful, fraudulent, or that violate the rights of others. This includes but is not limited to: conducting any illegal activities or activities that violate applicable local, national, or international laws; engaging in fraud, identity theft, or other deceptive practices; infringing upon the intellectual property rights of others, including copyright, trademark, and patent violations; transmitting content that is defamatory, obscene, harassing, threatening, or invasive of privacy; distributing or hosting content that exploits, harms, or endangers children in any way; engaging in activities that could damage the reputation of ByteNodes."},
-      {"title": "3. Network and System Security Violations", "content": "Users must not engage in any activities that compromise the security, integrity, or availability of our network, systems, or the systems of others. Prohibited security-related activities include: launching or facilitating Distributed Denial of Service (DDoS) attacks, network flooding, or other forms of network attacks against any target; attempting to gain unauthorized access to any computer system, network, data, or information belonging to ByteNodes or third parties; scanning, probing, or testing the vulnerability of any system or network without explicit authorization; intercepting, monitoring, or tampering with network traffic or communications without authorization; distributing or hosting malware, viruses, worms, trojans, ransomware, or any other malicious software."},
-      {"title": "4. Email and Communication Abuse", "content": "ByteNodes has a zero-tolerance policy for email abuse and spam. Users are prohibited from: sending unsolicited bulk email (spam) or commercial email without proper consent from recipients; sending email messages that forge, misrepresent, or conceal the sender's identity, origin, or routing information; harvesting, scraping, or collecting email addresses or other contact information without consent; operating open mail relays or open proxies that could be used for spam distribution; sending email that contains malware, phishing links, or other malicious content; engaging in email bombing or overwhelming recipients with excessive messages."},
-      {"title": "5. Resource Usage and Fair Use", "content": "Users must use ByteNodes resources responsibly and in accordance with their service plan limitations. Prohibited resource-related activities include: exceeding the allocated resources for your service plan, including CPU, RAM, bandwidth, and storage limits; running cryptocurrency mining operations without explicit written permission from ByteNodes; running resource-intensive applications that negatively impact other customers or our infrastructure; using services in a manner that places an unreasonable burden on our network, servers, or support resources; attempting to circumvent resource limits or quotas through technical means."},
-      {"title": "6. Content Restrictions and Prohibited Content", "content": "Users are prohibited from hosting, storing, distributing, or linking to certain types of content on ByteNodes services. Prohibited content includes: any content that is illegal under applicable law, including but not limited to content that violates copyright, trademark, or other intellectual property rights; child sexual abuse material (CSAM) or any content that exploits or endangers minors; content that promotes or facilitates terrorism, violence, or hate crimes; phishing websites, fake login pages, or other content designed to deceive users and steal personal information; pirated software, games, movies, music, or other copyrighted material distributed without authorization."},
-      {"title": "7. Consequences of Policy Violations", "content": "ByteNodes takes violations of this Acceptable Use Policy seriously and will take appropriate action against users who violate these terms. Consequences may include: warning notifications for minor or first-time violations, with a specified period to correct the issue; temporary suspension of services while we investigate potential violations; immediate termination of services without refund for serious or repeated violations; permanent ban from using any ByteNodes services in the future; cooperation with law enforcement agencies for illegal activities; legal action to recover damages caused by policy violations."},
-      {"title": "8. Reporting Violations and Contact Information", "content": "If you become aware of any violations of this Acceptable Use Policy, please report them immediately to our abuse team. You can report violations by sending an email to support@bytenodes.id with a detailed description of the violation, including any relevant evidence such as screenshots, logs, or URLs. You can also report violations through our support ticket system or by contacting us through our Discord server. We take all reports seriously and will investigate promptly."},
-      {"title": "9. Policy Updates and Modifications", "content": "ByteNodes reserves the right to modify this Acceptable Use Policy at any time. Changes will be effective immediately upon posting on our website. We may provide notice of material changes through email or prominent website announcements, but we are not obligated to do so. It is your responsibility to review this policy periodically and stay informed of any updates. Your continued use of our services after any modifications indicates your acceptance of the updated policy."}
+      {
+        "title": "1. Purpose and Scope of This Policy",
+        "content": "This Acceptable Use Policy (AUP) defines the acceptable and prohibited uses of ByteNodes hosting services, including but not limited to Virtual Private Servers (VPS), Game Servers, Remote Desktop Protocol (RDP) services, Discord Bot Hosting, Website Hosting, and all related infrastructure and network services. This policy applies to all users, customers, resellers, and any other parties who access or use ByteNodes services. The purpose of this policy is to ensure that all users can enjoy reliable, secure, and high-quality hosting services while preventing activities that may harm our infrastructure, other customers, or third parties."
+      },
+      {
+        "title": "2. General Prohibited Activities",
+        "content": "Users of ByteNodes services are strictly prohibited from engaging in any activities that are illegal, harmful, fraudulent, or that violate the rights of others. This includes but is not limited to: conducting any illegal activities or activities that violate applicable local, national, or international laws; engaging in fraud, identity theft, or other deceptive practices; infringing upon the intellectual property rights of others, including copyright, trademark, and patent violations; transmitting content that is defamatory, obscene, harassing, threatening, or invasive of privacy; distributing or hosting content that exploits, harms, or endangers children in any way; engaging in activities that could damage the reputation of ByteNodes."
+      },
+      {
+        "title": "3. Network and System Security Violations",
+        "content": "Users must not engage in any activities that compromise the security, integrity, or availability of our network, systems, or the systems of others. Prohibited security-related activities include: launching or facilitating Distributed Denial of Service (DDoS) attacks, network flooding, or other forms of network attacks against any target; attempting to gain unauthorized access to any computer system, network, data, or information belonging to ByteNodes or third parties; scanning, probing, or testing the vulnerability of any system or network without explicit authorization; intercepting, monitoring, or tampering with network traffic or communications without authorization; distributing or hosting malware, viruses, worms, trojans, ransomware, or any other malicious software."
+      },
+      {
+        "title": "4. Email and Communication Abuse",
+        "content": "ByteNodes has a zero-tolerance policy for email abuse and spam. Users are prohibited from: sending unsolicited bulk email (spam) or commercial email without proper consent from recipients; sending email messages that forge, misrepresent, or conceal the sender's identity, origin, or routing information; harvesting, scraping, or collecting email addresses or other contact information without consent; operating open mail relays or open proxies that could be used for spam distribution; sending email that contains malware, phishing links, or other malicious content; engaging in email bombing or overwhelming recipients with excessive messages."
+      },
+      {
+        "title": "5. Resource Usage and Fair Use",
+        "content": "Users must use ByteNodes resources responsibly and in accordance with their service plan limitations. Prohibited resource-related activities include: exceeding the allocated resources for your service plan, including CPU, RAM, bandwidth, and storage limits; running cryptocurrency mining operations without explicit written permission from ByteNodes; running resource-intensive applications that negatively impact other customers or our infrastructure; using services in a manner that places an unreasonable burden on our network, servers, or support resources; attempting to circumvent resource limits or quotas through technical means."
+      },
+      {
+        "title": "6. Content Restrictions and Prohibited Content",
+        "content": "Users are prohibited from hosting, storing, distributing, or linking to certain types of content on ByteNodes services. Prohibited content includes: any content that is illegal under applicable law, including but not limited to content that violates copyright, trademark, or other intellectual property rights; child sexual abuse material (CSAM) or any content that exploits or endangers minors; content that promotes or facilitates terrorism, violence, or hate crimes; phishing websites, fake login pages, or other content designed to deceive users and steal personal information; pirated software, games, movies, music, or other copyrighted material distributed without authorization."
+      },
+      {
+        "title": "7. Consequences of Policy Violations",
+        "content": "ByteNodes takes violations of this Acceptable Use Policy seriously and will take appropriate action against users who violate these terms. Consequences may include: warning notifications for minor or first-time violations, with a specified period to correct the issue; temporary suspension of services while we investigate potential violations; immediate termination of services without refund for serious or repeated violations; permanent ban from using any ByteNodes services in the future; cooperation with law enforcement agencies for illegal activities; legal action to recover damages caused by policy violations."
+      },
+      {
+        "title": "8. Reporting Violations and Contact Information",
+        "content": "If you become aware of any violations of this Acceptable Use Policy, please report them immediately to our abuse team. You can report violations by sending an email to support@bytenodes.id with a detailed description of the violation, including any relevant evidence such as screenshots, logs, or URLs. You can also report violations through our support ticket system or by contacting us through our Discord server. We take all reports seriously and will investigate promptly."
+      },
+      {
+        "title": "9. Policy Updates and Modifications",
+        "content": "ByteNodes reserves the right to modify this Acceptable Use Policy at any time. Changes will be effective immediately upon posting on our website. We may provide notice of material changes through email or prominent website announcements, but we are not obligated to do so. It is your responsibility to review this policy periodically and stay informed of any updates. Your continued use of our services after any modifications indicates your acceptance of the updated policy."
+      }
     ]
   },
   "sla": {
     "title": "Service Level Agreement",
     "lastUpdated": "2025-01-01",
     "sections": [
-      {"title": "1. Service Level Commitment", "content": "ByteNodes is committed to providing reliable and high-quality hosting services to all customers. We guarantee 99.9% network uptime for all our hosting services, including VPS KVM, Game Servers, RDP Windows, Discord Bot Hosting, and Website Hosting."},
-      {"title": "2. Network Uptime Definition", "content": "Network uptime is defined as the percentage of time during a given month that our network infrastructure is fully operational and accessible. Downtime is calculated as the total number of minutes during which your services are unavailable due to issues within our control."},
-      {"title": "3. Service Credit Eligibility", "content": "If we fail to meet our 99.9% uptime guarantee, eligible customers may receive service credits as compensation based on the uptime percentage achieved."},
-      {"title": "4. Requesting Service Credits", "content": "To request a service credit, customers must submit a support ticket within 30 days of the end of the month in which the downtime occurred."},
-      {"title": "5. Technical Support Response Times", "content": "ByteNodes provides technical support through multiple channels including our support ticket system, Discord server, WhatsApp, and email."},
-      {"title": "6. Maintenance and Updates", "content": "To ensure the continued reliability, security, and performance of our services, ByteNodes performs regular maintenance on our infrastructure."},
-      {"title": "7. Data Protection and Backup", "content": "While ByteNodes maintains robust infrastructure, customers are ultimately responsible for maintaining backups of their own data."},
-      {"title": "8. DDoS Protection Services", "content": "ByteNodes provides DDoS protection for all hosting services to help mitigate the impact of Distributed Denial of Service attacks."},
-      {"title": "9. Exclusions and Limitations", "content": "This Service Level Agreement does not apply to services that are suspended due to Terms of Service violations, beta or free services, or customer-caused issues."},
-      {"title": "10. Contact and Escalation", "content": "For all service-related issues, please contact ByteNodes through support@bytenodes.id, WhatsApp at +62 851-2608-0236, or Discord at discord.gg/2PMmPp6Yx8."}
+      {
+        "title": "1. Service Level Commitment",
+        "content": "ByteNodes is committed to providing reliable and high-quality hosting services to all customers. We guarantee 99.9% network uptime for all our hosting services, including VPS KVM, Game Servers, RDP Windows, Discord Bot Hosting, and Website Hosting."
+      },
+      {
+        "title": "2. Network Uptime Definition",
+        "content": "Network uptime is defined as the percentage of time during a given month that our network infrastructure is fully operational and accessible. Downtime is calculated as the total number of minutes during which your services are unavailable due to issues within our control."
+      },
+      {
+        "title": "3. Service Credit Eligibility",
+        "content": "If we fail to meet our 99.9% uptime guarantee, eligible customers may receive service credits as compensation based on the uptime percentage achieved."
+      },
+      {
+        "title": "4. Requesting Service Credits",
+        "content": "To request a service credit, customers must submit a support ticket within 30 days of the end of the month in which the downtime occurred."
+      },
+      {
+        "title": "5. Technical Support Response Times",
+        "content": "ByteNodes provides technical support through multiple channels including our support ticket system, Discord server, WhatsApp, and email."
+      },
+      {
+        "title": "6. Maintenance and Updates",
+        "content": "To ensure the continued reliability, security, and performance of our services, ByteNodes performs regular maintenance on our infrastructure."
+      },
+      {
+        "title": "7. Data Protection and Backup",
+        "content": "While ByteNodes maintains robust infrastructure, customers are ultimately responsible for maintaining backups of their own data."
+      },
+      {
+        "title": "8. DDoS Protection Services",
+        "content": "ByteNodes provides DDoS protection for all hosting services to help mitigate the impact of Distributed Denial of Service attacks."
+      },
+      {
+        "title": "9. Exclusions and Limitations",
+        "content": "This Service Level Agreement does not apply to services that are suspended due to Terms of Service violations, beta or free services, or customer-caused issues."
+      },
+      {
+        "title": "10. Contact and Escalation",
+        "content": "For all service-related issues, please contact ByteNodes through support@bytenodes.id, WhatsApp at +62 851-2608-0236, or Discord at discord.gg/2PMmPp6Yx8."
+      }
     ]
   },
   "refundPolicy": {
     "title": "Refund Policy",
     "lastUpdated": "2025-01-01",
     "sections": [
-      {"title": "1. Overview and Commitment", "content": "ByteNodes is committed to customer satisfaction and stands behind the quality of our hosting services. This Refund Policy outlines the conditions under which customers may request refunds for services purchased from ByteNodes. We understand that circumstances may arise where you need to cancel your services, and we aim to handle all refund requests fairly and transparently. Please read this policy carefully to understand your rights and the conditions that apply to refund requests. By purchasing our services, you acknowledge that you have read and agree to this Refund Policy."},
-      {"title": "2. 30-Day Money-Back Guarantee", "content": "ByteNodes offers a 30-day money-back guarantee on all new hosting service purchases. If you are not completely satisfied with your hosting service within the first 30 days of your initial purchase, you may request a full refund of your service fees. This guarantee applies only to new customers and their first purchase of a hosting service. The 30-day period begins from the date of service activation, not the date of payment. To qualify for this guarantee, you must submit a refund request before the end of the 30-day period. Refund requests submitted after this period will not be eligible for the money-back guarantee."},
-      {"title": "3. Eligible and Ineligible Services", "content": "The following services are eligible for refunds under our 30-day money-back guarantee: VPS KVM hosting plans, Game Server hosting packages, RDP Windows services, Discord Bot hosting, and Website hosting services. The following services and fees are NOT eligible for refunds: domain name registrations and renewals, as these are non-refundable once processed; setup fees and administrative fees; add-on services such as custom domain configurations, SSL certificates, and additional IP addresses; services that have been suspended or terminated due to violation of our Terms of Service or Acceptable Use Policy; services purchased at promotional or discounted rates may have different refund terms."},
-      {"title": "4. Conditions for Refund Eligibility", "content": "To be eligible for a refund, the following conditions must be met: the refund request must be submitted within 30 days of service activation for new customers; you must provide a valid reason for the refund request; your account must be in good standing with no outstanding balances or disputes; you must not have violated our Terms of Service or Acceptable Use Policy; you must have made reasonable efforts to resolve any technical issues with our support team before requesting a refund; any promotional credits, bonuses, or discounts applied to your purchase may be deducted from the refund amount."},
-      {"title": "5. How to Request a Refund", "content": "To request a refund, please follow these steps: Submit a support ticket through our client portal or contact us via email at support@bytenodes.id. Include your account information, the service for which you are requesting a refund, and a detailed explanation of your reason for the refund request. Our support team will review your request and respond within 2-3 business days. If your refund request is approved, we will process the refund to your original payment method within 7-14 business days, depending on your payment provider."},
-      {"title": "6. Partial Refunds and Pro-rata Credits", "content": "In certain circumstances, ByteNodes may offer partial refunds or pro-rata credits instead of full refunds. Partial refunds may be issued when: you have used a significant portion of a prepaid service period; certain components of your service are non-refundable; promotional discounts were applied that would not apply to the refund amount; there are outstanding balances or fees owed on your account. Pro-rata credits may be applied to your account for future services when services are terminated early due to circumstances beyond your control."},
-      {"title": "7. Chargebacks and Disputes", "content": "We strongly encourage customers to contact our support team before initiating any chargeback or payment dispute with their payment provider. Chargebacks initiated without first attempting to resolve the issue through our support channels may result in: immediate suspension or termination of all services associated with your account; forfeiture of any refund eligibility; additional fees to cover chargeback processing costs; permanent ban from using ByteNodes services."},
-      {"title": "8. Service Cancellation and Data Retention", "content": "When you request a refund and cancel your services, please be aware of the following: all data stored on your hosting account will be permanently deleted within 24-48 hours of service termination; it is your responsibility to backup any data you wish to keep before requesting a refund; once data is deleted, it cannot be recovered; any domain names registered through ByteNodes are not included in refunds and will remain registered unless you request a separate domain cancellation."},
-      {"title": "9. Exceptions and Special Circumstances", "content": "ByteNodes may make exceptions to this Refund Policy in special circumstances, including but not limited to: documented medical emergencies or hardships; significant service outages or issues caused by ByteNodes that are not covered under our SLA; billing errors or duplicate charges made by ByteNodes; other exceptional circumstances as determined by our management team. Requests for exceptions must be made in writing and include documentation supporting the request."},
-      {"title": "10. Changes to This Refund Policy", "content": "ByteNodes reserves the right to modify this Refund Policy at any time. Changes will be effective immediately upon posting on our website. We may provide notice of material changes through email or prominent website announcements, but we are not obligated to do so. Your continued use of our services after any modifications indicates your acceptance of the updated policy. If you have any questions about this Refund Policy, please contact our support team at support@bytenodes.id."}
+      {
+        "title": "1. Overview and Commitment",
+        "content": "ByteNodes is committed to customer satisfaction and stands behind the quality of our hosting services. This Refund Policy outlines the conditions under which customers may request refunds for services purchased from ByteNodes. We understand that circumstances may arise where you need to cancel your services, and we aim to handle all refund requests fairly and transparently. Please read this policy carefully to understand your rights and the conditions that apply to refund requests. By purchasing our services, you acknowledge that you have read and agree to this Refund Policy."
+      },
+      {
+        "title": "2. 30-Day Money-Back Guarantee",
+        "content": "ByteNodes offers a 30-day money-back guarantee on all new hosting service purchases. If you are not completely satisfied with your hosting service within the first 30 days of your initial purchase, you may request a full refund of your service fees. This guarantee applies only to new customers and their first purchase of a hosting service. The 30-day period begins from the date of service activation, not the date of payment. To qualify for this guarantee, you must submit a refund request before the end of the 30-day period. Refund requests submitted after this period will not be eligible for the money-back guarantee."
+      },
+      {
+        "title": "3. Eligible and Ineligible Services",
+        "content": "The following services are eligible for refunds under our 30-day money-back guarantee: VPS KVM hosting plans, Game Server hosting packages, RDP Windows services, Discord Bot hosting, and Website hosting services. The following services and fees are NOT eligible for refunds: domain name registrations and renewals, as these are non-refundable once processed; setup fees and administrative fees; add-on services such as custom domain configurations, SSL certificates, and additional IP addresses; services that have been suspended or terminated due to violation of our Terms of Service or Acceptable Use Policy; services purchased at promotional or discounted rates may have different refund terms."
+      },
+      {
+        "title": "4. Conditions for Refund Eligibility",
+        "content": "To be eligible for a refund, the following conditions must be met: the refund request must be submitted within 30 days of service activation for new customers; you must provide a valid reason for the refund request; your account must be in good standing with no outstanding balances or disputes; you must not have violated our Terms of Service or Acceptable Use Policy; you must have made reasonable efforts to resolve any technical issues with our support team before requesting a refund; any promotional credits, bonuses, or discounts applied to your purchase may be deducted from the refund amount."
+      },
+      {
+        "title": "5. How to Request a Refund",
+        "content": "To request a refund, please follow these steps: Submit a support ticket through our client portal or contact us via email at support@bytenodes.id. Include your account information, the service for which you are requesting a refund, and a detailed explanation of your reason for the refund request. Our support team will review your request and respond within 2-3 business days. If your refund request is approved, we will process the refund to your original payment method within 7-14 business days, depending on your payment provider."
+      },
+      {
+        "title": "6. Partial Refunds and Pro-rata Credits",
+        "content": "In certain circumstances, ByteNodes may offer partial refunds or pro-rata credits instead of full refunds. Partial refunds may be issued when: you have used a significant portion of a prepaid service period; certain components of your service are non-refundable; promotional discounts were applied that would not apply to the refund amount; there are outstanding balances or fees owed on your account. Pro-rata credits may be applied to your account for future services when services are terminated early due to circumstances beyond your control."
+      },
+      {
+        "title": "7. Chargebacks and Disputes",
+        "content": "We strongly encourage customers to contact our support team before initiating any chargeback or payment dispute with their payment provider. Chargebacks initiated without first attempting to resolve the issue through our support channels may result in: immediate suspension or termination of all services associated with your account; forfeiture of any refund eligibility; additional fees to cover chargeback processing costs; permanent ban from using ByteNodes services."
+      },
+      {
+        "title": "8. Service Cancellation and Data Retention",
+        "content": "When you request a refund and cancel your services, please be aware of the following: all data stored on your hosting account will be permanently deleted within 24-48 hours of service termination; it is your responsibility to backup any data you wish to keep before requesting a refund; once data is deleted, it cannot be recovered; any domain names registered through ByteNodes are not included in refunds and will remain registered unless you request a separate domain cancellation."
+      },
+      {
+        "title": "9. Exceptions and Special Circumstances",
+        "content": "ByteNodes may make exceptions to this Refund Policy in special circumstances, including but not limited to: documented medical emergencies or hardships; significant service outages or issues caused by ByteNodes that are not covered under our SLA; billing errors or duplicate charges made by ByteNodes; other exceptional circumstances as determined by our management team. Requests for exceptions must be made in writing and include documentation supporting the request."
+      },
+      {
+        "title": "10. Changes to This Refund Policy",
+        "content": "ByteNodes reserves the right to modify this Refund Policy at any time. Changes will be effective immediately upon posting on our website. We may provide notice of material changes through email or prominent website announcements, but we are not obligated to do so. Your continued use of our services after any modifications indicates your acceptance of the updated policy. If you have any questions about this Refund Policy, please contact our support team at support@bytenodes.id."
+      }
     ]
   }
 }
