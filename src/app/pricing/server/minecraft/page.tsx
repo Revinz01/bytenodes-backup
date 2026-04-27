@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import PricingGameServer from "@/views/PricingGameServer";
+import PricingMinecraftServer from "@/views/PricingMinecraftServer";
 
 export const metadata: Metadata = {
   title: "Minecraft Server Hosting Plans",
@@ -11,5 +11,5 @@ export const metadata: Metadata = {
 };
 
 export default function PricingMinecraftPage() {
-  return <PricingGameServer game="minecraft" />;
+  return <PricingMinecraftServer />;
 }

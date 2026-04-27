@@ -240,8 +240,10 @@ export const Footer = () => {
 
         <div className="border-t border-border pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
-            <p>&copy; 2025 ByteNodes. Hak Cipta Dilindungi.</p>
-            <p>Powered By Yeng</p>
+            <p>&copy; 2026 ByteNodes. Hak Cipta Dilindungi.</p>
+            <p>Powered By <a className="hover:text-primary transition-colors" href="https://fauzaro.web.id" target="_blank" rel="noopener noreferrer">
+              Fauzaro01
+            </a></p>
           </div>
         </div>
       </div>

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import PricingGameServer from "@/views/PricingGameServer";
+import PricingFiveMServer from "@/views/PricingFiveMServer";
 
 export const metadata: Metadata = {
   title: "FiveM Server Hosting Plans",
@@ -11,5 +11,5 @@ export const metadata: Metadata = {
 };
 
 export default function PricingFiveMPage() {
-  return <PricingGameServer game="fivem" />;
+  return <PricingFiveMServer />;
 }
