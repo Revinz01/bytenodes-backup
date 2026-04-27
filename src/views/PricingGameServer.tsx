@@ -1,4 +1,6 @@
-"use client";
+export { default } from "./PricingMinecraftServer";
+
+/*
 
 import { Navbar } from "@/components/Navbar";
 import { AnnouncementBanner } from "@/components/AnnouncementBanner";
@@ -242,5 +244,4 @@ const gameContent: Record<
             slots: "Minecraft Private Server",
             priceRp: 840000,
             promoPriceRp: 800000,
-          export { default } from "./PricingMinecraftServer";
-          {
+*/
