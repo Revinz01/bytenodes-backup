@@ -19,23 +19,8 @@ const DISCORD_URL = "https://discord.gg/2PMmPp6Yx8";
 
 const botPackages = [
   {
-    name: "Bot Starter",
-    priceRp: 10000,
-    priceUsd: 0.6,
-    ram: "512 MB",
-    storage: "5 GB SSD",
-    features: [
-      "1 Bot Instance",
-      "24/7 Uptime",
-      "Auto Restart",
-      "Basic Support",
-    ],
-    note: "Perfect for small Discord bots",
-    popular: false,
-  },
-  {
     name: "Bot Basic",
-    priceRp: 20000,
+    priceRp: 25000,
     priceUsd: 1.2,
     ram: "1 GB",
     storage: "10 GB SSD",
@@ -59,27 +44,9 @@ const botPackages = [
       "24/7 Uptime",
       "Auto Restart",
       "Priority Support",
-      "Custom Domain (Rp 10.000)",
     ],
     note: "Best for multiple bots",
     popular: true,
-  },
-  {
-    name: "Bot Enterprise",
-    priceRp: 60000,
-    priceUsd: 3.6,
-    ram: "4 GB",
-    storage: "40 GB SSD",
-    features: [
-      "Unlimited Bot Instances",
-      "24/7 Uptime",
-      "Auto Restart",
-      "Premium Support",
-      "Custom Domain (Rp 10.000)",
-      "Database Included",
-    ],
-    note: "For large-scale bot operations",
-    popular: false,
   },
 ];
 
@@ -172,7 +139,7 @@ const PricingBot = () => {
             variants={staggerContainer}
             initial="hidden"
             animate={packagesInView ? "visible" : "hidden"}
-            className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto"
+            className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto"
           >
             {botPackages.map((pkg, index) => {
               const price = formatPrice(pkg.priceRp, pkg.priceUsd);
