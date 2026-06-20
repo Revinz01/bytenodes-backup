@@ -6,7 +6,7 @@ import { createBreadcrumbSchema } from "@/lib/structured-data";
 export const metadata: Metadata = {
   title: "ByteNodes - Professional Hosting Solutions Indonesia",
   description:
-    "Enterprise-grade hosting solutions with 99.9% uptime guarantee. VPS, Dedicated Servers, Discord Bot Hosting, and Website Hosting services. 24/7 customer support, affordable pricing from ByteNodes Indonesia.",
+    "Enterprise-grade hosting solutions with 98% uptime guarantee. VPS, Dedicated Servers, Discord Bot Hosting, and Website Hosting services. 24/7 customer support, affordable pricing from ByteNodes Indonesia.",
   keywords:
     "hosting, VPS hosting, dedicated server, Discord bot hosting, website hosting, cloud hosting, game server hosting, Indonesia hosting, ByteNodes, premium hosting, affordable hosting",
   alternates: {
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "ByteNodes - Professional Hosting Solutions Indonesia",
     description:
-      "Enterprise-grade hosting with 99.9% uptime. VPS, Dedicated Servers, Discord Bots, Website Hosting. 24/7 Support.",
+      "Enterprise-grade hosting with 98% uptime. VPS, Dedicated Servers, Discord Bots, Website Hosting. 24/7 Support.",
     url: "https://bytenodes.icu/",
     type: "website",
     siteName: "ByteNodes",
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "ByteNodes - Professional Hosting Solutions Indonesia",
     description:
-      "Enterprise-grade hosting with 99.9% uptime. VPS, Dedicated Servers, Discord Bots, Website Hosting.",
+      "Enterprise-grade hosting with 98% uptime. VPS, Dedicated Servers, Discord Bots, Website Hosting.",
     images: ["https://bytenodes.icu/og-image.png"],
   },
 };

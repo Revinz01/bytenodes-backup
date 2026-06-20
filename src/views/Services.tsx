@@ -15,8 +15,8 @@ const servicesDetail = [
     title: "Game Server Hosting",
     description:
       "Minecraft, FiveM, Rust, dan game lainnya dengan performa tinggi. Shared CPU dengan harga terjangkau.",
-    priceRp: "Mulai Rp 12.000",
-    priceUsd: "~$0.75",
+    priceRp: "Mulai Rp 14.000",
+    priceUsd: "~$0.85",
     link: "/pricing/server/minecraft",
     available: true,
     features: [
@@ -34,8 +34,8 @@ const servicesDetail = [
     icon: Bot,
     title: "Discord Bot Hosting",
     description: "Hosting bot Discord dengan uptime 24/7 dan auto-restart.",
-    priceRp: "Mulai Rp 10.000",
-    priceUsd: "~$0.60",
+    priceRp: "Mulai Rp 25.000",
+    priceUsd: "~$1.50",
     link: "/pricing/bot",
     available: true,
     features: [
@@ -54,8 +54,8 @@ const servicesDetail = [
     title: "Website Hosting",
     description:
       "Web Ptero (Container), Turbo Web (Cloudflare Tunnel), dan Jasa Coding.",
-    priceRp: "Mulai Rp 5.000",
-    priceUsd: "~$0.30",
+    priceRp: "Mulai Rp 50.000",
+    priceUsd: "~$3.30",
     link: "/pricing/website",
     available: true,
     features: [
@@ -142,7 +142,7 @@ const Services = () => {
     <div className="min-h-screen">
       <SEO
         title="Our Services - Hosting Solutions"
-        description="Comprehensive hosting services including Game Servers, Discord Bots, VPS, and Website Hosting. Premium infrastructure with 24/7 support and 99.9% uptime guarantee."
+        description="Comprehensive hosting services including Game Servers, Discord Bots, VPS, and Website Hosting. Premium infrastructure with 24/7 support and 98% uptime guarantee."
         keywords="game server hosting, Discord bot hosting, VPS hosting, website hosting, Minecraft hosting, FiveM hosting, cloud hosting services"
         canonicalUrl="https://bytenodes.icu/services"
         structuredData={structuredData}

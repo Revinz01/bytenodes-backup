@@ -9,7 +9,7 @@ import {
 export const metadata: Metadata = {
   title: "Hosting Services - Game Servers, Discord Bots, VPS | ByteNodes",
   description:
-    "Comprehensive hosting services including Game Servers (Minecraft, FiveM, Rust), Discord Bots, VPS, and Website Hosting. Premium infrastructure with 24/7 support and 99.9% uptime guarantee.",
+    "Comprehensive hosting services including Game Servers (Minecraft, FiveM, Rust), Discord Bots, VPS, and Website Hosting. Premium infrastructure with 24/7 support and 98% uptime guarantee.",
   keywords:
     "game server hosting, Discord bot hosting, VPS hosting, website hosting, Minecraft hosting, FiveM hosting, Rust hosting, cloud hosting services, dedicated servers",
   alternates: {
@@ -45,7 +45,7 @@ export default function ServicesPage() {
 
   const discordBotSchema = createServiceSchema(
     "Discord Bot Hosting",
-    "Reliable hosting for Discord bots with 99.9% uptime and premium support",
+    "Reliable hosting for Discord bots with 98% uptime and premium support",
     "IDR 15000-250000",
   );
 

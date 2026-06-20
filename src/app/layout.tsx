@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     template: "%s | ByteNodes",
   },
   description:
-    "Enterprise-grade hosting solutions with 99.9% uptime guarantee. VPS, Dedicated Servers, Discord Bot Hosting, and Website Hosting services from ByteNodes Indonesia.",
+    "Enterprise-grade hosting solutions with 98% uptime guarantee. VPS, Dedicated Servers, Discord Bot Hosting, and Website Hosting services from ByteNodes Indonesia.",
   keywords:
     "hosting, VPS, dedicated server, Discord bot hosting, website hosting, cloud hosting, game server hosting, Indonesia, ByteNodes, professional hosting",
   authors: [{ name: "ByteNodes" }],
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "ByteNodes - Professional Hosting Solutions",
     description:
-      "Enterprise-grade hosting solutions with 99.9% uptime guarantee. VPS, Dedicated Servers, Discord Bot Hosting, Website Hosting.",
+      "Enterprise-grade hosting solutions with 98% uptime guarantee. VPS, Dedicated Servers, Discord Bot Hosting, Website Hosting.",
     type: "website",
     url: "https://bytenodes.icu/",
     siteName: "ByteNodes",
@@ -58,8 +58,7 @@ export const metadata: Metadata = {
     site: "@ByteNodes",
     creator: "@ByteNodes",
     title: "ByteNodes - Professional Hosting Solutions",
-    description:
-      "Enterprise-grade hosting solutions with 99.9% uptime guarantee",
+    description: "Enterprise-grade hosting solutions with 98% uptime guarantee",
     images: ["/og-image.png"],
   },
   icons: {

@@ -161,7 +161,7 @@
     "sections": [
       {
         "title": "1. Service Level Commitment",
-        "content": "ByteNodes is committed to providing reliable and high-quality hosting services to all customers. We guarantee 99.9% network uptime for all our hosting services, including VPS KVM, Game Servers, RDP Windows, Discord Bot Hosting, and Website Hosting."
+        "content": "ByteNodes is committed to providing reliable and high-quality hosting services to all customers. We guarantee 98% network uptime for all our hosting services, including VPS KVM, Game Servers, RDP Windows, Discord Bot Hosting, and Website Hosting."
       },
       {
         "title": "2. Network Uptime Definition",
@@ -169,7 +169,7 @@
       },
       {
         "title": "3. Service Credit Eligibility",
-        "content": "If we fail to meet our 99.9% uptime guarantee, eligible customers may receive service credits as compensation based on the uptime percentage achieved."
+        "content": "If we fail to meet our 98% uptime guarantee, eligible customers may receive service credits as compensation based on the uptime percentage achieved."
       },
       {
         "title": "4. Requesting Service Credits",

@@ -64,28 +64,6 @@ const Contact = () => {
           <div className="grid md:grid-cols-2 gap-6">
             <Card className="p-6 hover:shadow-lg transition-shadow">
               <a
-                href="https://wa.me/6285126080236"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-start gap-4 group"
-              >
-                <div className="p-3 rounded-lg bg-cyan/10 group-hover:bg-cyan/20 transition-colors">
-                  <MessageCircle className="w-6 h-6 text-cyan" />
-                </div>
-                <div>
-                  <h3 className="font-bold mb-1 group-hover:text-cyan transition-colors">
-                    WhatsApp
-                  </h3>
-                  <p className="text-muted-foreground">+62 851-2608-0236</p>
-                  <p className="text-sm text-cyan mt-1">
-                    Chat langsung dengan kami
-                  </p>
-                </div>
-              </a>
-            </Card>
-
-            <Card className="p-6 hover:shadow-lg transition-shadow">
-              <a
                 href="mailto:support@bytenodes.id"
                 className="flex items-start gap-4 group"
               >
@@ -99,26 +77,6 @@ const Contact = () => {
                   <p className="text-muted-foreground">support@bytenodes.id</p>
                   <p className="text-sm text-cyan mt-1">
                     Kirim email kepada kami
-                  </p>
-                </div>
-              </a>
-            </Card>
-
-            <Card className="p-6 hover:shadow-lg transition-shadow">
-              <a
-                href="tel:+6285126080236"
-                className="flex items-start gap-4 group"
-              >
-                <div className="p-3 rounded-lg bg-cyan/10 group-hover:bg-cyan/20 transition-colors">
-                  <Phone className="w-6 h-6 text-cyan" />
-                </div>
-                <div>
-                  <h3 className="font-bold mb-1 group-hover:text-cyan transition-colors">
-                    Telepon
-                  </h3>
-                  <p className="text-muted-foreground">+62 851-2608-0236</p>
-                  <p className="text-sm text-cyan mt-1">
-                    Hubungi kami kapan saja
                   </p>
                 </div>
               </a>

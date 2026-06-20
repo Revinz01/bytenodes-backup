@@ -16,7 +16,7 @@ const stats = [
   },
   {
     icon: Server,
-    value: 99.9,
+    value: 98,
     suffix: "%",
     decimals: 1,
     label: "Uptime SLA",

@@ -66,7 +66,7 @@ export const AnimatedStats = () => {
         label="Happy Customers"
       />
       <AnimatedStat
-        end={99.9}
+        end={98}
         suffix="%"
         icon={<TrendingUp className="w-6 h-6" />}
         label="Uptime Guarantee"

@@ -35,9 +35,9 @@ const benefits = [
   },
   {
     icon: Zap,
-    title: "99.9% Uptime SLA",
+    title: "98% Uptime SLA",
     description:
-      "We guarantee 99.9% uptime with our robust infrastructure and proactive monitoring systems.",
+      "We guarantee 98% uptime with our robust infrastructure and proactive monitoring systems.",
   },
   {
     icon: Headphones,

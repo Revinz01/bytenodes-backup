@@ -29,8 +29,8 @@ const pricingCategories = [
   {
     name: "Game Server",
     icon: Gamepad2,
-    startingPriceRp: 8000,
-    startingPriceUsd: 0.5,
+    startingPriceRp: 14000,
+    startingPriceUsd: 0.85,
     description: "Minecraft, FiveM, Rust, dan game lainnya",
     features: [
       "Opsi Shared & Premium",
@@ -45,8 +45,8 @@ const pricingCategories = [
   {
     name: "Discord Bot",
     icon: Bot,
-    startingPriceRp: 10000,
-    startingPriceUsd: 0.6,
+    startingPriceRp: 25000,
+    startingPriceUsd: 2.2,
     description: "Hosting bot Discord dengan uptime 24/7",
     features: [
       "Auto Restart",
@@ -61,8 +61,8 @@ const pricingCategories = [
   {
     name: "Website Hosting",
     icon: Globe,
-    startingPriceRp: 5000,
-    startingPriceUsd: 0.3,
+    startingPriceRp: 50000,
+    startingPriceUsd: 3.4,
     description: "Web Ptero, Turbo Web, & Jasa Coding",
     features: [
       "SSL Gratis (HTTPS)",
@@ -77,8 +77,8 @@ const pricingCategories = [
   {
     name: "VPS & Dedicated",
     icon: Server,
-    startingPriceRp: 65000,
-    startingPriceUsd: 4.0,
+    startingPriceRp: 175000,
+    startingPriceUsd: 10.9,
     description: "Dedicated server dengan performa tinggi",
     features: [
       "Penyimpanan NVMe",
@@ -120,7 +120,7 @@ const Pricing = () => {
     <div className="min-h-screen">
       <SEO
         title="Pricing Plans - Affordable Hosting Solutions"
-        description="Transparent pricing for all hosting services. Game Server hosting from Rp 8.000, Discord Bot hosting from Rp 10.000. No hidden fees, 24/7 support included."
+        description="Transparent pricing for all hosting services. Game Server hosting from Rp 14.000, Discord Bot hosting from Rp 25.000. No hidden fees, 24/7 support included."
         keywords="hosting pricing, cheap VPS, affordable game server, Discord bot pricing, website hosting price, ByteNodes pricing"
         canonicalUrl="https://bytenodes.icu/pricing"
         structuredData={structuredData}
@@ -151,7 +151,7 @@ const Pricing = () => {
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-12 leading-relaxed animate-fade-in">
             Pilih paket yang sesuai dengan kebutuhan. Semua paket termasuk
-            support 24/7, uptime 99.9%, dan migrasi gratis.
+            support 24/7, uptime 98%, dan migrasi gratis.
           </p>
 
           <AnimatedStats />

@@ -14,9 +14,23 @@ const DISCORD_URL = "https://discord.gg/2PMmPp6Yx8";
 
 const ORBS = [
   { size: 520, top: "-10%", left: "-8%", delay: 0, speed: 0.4, opacity: 0.12 },
-  { size: 380, top: "20%", right: "-5%", delay: 0.3, speed: -0.25, opacity: 0.1 },
+  {
+    size: 380,
+    top: "20%",
+    right: "-5%",
+    delay: 0.3,
+    speed: -0.25,
+    opacity: 0.1,
+  },
   { size: 260, top: "55%", left: "15%", delay: 0.6, speed: 0.3, opacity: 0.08 },
-  { size: 180, top: "10%", left: "45%", delay: 0.9, speed: -0.2, opacity: 0.06 },
+  {
+    size: 180,
+    top: "10%",
+    left: "45%",
+    delay: 0.9,
+    speed: -0.2,
+    opacity: 0.06,
+  },
 ];
 
 export const HeroGSAP = () => {
@@ -142,10 +156,30 @@ export const HeroGSAP = () => {
 
   const headlineWords = ["Reliable", "&", "Affordable", "Hosting", "Solutions"];
   const floatCards = [
-    { icon: Server, label: "VPS & Dedicated", value: "NVMe SSD", color: "from-blue-500/20 to-blue-600/10" },
-    { icon: Shield, label: "DDoS Protected", value: "Always On", color: "from-cyan-500/20 to-cyan-600/10" },
-    { icon: Zap, label: "99.9% Uptime", value: "SLA Guarantee", color: "from-emerald-500/20 to-emerald-600/10" },
-    { icon: Globe, label: "Low Latency", value: "Singapore Node", color: "from-violet-500/20 to-violet-600/10" },
+    {
+      icon: Server,
+      label: "VPS & Dedicated",
+      value: "NVMe SSD",
+      color: "from-blue-500/20 to-blue-600/10",
+    },
+    {
+      icon: Shield,
+      label: "DDoS Protected",
+      value: "Always On",
+      color: "from-cyan-500/20 to-cyan-600/10",
+    },
+    {
+      icon: Zap,
+      label: "98% Uptime",
+      value: "SLA Guarantee",
+      color: "from-emerald-500/20 to-emerald-600/10",
+    },
+    {
+      icon: Globe,
+      label: "Low Latency",
+      value: "Singapore Node",
+      color: "from-violet-500/20 to-violet-600/10",
+    },
   ];
 
   return (
@@ -156,11 +190,7 @@ export const HeroGSAP = () => {
     >
       {/* Shape Grid Background - Dynamic and Interactive */}
       <div className="absolute inset-0 z-0">
-        <ShapeGrid
-          gridSize={80}
-          duration={2500}
-          maxActiveShapes={12}
-        />
+        <ShapeGrid gridSize={80} duration={2500} maxActiveShapes={12} />
       </div>
 
       {/* Animated grid background - reduced opacity to not compete with lines */}
@@ -179,7 +209,9 @@ export const HeroGSAP = () => {
       {ORBS.map((orb, i) => (
         <div
           key={i}
-          ref={(el) => { orbsRef.current[i] = el; }}
+          ref={(el) => {
+            orbsRef.current[i] = el;
+          }}
           className="absolute rounded-full pointer-events-none z-[1]"
           aria-hidden="true"
           style={{
@@ -187,7 +219,8 @@ export const HeroGSAP = () => {
             height: orb.size,
             top: orb.top,
             left: "left" in orb ? (orb as { left: string }).left : undefined,
-            right: "right" in orb ? (orb as { right: string }).right : undefined,
+            right:
+              "right" in orb ? (orb as { right: string }).right : undefined,
             background: `radial-gradient(circle, hsl(var(--primary) / ${orb.opacity}) 0%, transparent 70%)`,
             filter: "blur(60px)",
           }}
@@ -198,9 +231,14 @@ export const HeroGSAP = () => {
       <div className="container mx-auto px-4 relative z-10 py-32 md:py-40">
         <div className="max-w-4xl mx-auto text-center space-y-6 md:space-y-8">
           {/* Badge */}
-          <div ref={badgeRef} className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 backdrop-blur-sm px-3 md:px-4 py-1.5 text-xs font-medium text-primary">
+          <div
+            ref={badgeRef}
+            className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 backdrop-blur-sm px-3 md:px-4 py-1.5 text-xs font-medium text-primary"
+          >
             <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
-            <span className="hidden sm:inline">All systems operational &mdash; Singapore Node</span>
+            <span className="hidden sm:inline">
+              All systems operational &mdash; Singapore Node
+            </span>
             <span className="sm:hidden">All systems operational</span>
           </div>
 
@@ -211,7 +249,10 @@ export const HeroGSAP = () => {
             style={{ transformStyle: "preserve-3d" }}
           >
             {headlineWords.map((word, i) => (
-              <span key={i} className="word inline-block mr-[0.15em] sm:mr-[0.2em] last:mr-0">
+              <span
+                key={i}
+                className="word inline-block mr-[0.15em] sm:mr-[0.2em] last:mr-0"
+              >
                 {word === "Hosting" || word === "Solutions" ? (
                   <span className="text-primary">{word}</span>
                 ) : (
@@ -227,19 +268,29 @@ export const HeroGSAP = () => {
             className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed px-4 md:px-0"
           >
             Solusi hosting profesional dengan performa tinggi. Game server, VPS,
-            Discord bot, dan website hosting dengan uptime 99.9%.
+            Discord bot, dan website hosting dengan uptime 98%.
           </p>
 
           {/* CTA */}
-          <div ref={ctaRef} className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center px-4 md:px-0">
+          <div
+            ref={ctaRef}
+            className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center px-4 md:px-0"
+          >
             <a href={DISCORD_URL} target="_blank" rel="noopener noreferrer">
-              <Button size="lg" className="w-full sm:w-auto text-base px-6 md:px-8 py-5 md:py-6 font-semibold rounded-xl">
+              <Button
+                size="lg"
+                className="w-full sm:w-auto text-base px-6 md:px-8 py-5 md:py-6 font-semibold rounded-xl"
+              >
                 Get Started
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
             </a>
             <Link href="/contact">
-              <Button size="lg" variant="outline" className="w-full sm:w-auto text-base px-6 md:px-8 py-5 md:py-6 font-semibold rounded-xl backdrop-blur-sm">
+              <Button
+                size="lg"
+                variant="outline"
+                className="w-full sm:w-auto text-base px-6 md:px-8 py-5 md:py-6 font-semibold rounded-xl backdrop-blur-sm"
+              >
                 Contact Sales
               </Button>
             </Link>
@@ -250,12 +301,21 @@ export const HeroGSAP = () => {
             {floatCards.map((card, i) => (
               <div
                 key={i}
-                ref={(el) => { floatCardsRef.current[i] = el; }}
+                ref={(el) => {
+                  floatCardsRef.current[i] = el;
+                }}
                 className={`rounded-xl md:rounded-2xl border border-primary/20 bg-gradient-to-br ${card.color} backdrop-blur-sm p-3 md:p-4 text-left`}
               >
-                <card.icon className="w-4 h-4 md:w-5 md:h-5 text-primary mb-1.5 md:mb-2" aria-hidden="true" />
-                <p className="text-[10px] md:text-[11px] text-muted-foreground font-medium">{card.label}</p>
-                <p className="text-xs md:text-sm font-bold text-foreground">{card.value}</p>
+                <card.icon
+                  className="w-4 h-4 md:w-5 md:h-5 text-primary mb-1.5 md:mb-2"
+                  aria-hidden="true"
+                />
+                <p className="text-[10px] md:text-[11px] text-muted-foreground font-medium">
+                  {card.label}
+                </p>
+                <p className="text-xs md:text-sm font-bold text-foreground">
+                  {card.value}
+                </p>
               </div>
             ))}
           </div>

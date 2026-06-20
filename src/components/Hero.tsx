@@ -35,7 +35,7 @@ export const Hero = () => {
             </div>
             <div className="flex items-center gap-2">
               <span className="w-2 h-2 bg-primary rounded-full"></span>
-              <span>99.9% SLA guarantee</span>
+              <span>98% SLA guarantee</span>
             </div>
           </div>
 
@@ -46,7 +46,7 @@ export const Hero = () => {
 
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             Solusi hosting profesional dengan performa tinggi. Game server, VPS,
-            Discord bot, dan website hosting dengan uptime 99.9%.
+            Discord bot, dan website hosting dengan uptime 98%.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

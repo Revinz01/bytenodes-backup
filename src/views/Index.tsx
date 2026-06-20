@@ -17,7 +17,7 @@ const Index = () => {
     name: "ByteNodes",
     url: "https://bytenodes.icu",
     description:
-      "Enterprise-grade hosting solutions with 99.9% uptime guarantee. VPS, Dedicated Servers, Discord Bots, and Website Hosting services.",
+      "Enterprise-grade hosting solutions with 98% uptime guarantee. VPS, Dedicated Servers, Discord Bots, and Website Hosting services.",
     potentialAction: {
       "@type": "SearchAction",
       target: "https://bytenodes.icu/search?q={search_term_string}",
@@ -29,35 +29,35 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <SEO
         title="ByteNodes - Professional Hosting Solutions"
-        description="Enterprise-grade hosting solutions with 99.9% uptime guarantee. VPS, Dedicated Servers, Discord Bots, and Website Hosting services with 24/7 support."
+        description="Enterprise-grade hosting solutions with 98% uptime guarantee. VPS, Dedicated Servers, Discord Bots, and Website Hosting services with 24/7 support."
         keywords="hosting, VPS hosting, dedicated server, Discord bot hosting, website hosting, cloud hosting, game server hosting, ByteNodes, premium hosting"
         canonicalUrl="https://bytenodes.icu/"
         structuredData={structuredData}
       />
       <AnnouncementBanner />
       <Navbar />
-      
+
       {/* Hero with GSAP parallax orbs and word-by-word reveal */}
       <HeroGSAP />
-      
+
       {/* Scroll-pinned storytelling section - showcases key benefits with sticky animations */}
       <ScrollStorySection />
-      
+
       {/* Horizontal scroll services showcase - scrub-based horizontal carousel */}
       <HorizontalServicesScroll />
-      
+
       {/* Animated stats bar with count-up numbers */}
       <AnimatedStatsBar />
-      
+
       {/* Why Choose Us with 3D tilt cards and animated stat counters */}
       <WhyChooseUsGSAP />
-      
+
       {/* Infinite marquee testimonials with pause-on-hover */}
       <TestimonialsMarquee />
-      
+
       {/* Technology stack */}
       <TechnologyStack />
-      
+
       {/* Footer */}
       <Footer />
     </div>
