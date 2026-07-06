@@ -16,12 +16,12 @@ const DISCORD_URL = "https://discord.gg/2PMmPp6Yx8";
 // VPS KVM Packages - AMD EPYC Milan Series
 const vpsKvmPackages = [
   {
-    name: "VML-01",
-    priceRp: 269000,
-    priceUsd: 16.8,
+    name: "VML-XS",
+    priceRp: 275000,
+    priceUsd: 17.19,
     ram: "8 GB",
-    cores: "4 Core",
-    storage: "50 GB NVMe",
+    cores: "4 vCPU",
+    storage: "64 GB NVMe",
     cpu: "AMD EPYC Milan Series",
     features: [
       "SSD NVMe Storage",
@@ -32,12 +32,12 @@ const vpsKvmPackages = [
     popular: false,
   },
   {
-    name: "VML-02",
-    priceRp: 499000,
-    priceUsd: 31.1,
+    name: "VML-S",
+    priceRp: 495000,
+    priceUsd: 30.94,
     ram: "16 GB",
-    cores: "8 Core",
-    storage: "100 GB NVMe",
+    cores: "8 vCPU",
+    storage: "128 GB NVMe",
     cpu: "AMD EPYC Milan Series",
     features: [
       "SSD NVMe Storage",
@@ -48,12 +48,12 @@ const vpsKvmPackages = [
     popular: true,
   },
   {
-    name: "VML-03",
-    priceRp: 699000,
-    priceUsd: 43.6,
+    name: "VML-M",
+    priceRp: 895000,
+    priceUsd: 55.94,
     ram: "32 GB",
-    cores: "12 Core",
-    storage: "200 GB NVMe",
+    cores: "12 vCPU",
+    storage: "256 GB NVMe",
     cpu: "AMD EPYC Milan Series",
     features: [
       "SSD NVMe Storage",
@@ -65,12 +65,29 @@ const vpsKvmPackages = [
     popular: false,
   },
   {
-    name: "VML-04",
-    priceRp: 925000,
-    priceUsd: 57.8,
+    name: "VML-L",
+    priceRp: 1295000,
+    priceUsd: 80.94,
     ram: "64 GB",
-    cores: "16 Core",
-    storage: "300 GB NVMe",
+    cores: "16 vCPU",
+    storage: "512 GB NVMe",
+    cpu: "AMD EPYC Milan Series",
+    features: [
+      "SSD NVMe Storage",
+      "Full Root Access",
+      "Premium Support",
+      "DDoS Protection",
+      "Dedicated IP",
+    ],
+    popular: false,
+  },
+  {
+    name: "VML-XL",
+    priceRp: 2495000,
+    priceUsd: 155.94,
+    ram: "128 GB",
+    cores: "24 vCPU",
+    storage: "1024 GB NVMe",
     cpu: "AMD EPYC Milan Series",
     features: [
       "SSD NVMe Storage",
@@ -83,84 +100,18 @@ const vpsKvmPackages = [
   },
 ];
 
-// VPS Packages - AMD Ryzen 9 7900
-const vpsRyzenPackages = [
-  {
-    name: "VRZ-LT",
-    priceRp: 375000,
-    priceUsd: 23.4,
-    ram: "4 GB",
-    cores: "2 vCore",
-    storage: "60 GB NVMe",
-    cpu: "AMD Ryzen 9 7900",
-    features: [
-      "SSD NVMe Storage",
-      "Full Root Access",
-      "24/7 Support",
-      "DDoS Protection",
-    ],
-    popular: false,
-  },
-  {
-    name: "VRZ-MD",
-    priceRp: 479000,
-    priceUsd: 29.9,
-    ram: "8 GB",
-    cores: "4 vCore",
-    storage: "120 GB NVMe",
-    cpu: "AMD Ryzen 9 7900",
-    features: [
-      "SSD NVMe Storage",
-      "Full Root Access",
-      "Priority Support",
-      "DDoS Protection",
-    ],
-    popular: true,
-  },
-  {
-    name: "VRZ-HG",
-    priceRp: 629000,
-    priceUsd: 39.3,
-    ram: "10 GB",
-    cores: "4 vCore",
-    storage: "150 GB NVMe",
-    cpu: "AMD Ryzen 9 7900",
-    features: [
-      "SSD NVMe Storage",
-      "Full Root Access",
-      "Priority Support",
-      "DDoS Protection",
-    ],
-    popular: false,
-  },
-  {
-    name: "VRZ-EX",
-    priceRp: 985000,
-    priceUsd: 61.6,
-    ram: "16 GB",
-    cores: "6 vCore",
-    storage: "220 GB NVMe",
-    cpu: "AMD Ryzen 9 7900",
-    features: [
-      "SSD NVMe Storage",
-      "Full Root Access",
-      "Premium Support",
-      "DDoS Protection",
-      "Dedicated IP",
-    ],
-    popular: false,
-  },
-];
+// VPS Packages - AMD Ryzen 9 7900 (Out of Stock)
+const vpsRyzenPackages = [];
 
 // VPS Packages - AMD EPYC Genoa Series
 const vpsGenoaPackages = [
   {
-    name: "VGN-01",
-    priceRp: 175000,
-    priceUsd: 10.9,
+    name: "VGN-XS",
+    priceRp: 215000,
+    priceUsd: 13.44,
     ram: "4 GB",
-    cores: "2 vCore",
-    storage: "50 GB NVMe",
+    cores: "2 vCPU",
+    storage: "64 GB NVMe",
     cpu: "AMD EPYC Genoa Series",
     features: [
       "SSD NVMe Storage",
@@ -171,12 +122,12 @@ const vpsGenoaPackages = [
     popular: false,
   },
   {
-    name: "VGN-02",
-    priceRp: 285000,
-    priceUsd: 17.8,
+    name: "VGN-S",
+    priceRp: 345000,
+    priceUsd: 21.56,
     ram: "8 GB",
-    cores: "4 vCore",
-    storage: "100 GB NVMe",
+    cores: "4 vCPU",
+    storage: "128 GB NVMe",
     cpu: "AMD EPYC Genoa Series",
     features: [
       "SSD NVMe Storage",
@@ -184,14 +135,14 @@ const vpsGenoaPackages = [
       "Priority Support",
       "DDoS Protection",
     ],
-    popular: true,
+    popular: false,
   },
   {
-    name: "VGN-03",
-    priceRp: 479000,
-    priceUsd: 29.9,
+    name: "VGN-M",
+    priceRp: 695000,
+    priceUsd: 43.44,
     ram: "16 GB",
-    cores: "8 vCore",
+    cores: "8 vCPU",
     storage: "256 GB NVMe",
     cpu: "AMD EPYC Genoa Series",
     features: [
@@ -200,15 +151,83 @@ const vpsGenoaPackages = [
       "Priority Support",
       "DDoS Protection",
     ],
+    popular: true,
+  },
+  {
+    name: "VGN-L",
+    priceRp: 1350000,
+    priceUsd: 84.38,
+    ram: "32 GB",
+    cores: "10 vCPU",
+    storage: "512 GB NVMe",
+    cpu: "AMD EPYC Genoa Series",
+    features: [
+      "SSD NVMe Storage",
+      "Full Root Access",
+      "Premium Support",
+      "DDoS Protection",
+      "Dedicated IP",
+    ],
     popular: false,
   },
   {
-    name: "VGN-04",
-    priceRp: 899000,
-    priceUsd: 56.2,
-    ram: "32 GB",
-    cores: "10 vCore",
-    storage: "512 GB NVMe",
+    name: "VGN-XL",
+    priceRp: 1995000,
+    priceUsd: 124.69,
+    ram: "48 GB",
+    cores: "12 vCPU",
+    storage: "768 GB NVMe",
+    cpu: "AMD EPYC Genoa Series",
+    features: [
+      "SSD NVMe Storage",
+      "Full Root Access",
+      "Premium Support",
+      "DDoS Protection",
+      "Dedicated IP",
+    ],
+    popular: false,
+  },
+  {
+    name: "VGN-XXL",
+    priceRp: 2650000,
+    priceUsd: 165.63,
+    ram: "64 GB",
+    cores: "14 vCPU",
+    storage: "1024 GB NVMe",
+    cpu: "AMD EPYC Genoa Series",
+    features: [
+      "SSD NVMe Storage",
+      "Full Root Access",
+      "Premium Support",
+      "DDoS Protection",
+      "Dedicated IP",
+    ],
+    popular: false,
+  },
+  {
+    name: "VGN-BMS",
+    priceRp: 3250000,
+    priceUsd: 203.13,
+    ram: "96 GB",
+    cores: "16 vCPU",
+    storage: "1536 GB NVMe",
+    cpu: "AMD EPYC Genoa Series",
+    features: [
+      "SSD NVMe Storage",
+      "Full Root Access",
+      "Premium Support",
+      "DDoS Protection",
+      "Dedicated IP",
+    ],
+    popular: false,
+  },
+  {
+    name: "VGN-BMM",
+    priceRp: 3895000,
+    priceUsd: 243.44,
+    ram: "128 GB",
+    cores: "20 vCPU",
+    storage: "2048 GB NVMe",
     cpu: "AMD EPYC Genoa Series",
     features: [
       "SSD NVMe Storage",
@@ -354,13 +373,15 @@ const PricingVPS = () => {
             </button>
             <button
               onClick={() => setSelectedCategory("vps-ryzen")}
-              className={`px-4 py-2 rounded-md text-sm font-semibold transition-all whitespace-nowrap ${
+              disabled
+              className={`px-4 py-2 rounded-md text-sm font-semibold transition-all whitespace-nowrap opacity-50 cursor-not-allowed ${
                 selectedCategory === "vps-ryzen"
                   ? "bg-primary text-primary-foreground shadow-md"
                   : "text-muted-foreground hover:text-foreground"
               }`}
+              title="VPS Ryzen is currently out of stock"
             >
-              VPS Ryzen
+              VPS Ryzen (Out of Stock)
             </button>
             <button
               onClick={() => setSelectedCategory("vps-genoa")}
