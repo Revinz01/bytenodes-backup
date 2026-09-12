@@ -18,6 +18,8 @@ import {
   Zap,
   Shield,
   Crown,
+  Key,
+  Network,
 } from "lucide-react";
 import Link from "next/link";
 import { GameSupportLogos } from "@/components/GameSupportLogos";
@@ -26,6 +28,22 @@ import SEO from "@/components/SEO";
 const DISCORD_URL = "https://discord.gg/2PMmPp6Yx8";
 
 const pricingCategories = [
+  {
+    name: "API & Routing",
+    icon: Key,
+    startingPriceRp: 25000,
+    startingPriceUsd: 1.55,
+    description: "Gemini Flash & Anthropic Opus API, Hermes & 9router Node",
+    features: [
+      "Tanpa Kartu Kredit",
+      "Model AI Premium & Fast Response",
+      "Hermes & 9router Siap Pakai",
+      "Slot Terbatas & Resource Dedicated",
+    ],
+    link: "/pricing/api-routing",
+    popular: true,
+    gradient: "from-emerald-500/20 to-cyan-500/20",
+  },
   {
     name: "Game Server",
     icon: Gamepad2,
@@ -39,7 +57,7 @@ const pricingCategories = [
       "Panel Pterodactyl",
     ],
     link: "/pricing/server/minecraft",
-    popular: true,
+    popular: false,
     gradient: "from-orange-500/20 to-red-500/20",
   },
   {

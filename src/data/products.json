@@ -201,5 +201,124 @@
       "price": 275000,
       "features": ["Windows Server", "RDP Access", "Admin Rights"]
     }
+  ],
+  "api_endpoints": [
+    {
+      "id": 1,
+      "name": "Flexi Credit",
+      "type": "Pay-as-you-go",
+      "models": "Gemini Flash & Anthropic Opus",
+      "startingPrice": 25000,
+      "options": ["Top-up Rp 25.000", "Top-up Rp 50.000"],
+      "description": "Cocok untuk testing / pemakaian kasual. Saldo terpotong otomatis per request.",
+      "features": [
+        "Akses Gemini Flash & Anthropic Opus",
+        "Tanpa Kartu Kredit",
+        "Sistem Saldo Terpotong Otomatis",
+        "Cocok untuk Testing & Dev Kasual",
+        "Dashboard & Monitoring Token"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Developer Plan",
+      "type": "Monthly Subscription",
+      "models": "Gemini Flash High-Speed",
+      "price": 65000,
+      "description": "Akses khusus endpoint super cepat untuk fast response.",
+      "features": [
+        "Akses Endpoint Super Cepat (Low Latency)",
+        "Kuota / Token Bulanan Stabil",
+        "Tanpa Ribet Kartu Kredit",
+        "High Rate Limits & Fast Response",
+        "Priority Discord Support"
+      ],
+      "popular": false
+    },
+    {
+      "id": 3,
+      "name": "Production Plan",
+      "type": "Monthly Subscription",
+      "models": "Gemini Flash & Claude Opus Balanced",
+      "price": 120000,
+      "description": "Limit token lebih besar, cocok untuk aplikasi atau project skala menengah.",
+      "features": [
+        "Limit Token Bulanan Lebih Besar",
+        "Akses Gemini Flash & Claude Opus",
+        "Stabilitas & Throughput Tinggi",
+        "Cocok untuk Aplikasi Skala Menengah",
+        "Priority Support 24/7"
+      ],
+      "popular": true
+    },
+    {
+      "id": 4,
+      "name": "Enterprise Plan",
+      "type": "Monthly Subscription",
+      "models": "All Flagship AI Models (Full Access)",
+      "price": 250000,
+      "description": "Akses penuh ke semua model terkuat. Khusus untuk heavy user & integrasi web apps tingkat lanjut.",
+      "features": [
+        "Akses Penuh ke Semua Model Terkuat",
+        "Maksimum Token & Concurrency",
+        "Heavy User & Web Apps Integration",
+        "Dedicated Routing Optimization",
+        "VIP Discord Support & Consultation"
+      ],
+      "popular": false
+    }
+  ],
+  "routing_environments": [
+    {
+      "id": 1,
+      "name": "Essential Node",
+      "environment": "Hermes & 9router Environment",
+      "ram": "2 GB",
+      "price": 85000,
+      "description": "Alokasi RAM 2GB. Cocok untuk menjalankan background task/routing skala kecil.",
+      "features": [
+        "Include Resource VPS / Node",
+        "RAM 2 GB Alokasi Khusus",
+        "Hermes & 9router Pre-Configured",
+        "Terima Beres Langsung Jalan",
+        "Background Task & Small Routing",
+        "Slot Terbatas"
+      ],
+      "popular": false
+    },
+    {
+      "id": 2,
+      "name": "Performance Node",
+      "environment": "Hermes & 9router Environment",
+      "ram": "4 GB",
+      "price": 150000,
+      "description": "Alokasi RAM 4GB. Sangat direkomendasikan untuk routing kompleks & beban menengah.",
+      "features": [
+        "Include Resource VPS / Node",
+        "RAM 4 GB Alokasi Khusus",
+        "Hermes & 9router Pre-Configured",
+        "Terima Beres Langsung Jalan",
+        "Routing Kompleks & Beban Menengah",
+        "Slot Terbatas"
+      ],
+      "popular": true
+    },
+    {
+      "id": 3,
+      "name": "Ultimate Node",
+      "environment": "Hermes & 9router Environment",
+      "ram": "8 GB+",
+      "price": 250000,
+      "description": "Alokasi RAM 8GB+. Dikhususkan untuk running multiple task sekaligus tanpa takut limit OOM.",
+      "features": [
+        "Include Resource VPS / Node",
+        "RAM 8 GB+ Alokasi Besar",
+        "Hermes & 9router Pre-Configured",
+        "Terima Beres Langsung Jalan",
+        "Multiple Tasks Concurrently (Anti OOM)",
+        "VIP Dedicated Support & Slot Terbatas"
+      ],
+      "popular": false
+    }
   ]
 }

@@ -26,6 +26,30 @@ export interface VPSProduct {
   features: string[];
 }
 
+export interface ApiEndpointProduct {
+  id: number;
+  name: string;
+  type: string;
+  models: string;
+  startingPrice?: number;
+  price?: number;
+  options?: string[];
+  description: string;
+  features: string[];
+  popular?: boolean;
+}
+
+export interface RoutingEnvironmentProduct {
+  id: number;
+  name: string;
+  environment: string;
+  ram: string;
+  price: number;
+  description: string;
+  features: string[];
+  popular?: boolean;
+}
+
 export interface BlogPost {
   id: number;
   title: string;
@@ -75,6 +99,14 @@ export const getVPSProductsByCategory = (category: string): VPSProduct[] => {
 
 export const getVPSCategories = (): string[] => {
   return [...new Set(productsData.vps.map(p => p.category))];
+};
+
+export const getApiEndpointProducts = (): ApiEndpointProduct[] => {
+  return (productsData as any).api_endpoints || [];
+};
+
+export const getRoutingEnvironmentProducts = (): RoutingEnvironmentProduct[] => {
+  return (productsData as any).routing_environments || [];
 };
 
 // Blog Service

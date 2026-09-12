@@ -3,13 +3,33 @@ import { AnnouncementBanner } from "@/components/AnnouncementBanner";
 import { Footer } from "@/components/Footer";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Server, Globe, Bot, Gamepad2, Code, Check, Clock } from "lucide-react";
+import { Server, Globe, Bot, Gamepad2, Code, Check, Clock, Key } from "lucide-react";
 import Link from "next/link";
 import SEO from "@/components/SEO";
 
 const DISCORD_URL = "https://discord.gg/2PMmPp6Yx8";
 
 const servicesDetail = [
+  {
+    icon: Key,
+    title: "API Endpoint & Routing",
+    description:
+      "Akses API AI (Gemini Flash & Anthropic Opus) tanpa kartu kredit serta Hermes & 9router Environment siap pakai.",
+    priceRp: "Mulai Rp 25.000",
+    priceUsd: "~$1.55",
+    link: "/pricing/api-routing",
+    available: true,
+    features: [
+      "Gemini Flash & Opus Powered",
+      "Pay-as-you-go / Monthly Plan",
+      "Hermes & 9router Environment",
+      "Resource Node Dedicated (2GB-8GB+)",
+      "Tanpa Ribet Kartu Kredit",
+      "Slot Terbatas & Fast Response",
+      "Setup Terima Beres Langsung Jalan",
+      "Support Tiket Discord 24/7",
+    ],
+  },
   {
     icon: Gamepad2,
     title: "Game Server Hosting",
@@ -106,6 +126,13 @@ const Services = () => {
       "@type": "OfferCatalog",
       name: "Hosting Services",
       itemListElement: [
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "API Endpoint & Advanced Routing",
+          },
+        },
         {
           "@type": "Offer",
           itemOffered: {

@@ -10,6 +10,7 @@ import {
   ArrowRight,
   ChevronLeft,
   ChevronRight,
+  Key,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
@@ -57,6 +58,24 @@ const getResponsiveValues = (viewportWidth: number | null) => {
 };
 
 const services = [
+  {
+    id: "api-routing",
+    icon: Key,
+    title: "API & Routing",
+    tagline: "Ultra-fast AI & Node Routing.",
+    startingPrice: "Rp 25.000",
+    priceUsd: "$1.55",
+    link: "/pricing/api-routing",
+    color: "from-emerald-600/20 via-teal-500/10 to-cyan-900/5",
+    accent: "hsl(160 84% 45%)",
+    features: [
+      "Gemini Flash & Opus API",
+      "Pay-as-you-go & Monthly",
+      "Hermes & 9router Environment",
+      "Dedicated RAM 2GB - 8GB+",
+      "No Credit Card Needed",
+    ],
+  },
   {
     id: "game",
     icon: Gamepad2,

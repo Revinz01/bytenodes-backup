@@ -26,6 +26,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     // Pricing subpages
     {
+      url: `${baseUrl}/pricing/api-routing`,
+      lastModified,
+      changeFrequency: "weekly" as const,
+      priority: 0.9,
+    },
+    {
       url: `${baseUrl}/pricing/server/minecraft`,
       lastModified,
       changeFrequency: "weekly" as const,
