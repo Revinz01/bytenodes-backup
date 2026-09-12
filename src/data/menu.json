@@ -18,6 +18,11 @@
           "description": "Lihat semua paket hosting kami"
         },
         {
+          "label": "API & Advanced Routing",
+          "href": "/pricing/api-routing",
+          "description": "Gemini Flash, Opus, Hermes & 9router"
+        },
+        {
           "label": "Game Servers",
           "href": "/pricing/server/minecraft",
           "description": "Minecraft & Game Server Hosting"
@@ -44,6 +49,7 @@
   ],
   "footerNav": {
     "services": [
+      { "label": "API & Routing", "href": "/pricing/api-routing" },
       { "label": "Game Server", "href": "/pricing/server/minecraft" },
       { "label": "VPS KVM", "href": "/pricing/vps" },
       { "label": "VPS Premium", "href": "/pricing/vps" },
